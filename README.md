@@ -49,8 +49,5 @@ If you find MQUANT useful in your research, please consider citing our paper:
 ```bibtex
 @inproceedings{mambaquant2024,
   title={MambaQuant: Quantizing the Mamba Family with Variance Aligned Rotation Methods},
-  author={Your Name and Co-authors},
-  booktitle={International Conference on Learning Representations (ICLR)},
-  year={2025},
-  url={https://openreview.net/forum?id=yourpaperid}
+  ...
 }
