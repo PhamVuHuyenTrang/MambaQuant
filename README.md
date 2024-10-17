@@ -44,7 +44,7 @@ We welcome contributions from the research and development community! Whether yo
 
 ## Citation
 
-If you find MQUANT useful in your research, please consider citing our paper:
+If you find MAMBAQUANT useful in your research, please consider citing our paper:
 
 ```bibtex
 @inproceedings{mambaquant2024,
