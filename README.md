@@ -36,7 +36,7 @@ Detailed instructions for setting up the MQUANT framework will be provided once 
 
 *Coming Soon.*
 
-Comprehensive usage examples and tutorials will be available with the code release to help you get started with MQUANT effortlessly.
+Comprehensive usage examples and tutorials will be available with the code release to help you get started with MAMBAQUANT effortlessly.
 
 ## Contributing
 
