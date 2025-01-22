@@ -6,7 +6,7 @@
 
 **MAMBAQUANT**, a novel post-training quantization framework tailored for Mamba models, addressing key challenges such as outliers and variance inconsistencies. MambaQuant achieves less than 1% accuracy loss in quantizing weights and activations to 8-bit for various Mamba-based tasks, marking the first comprehensive PTQ design for this family.
 
-This repository accompanies our ICLR 2024 paper titled **"MAMBAQUANT: QUANTIZING THE MAMBA FAMILY WITH VARIANCE ALIGNED ROTATION METHODS"**. 
+This repository accompanies our ICLR 2025 paper titled **"MAMBAQUANT: QUANTIZING THE MAMBA FAMILY WITH VARIANCE ALIGNED ROTATION METHODS"**. 
 
 ## Table of Contents
 
@@ -30,7 +30,7 @@ This repository accompanies our ICLR 2024 paper titled **"MAMBAQUANT: QUANTIZING
 
 *Coming Soon.*
 
-Detailed instructions for setting up the MQUANT framework will be provided once the code is released. Stay tuned for updates!
+Detailed instructions for setting up the MAMBAQUANT framework will be provided once the code is released. Stay tuned for updates!
 
 ## Usage
 
@@ -47,7 +47,7 @@ We welcome contributions from the research and development community! Whether yo
 If you find MAMBAQUANT useful in your research, please consider citing our paper:
 
 ```bibtex
-@inproceedings{mambaquant2024,
+@inproceedings{mambaquant2025,
   title={MambaQuant: Quantizing the Mamba Family with Variance Aligned Rotation Methods},
   ...
 }
