@@ -28,13 +28,13 @@ This repository accompanies our ICLR 2025 paper titled **"MAMBAQUANT: QUANTIZING
 
 ## Installation
 
-Python 3.10.13 
+Python 3.10.13  
 ◦ conda create -n your_env_name python=3.10.13  
-torch 2.1.1 + cu118 
+torch 2.1.1 + cu118  
 ◦ pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu118  
-Requirements: vim_requirements.txt 
+Requirements: vim_requirements.txt  
 ◦ pip install -r vim/vim_requirements.txt   
-Install causal_conv1d and mamba 
+Install causal_conv1d and mamba  
 ◦ pip install -e causal_conv1d>=1.1.0 ◦ pip install -e mamba-1p1p1
 
 ## Usage
