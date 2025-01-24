@@ -38,7 +38,7 @@ Install causal_conv1d and mamba
 ◦ pip install -e causal_conv1d>=1.1.0 ◦ pip install -e mamba-1p1p1
 
 ## Usage
-sh tools/quant_vim.sh
+The code is being sorted out
 
 ## Contributing
 
