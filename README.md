@@ -35,7 +35,8 @@ torch 2.1.1 + cu118
 Requirements: vim_requirements.txt  
 ◦ pip install -r vim/vim_requirements.txt   
 Install causal_conv1d and mamba  
-◦ pip install -e causal_conv1d>=1.1.0 ◦ pip install -e mamba-1p1p1
+◦ pip install -e causal_conv1d>=1.1.0  
+◦ pip install -e mamba-1p1p1
 
 ## Usage
 The code is being sorted out
