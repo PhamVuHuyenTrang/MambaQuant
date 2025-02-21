@@ -42,7 +42,7 @@ Install causal_conv1d and mamba
 ◦ pip install -e mamba-1p1p1
 
 ## Usage
-The code is being sorted out
+The code is being sorted out.I've been busy with work recently, and the code is expected to be updated by mid-March with more explanations of args and code for mamba-llm.
 
 ## Contributing
 
