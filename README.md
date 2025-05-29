@@ -4,6 +4,8 @@
 
     sh ./set_links_before_run.sh
 
-## vim_quant
-quant vision mamba for: https://github.com/hustvl/Vim.git, you can download pretrained checkpoints in this url.
+##02 cond env
+    conda create --name mambquant --file requirements.txt
 
+##03 run script
+    All running scripts and configurations can be obtained in  ".vscode/launch.json"
