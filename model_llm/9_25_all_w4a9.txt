@@ -1,0 +1,5921 @@
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf, task: arc_easy, w4a8_method_1B
+model: mamba
+tasks: arc_easy
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+| Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|--------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_easy|      1|none  |     0|acc     |↑  |0.2774|±  |0.0092|
+|        |       |none  |     0|acc_norm|↑  |0.2782|±  |0.0092|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf, task: arc_challenge, w4a8_method_1B
+model: mamba
+tasks: arc_challenge
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.2108|±  |0.0119|
+|             |       |none  |     0|acc_norm|↑  |0.2483|±  |0.0126|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf, task: piqa, w4a8_method_1B
+model: mamba
+tasks: piqa
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|Tasks|Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-----|------:|------|-----:|--------|---|-----:|---|-----:|
+|piqa |      1|none  |     0|acc     |↑  |0.5326|±  |0.0116|
+|     |       |none  |     0|acc_norm|↑  |0.5114|±  |0.0117|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf, task: winogrande, w4a8_method_1B
+model: mamba
+tasks: winogrande
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks   |Version|Filter|n-shot|Metric|   |Value |   |Stderr|
+|----------|------:|------|-----:|------|---|-----:|---|-----:|
+|winogrande|      1|none  |     0|acc   |↑  |0.4799|±  | 0.014|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf, task: hellaswag, w4a8_method_1B
+model: mamba
+tasks: hellaswag
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |0.2578|±  |0.0044|
+|         |       |none  |     0|acc_norm|↑  |0.2576|±  |0.0044|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf, task: arc_easy, w4a8_method_2**
+model: mamba
+tasks: arc_easy
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+| Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|--------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_easy|      1|none  |     0|acc     |↑  |0.3712|±  |0.0099|
+|        |       |none  |     0|acc_norm|↑  |0.3611|±  |0.0099|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf, task: arc_challenge, w4a8_method_2**
+model: mamba
+tasks: arc_challenge
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.1962|±  |0.0116|
+|             |       |none  |     0|acc_norm|↑  |0.2611|±  |0.0128|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf, task: piqa, w4a8_method_2**
+model: mamba
+tasks: piqa
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|Tasks|Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-----|------:|------|-----:|--------|---|-----:|---|-----:|
+|piqa |      1|none  |     0|acc     |↑  |0.5642|±  |0.0116|
+|     |       |none  |     0|acc_norm|↑  |0.5631|±  |0.0116|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf, task: winogrande, w4a8_method_2**
+model: mamba
+tasks: winogrande
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks   |Version|Filter|n-shot|Metric|   |Value|   |Stderr|
+|----------|------:|------|-----:|------|---|----:|---|-----:|
+|winogrande|      1|none  |     0|acc   |↑  |0.502|±  |0.0141|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf, task: hellaswag, w4a8_method_2**
+model: mamba
+tasks: hellaswag
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |0.2817|±  |0.0045|
+|         |       |none  |     0|acc_norm|↑  |0.3161|±  |0.0046|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf, task: arc_easy, w4a8_method_2
+model: mamba
+tasks: arc_easy
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+| Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|--------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_easy|      1|none  |     0|acc     |↑  |0.3468|±  |0.0098|
+|        |       |none  |     0|acc_norm|↑  |0.3514|±  |0.0098|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf, task: arc_challenge, w4a8_method_2
+model: mamba
+tasks: arc_challenge
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.1920|±  |0.0115|
+|             |       |none  |     0|acc_norm|↑  |0.2398|±  |0.0125|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf, task: piqa, w4a8_method_2
+model: mamba
+tasks: piqa
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|Tasks|Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-----|------:|------|-----:|--------|---|-----:|---|-----:|
+|piqa |      1|none  |     0|acc     |↑  |0.5669|±  |0.0116|
+|     |       |none  |     0|acc_norm|↑  |0.5544|±  |0.0116|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf, task: winogrande, w4a8_method_2
+model: mamba
+tasks: winogrande
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks   |Version|Filter|n-shot|Metric|   |Value |   |Stderr|
+|----------|------:|------|-----:|------|---|-----:|---|-----:|
+|winogrande|      1|none  |     0|acc   |↑  |0.5114|±  | 0.014|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf, task: hellaswag, w4a8_method_2
+model: mamba
+tasks: hellaswag
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-130m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |0.2808|±  |0.0045|
+|         |       |none  |     0|acc_norm|↑  |0.3102|±  |0.0046|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf, task: arc_easy, w4a8_method_1B
+model: mamba
+tasks: arc_easy
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+| Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|--------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_easy|      1|none  |     0|acc     |↑  |0.2656|±  |0.0091|
+|        |       |none  |     0|acc_norm|↑  |0.2681|±  |0.0091|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf, task: arc_challenge, w4a8_method_1B
+model: mamba
+tasks: arc_challenge
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.2398|±  |0.0125|
+|             |       |none  |     0|acc_norm|↑  |0.2568|±  |0.0128|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf, task: piqa, w4a8_method_1B
+model: mamba
+tasks: piqa
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|Tasks|Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-----|------:|------|-----:|--------|---|-----:|---|-----:|
+|piqa |      1|none  |     0|acc     |↑  |0.5413|±  |0.0116|
+|     |       |none  |     0|acc_norm|↑  |0.5169|±  |0.0117|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf, task: winogrande, w4a8_method_1B
+model: mamba
+tasks: winogrande
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks   |Version|Filter|n-shot|Metric|   |Value |   |Stderr|
+|----------|------:|------|-----:|------|---|-----:|---|-----:|
+|winogrande|      1|none  |     0|acc   |↑  |0.4933|±  |0.0141|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf, task: hellaswag, w4a8_method_1B
+model: mamba
+tasks: hellaswag
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |0.2565|±  |0.0044|
+|         |       |none  |     0|acc_norm|↑  |0.2768|±  |0.0045|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf, task: arc_easy, w4a8_method_2**
+model: mamba
+tasks: arc_easy
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+| Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|--------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_easy|      1|none  |     0|acc     |↑  |0.3754|±  |0.0099|
+|        |       |none  |     0|acc_norm|↑  |0.3674|±  |0.0099|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf, task: arc_challenge, w4a8_method_2**
+model: mamba
+tasks: arc_challenge
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.2449|±  |0.0126|
+|             |       |none  |     0|acc_norm|↑  |0.2739|±  |0.0130|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf, task: piqa, w4a8_method_2**
+model: mamba
+tasks: piqa
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|Tasks|Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-----|------:|------|-----:|--------|---|-----:|---|-----:|
+|piqa |      1|none  |     0|acc     |↑  |0.6246|±  |0.0113|
+|     |       |none  |     0|acc_norm|↑  |0.6164|±  |0.0113|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf, task: winogrande, w4a8_method_2**
+model: mamba
+tasks: winogrande
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks   |Version|Filter|n-shot|Metric|   |Value |   |Stderr|
+|----------|------:|------|-----:|------|---|-----:|---|-----:|
+|winogrande|      1|none  |     0|acc   |↑  |0.5296|±  | 0.014|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf, task: hellaswag, w4a8_method_2**
+model: mamba
+tasks: hellaswag
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |0.3276|±  |0.0047|
+|         |       |none  |     0|acc_norm|↑  |0.3958|±  |0.0049|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf, task: arc_easy, w4a8_method_2
+model: mamba
+tasks: arc_easy
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+| Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|--------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_easy|      1|none  |     0|acc     |↑  |0.3805|±  |0.0100|
+|        |       |none  |     0|acc_norm|↑  |0.3754|±  |0.0099|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf, task: arc_challenge, w4a8_method_2
+model: mamba
+tasks: arc_challenge
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.2218|±  |0.0121|
+|             |       |none  |     0|acc_norm|↑  |0.2713|±  |0.0130|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf, task: piqa, w4a8_method_2
+model: mamba
+tasks: piqa
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|Tasks|Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-----|------:|------|-----:|--------|---|-----:|---|-----:|
+|piqa |      1|none  |     0|acc     |↑  |0.6273|±  |0.0113|
+|     |       |none  |     0|acc_norm|↑  |0.6224|±  |0.0113|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf, task: winogrande, w4a8_method_2
+model: mamba
+tasks: winogrande
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks   |Version|Filter|n-shot|Metric|   |Value |   |Stderr|
+|----------|------:|------|-----:|------|---|-----:|---|-----:|
+|winogrande|      1|none  |     0|acc   |↑  |0.5257|±  | 0.014|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf, task: hellaswag, w4a8_method_2
+model: mamba
+tasks: hellaswag
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-370m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |0.3262|±  |0.0047|
+|         |       |none  |     0|acc_norm|↑  |0.3984|±  |0.0049|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf, task: arc_easy, w4a8_method_1B
+model: mamba
+tasks: arc_easy
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+| Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|--------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_easy|      1|none  |     0|acc     |↑  |0.2837|±  |0.0092|
+|        |       |none  |     0|acc_norm|↑  |0.2929|±  |0.0093|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf, task: arc_challenge, w4a8_method_1B
+model: mamba
+tasks: arc_challenge
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.2193|±  |0.0121|
+|             |       |none  |     0|acc_norm|↑  |0.2560|±  |0.0128|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf, task: piqa, w4a8_method_1B
+model: mamba
+tasks: piqa
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|Tasks|Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-----|------:|------|-----:|--------|---|-----:|---|-----:|
+|piqa |      1|none  |     0|acc     |↑  |0.5506|±  |0.0116|
+|     |       |none  |     0|acc_norm|↑  |0.5392|±  |0.0116|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf, task: winogrande, w4a8_method_1B
+model: mamba
+tasks: winogrande
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks   |Version|Filter|n-shot|Metric|   |Value |   |Stderr|
+|----------|------:|------|-----:|------|---|-----:|---|-----:|
+|winogrande|      1|none  |     0|acc   |↑  |0.4933|±  |0.0141|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf, task: hellaswag, w4a8_method_1B
+model: mamba
+tasks: hellaswag
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |0.2691|±  |0.0044|
+|         |       |none  |     0|acc_norm|↑  |0.3034|±  |0.0046|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf, task: arc_easy, w4a8_method_2**
+model: mamba
+tasks: arc_easy
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+| Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|--------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_easy|      1|none  |     0|acc     |↑  |0.3624|±  |0.0099|
+|        |       |none  |     0|acc_norm|↑  |0.3674|±  |0.0099|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf, task: arc_challenge, w4a8_method_2**
+model: mamba
+tasks: arc_challenge
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.2355|±  |0.0124|
+|             |       |none  |     0|acc_norm|↑  |0.2747|±  |0.0130|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf, task: piqa, w4a8_method_2**
+model: mamba
+tasks: piqa
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|Tasks|Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-----|------:|------|-----:|--------|---|-----:|---|-----:|
+|piqa |      1|none  |     0|acc     |↑  |0.5631|±  |0.0116|
+|     |       |none  |     0|acc_norm|↑  |0.5560|±  |0.0116|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf, task: winogrande, w4a8_method_2**
+model: mamba
+tasks: winogrande
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks   |Version|Filter|n-shot|Metric|   |Value|   |Stderr|
+|----------|------:|------|-----:|------|---|----:|---|-----:|
+|winogrande|      1|none  |     0|acc   |↑  |0.498|±  |0.0141|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf, task: hellaswag, w4a8_method_2**
+model: mamba
+tasks: hellaswag
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |0.3157|±  |0.0046|
+|         |       |none  |     0|acc_norm|↑  |0.3666|±  |0.0048|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf, task: arc_easy, w4a8_method_2
+model: mamba
+tasks: arc_easy
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+| Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|--------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_easy|      1|none  |     0|acc     |↑  |0.3775|±  |0.0099|
+|        |       |none  |     0|acc_norm|↑  |0.3796|±  |0.0100|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf, task: arc_challenge, w4a8_method_2
+model: mamba
+tasks: arc_challenge
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.2449|±  |0.0126|
+|             |       |none  |     0|acc_norm|↑  |0.2918|±  |0.0133|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf, task: piqa, w4a8_method_2
+model: mamba
+tasks: piqa
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|Tasks|Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-----|------:|------|-----:|--------|---|-----:|---|-----:|
+|piqa |      1|none  |     0|acc     |↑  |0.5822|±  |0.0115|
+|     |       |none  |     0|acc_norm|↑  |0.5751|±  |0.0115|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf, task: winogrande, w4a8_method_2
+model: mamba
+tasks: winogrande
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks   |Version|Filter|n-shot|Metric|   |Value |   |Stderr|
+|----------|------:|------|-----:|------|---|-----:|---|-----:|
+|winogrande|      1|none  |     0|acc   |↑  |0.4941|±  |0.0141|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf, task: hellaswag, w4a8_method_2
+model: mamba
+tasks: hellaswag
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-790m-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |0.3251|±  |0.0047|
+|         |       |none  |     0|acc_norm|↑  |0.3949|±  |0.0049|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf, task: arc_easy, w4a8_method_1B
+model: mamba
+tasks: arc_easy
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+| Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|--------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_easy|      1|none  |     0|acc     |↑  |0.5484|±  |0.0102|
+|        |       |none  |     0|acc_norm|↑  |0.5442|±  |0.0102|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf, task: arc_challenge, w4a8_method_1B
+model: mamba
+tasks: arc_challenge
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.2833|±  |0.0132|
+|             |       |none  |     0|acc_norm|↑  |0.3217|±  |0.0137|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf, task: piqa, w4a8_method_1B
+model: mamba
+tasks: piqa
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|Tasks|Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-----|------:|------|-----:|--------|---|-----:|---|-----:|
+|piqa |      1|none  |     0|acc     |↑  |0.6812|±  |0.0109|
+|     |       |none  |     0|acc_norm|↑  |0.6877|±  |0.0108|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf, task: winogrande, w4a8_method_1B
+model: mamba
+tasks: winogrande
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks   |Version|Filter|n-shot|Metric|   |Value |   |Stderr|
+|----------|------:|------|-----:|------|---|-----:|---|-----:|
+|winogrande|      1|none  |     0|acc   |↑  |0.5627|±  |0.0139|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf, task: hellaswag, w4a8_method_1B
+model: mamba
+tasks: hellaswag
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |0.4118|±  |0.0049|
+|         |       |none  |     0|acc_norm|↑  |0.5399|±  |0.0050|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf, task: arc_easy, w4a8_method_2**
+model: mamba
+tasks: arc_easy
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+| Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|--------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_easy|      1|none  |     0|acc     |↑  |0.5766|±  |0.0101|
+|        |       |none  |     0|acc_norm|↑  |0.5547|±  |0.0102|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf, task: arc_challenge, w4a8_method_2**
+model: mamba
+tasks: arc_challenge
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.2850|±  |0.0132|
+|             |       |none  |     0|acc_norm|↑  |0.3131|±  |0.0136|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf, task: piqa, w4a8_method_2**
+model: mamba
+tasks: piqa
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|Tasks|Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-----|------:|------|-----:|--------|---|-----:|---|-----:|
+|piqa |      1|none  |     0|acc     |↑  |0.7095|±  |0.0106|
+|     |       |none  |     0|acc_norm|↑  |0.7029|±  |0.0107|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf, task: winogrande, w4a8_method_2**
+model: mamba
+tasks: winogrande
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks   |Version|Filter|n-shot|Metric|   |Value |   |Stderr|
+|----------|------:|------|-----:|------|---|-----:|---|-----:|
+|winogrande|      1|none  |     0|acc   |↑  |0.5667|±  |0.0139|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf, task: hellaswag, w4a8_method_2**
+model: mamba
+tasks: hellaswag
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |0.4256|±  |0.0049|
+|         |       |none  |     0|acc_norm|↑  |0.5533|±  |0.0050|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf, task: arc_easy, w4a8_method_2
+model: mamba
+tasks: arc_easy
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+| Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|--------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_easy|      1|none  |     0|acc     |↑  |0.5905|±  |0.0101|
+|        |       |none  |     0|acc_norm|↑  |0.5560|±  |0.0102|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf, task: arc_challenge, w4a8_method_2
+model: mamba
+tasks: arc_challenge
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.2679|±  |0.0129|
+|             |       |none  |     0|acc_norm|↑  |0.3029|±  |0.0134|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf, task: piqa, w4a8_method_2
+model: mamba
+tasks: piqa
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|Tasks|Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-----|------:|------|-----:|--------|---|-----:|---|-----:|
+|piqa |      1|none  |     0|acc     |↑  |0.7116|±  |0.0106|
+|     |       |none  |     0|acc_norm|↑  |0.7100|±  |0.0106|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf, task: winogrande, w4a8_method_2
+model: mamba
+tasks: winogrande
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks   |Version|Filter|n-shot|Metric|   |Value |   |Stderr|
+|----------|------:|------|-----:|------|---|-----:|---|-----:|
+|winogrande|      1|none  |     0|acc   |↑  |0.5801|±  |0.0139|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf, task: hellaswag, w4a8_method_2
+model: mamba
+tasks: hellaswag
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-1.4b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |0.4250|±  |0.0049|
+|         |       |none  |     0|acc_norm|↑  |0.5611|±  |0.0050|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf, task: arc_easy, w4a8_method_1B
+model: mamba
+tasks: arc_easy
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+| Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|--------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_easy|      1|none  |     0|acc     |↑  |0.5589|±  |0.0102|
+|        |       |none  |     0|acc_norm|↑  |0.5358|±  |0.0102|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf, task: arc_challenge, w4a8_method_1B
+model: mamba
+tasks: arc_challenge
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.3072|±  |0.0135|
+|             |       |none  |     0|acc_norm|↑  |0.3328|±  |0.0138|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf, task: piqa, w4a8_method_1B
+model: mamba
+tasks: piqa
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|Tasks|Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-----|------:|------|-----:|--------|---|-----:|---|-----:|
+|piqa |      1|none  |     0|acc     |↑  |0.6964|±  |0.0107|
+|     |       |none  |     0|acc_norm|↑  |0.7122|±  |0.0106|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf, task: winogrande, w4a8_method_1B
+model: mamba
+tasks: winogrande
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks   |Version|Filter|n-shot|Metric|   |Value |   |Stderr|
+|----------|------:|------|-----:|------|---|-----:|---|-----:|
+|winogrande|      1|none  |     0|acc   |↑  |0.5888|±  |0.0138|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf, task: hellaswag, w4a8_method_1B
+model: mamba
+tasks: hellaswag
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |0.4488|±  |0.0050|
+|         |       |none  |     0|acc_norm|↑  |0.6038|±  |0.0049|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf, task: arc_easy, w4a8_method_2**
+model: mamba
+tasks: arc_easy
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+| Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|--------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_easy|      1|none  |     0|acc     |↑  |0.6120|±  |0.0100|
+|        |       |none  |     0|acc_norm|↑  |0.5913|±  |0.0101|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf, task: arc_challenge, w4a8_method_2**
+model: mamba
+tasks: arc_challenge
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|    Tasks    |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-------------|------:|------|-----:|--------|---|-----:|---|-----:|
+|arc_challenge|      1|none  |     0|acc     |↑  |0.3208|±  |0.0136|
+|             |       |none  |     0|acc_norm|↑  |0.3549|±  |0.0140|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf, task: piqa, w4a8_method_2**
+model: mamba
+tasks: piqa
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|Tasks|Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|-----|------:|------|-----:|--------|---|-----:|---|-----:|
+|piqa |      1|none  |     0|acc     |↑  |0.7160|±  |0.0105|
+|     |       |none  |     0|acc_norm|↑  |0.7203|±  |0.0105|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf, task: winogrande, w4a8_method_2**
+model: mamba
+tasks: winogrande
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks   |Version|Filter|n-shot|Metric|   |Value |   |Stderr|
+|----------|------:|------|-----:|------|---|-----:|---|-----:|
+|winogrande|      1|none  |     0|acc   |↑  |0.6085|±  |0.0137|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf, task: hellaswag, w4a8_method_2**
+model: mamba
+tasks: hellaswag
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: False
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: False
+use_S4: True
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: True
+use_hadmard_R4: True
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: minmax
+fake_online_hadamard: True
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+*************************************
+mamba (pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf), gen_kwargs: (None), limit: None, num_fewshot: None, batch_size: 64
+|  Tasks  |Version|Filter|n-shot| Metric |   |Value |   |Stderr|
+|---------|------:|------|-----:|--------|---|-----:|---|-----:|
+|hellaswag|      1|none  |     0|acc     |↑  |0.4493|±  |0.0050|
+|         |       |none  |     0|acc_norm|↑  |0.6207|±  |0.0048|
+
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf, task: arc_easy, w4a8_method_2
+model: mamba
+tasks: arc_easy
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+*************************************
+backbone.layers.0.mixer.in_proj_states input is orthogonal
+backbone.layers.0.mixer.in_proj_gates input is orthogonal
+backbone.layers.0.mixer.x_proj_dt input is orthogonal
+backbone.layers.0.mixer.x_proj_b input is orthogonal
+backbone.layers.0.mixer.x_proj_c input is orthogonal
+backbone.layers.0.mixer.dt_proj input is orthogonal
+backbone.layers.0.mixer.ssm_matmul input is orthogonal
+backbone.layers.0.mixer.out_proj input is orthogonal
+backbone.layers.1.mixer.in_proj_states input is orthogonal
+backbone.layers.1.mixer.in_proj_gates input is orthogonal
+backbone.layers.1.mixer.x_proj_dt input is orthogonal
+backbone.layers.1.mixer.x_proj_b input is orthogonal
+backbone.layers.1.mixer.x_proj_c input is orthogonal
+backbone.layers.1.mixer.dt_proj input is orthogonal
+backbone.layers.1.mixer.ssm_matmul input is orthogonal
+backbone.layers.1.mixer.out_proj input is orthogonal
+backbone.layers.2.mixer.in_proj_states input is orthogonal
+backbone.layers.2.mixer.in_proj_gates input is orthogonal
+backbone.layers.2.mixer.x_proj_dt input is orthogonal
+backbone.layers.2.mixer.x_proj_b input is orthogonal
+backbone.layers.2.mixer.x_proj_c input is orthogonal
+backbone.layers.2.mixer.dt_proj input is orthogonal
+backbone.layers.2.mixer.ssm_matmul input is orthogonal
+backbone.layers.2.mixer.out_proj input is orthogonal
+backbone.layers.3.mixer.in_proj_states input is orthogonal
+backbone.layers.3.mixer.in_proj_gates input is orthogonal
+backbone.layers.3.mixer.x_proj_dt input is orthogonal
+backbone.layers.3.mixer.x_proj_b input is orthogonal
+backbone.layers.3.mixer.x_proj_c input is orthogonal
+backbone.layers.3.mixer.dt_proj input is orthogonal
+backbone.layers.3.mixer.ssm_matmul input is orthogonal
+backbone.layers.3.mixer.out_proj input is orthogonal
+backbone.layers.4.mixer.in_proj_states input is orthogonal
+backbone.layers.4.mixer.in_proj_gates input is orthogonal
+backbone.layers.4.mixer.x_proj_dt input is orthogonal
+backbone.layers.4.mixer.x_proj_b input is orthogonal
+backbone.layers.4.mixer.x_proj_c input is orthogonal
+backbone.layers.4.mixer.dt_proj input is orthogonal
+backbone.layers.4.mixer.ssm_matmul input is orthogonal
+backbone.layers.4.mixer.out_proj input is orthogonal
+backbone.layers.5.mixer.in_proj_states input is orthogonal
+backbone.layers.5.mixer.in_proj_gates input is orthogonal
+backbone.layers.5.mixer.x_proj_dt input is orthogonal
+backbone.layers.5.mixer.x_proj_b input is orthogonal
+backbone.layers.5.mixer.x_proj_c input is orthogonal
+backbone.layers.5.mixer.dt_proj input is orthogonal
+backbone.layers.5.mixer.ssm_matmul input is orthogonal
+backbone.layers.5.mixer.out_proj input is orthogonal
+backbone.layers.6.mixer.in_proj_states input is orthogonal
+backbone.layers.6.mixer.in_proj_gates input is orthogonal
+backbone.layers.6.mixer.x_proj_dt input is orthogonal
+backbone.layers.6.mixer.x_proj_b input is orthogonal
+backbone.layers.6.mixer.x_proj_c input is orthogonal
+backbone.layers.6.mixer.dt_proj input is orthogonal
+backbone.layers.6.mixer.ssm_matmul input is orthogonal
+backbone.layers.6.mixer.out_proj input is orthogonal
+backbone.layers.7.mixer.in_proj_states input is orthogonal
+backbone.layers.7.mixer.in_proj_gates input is orthogonal
+backbone.layers.7.mixer.x_proj_dt input is orthogonal
+backbone.layers.7.mixer.x_proj_b input is orthogonal
+backbone.layers.7.mixer.x_proj_c input is orthogonal
+backbone.layers.7.mixer.dt_proj input is orthogonal
+backbone.layers.7.mixer.ssm_matmul input is orthogonal
+backbone.layers.7.mixer.out_proj input is orthogonal
+backbone.layers.8.mixer.in_proj_states input is orthogonal
+backbone.layers.8.mixer.in_proj_gates input is orthogonal
+backbone.layers.8.mixer.x_proj_dt input is orthogonal
+backbone.layers.8.mixer.x_proj_b input is orthogonal
+backbone.layers.8.mixer.x_proj_c input is orthogonal
+backbone.layers.8.mixer.dt_proj input is orthogonal
+backbone.layers.8.mixer.ssm_matmul input is orthogonal
+backbone.layers.8.mixer.out_proj input is orthogonal
+backbone.layers.9.mixer.in_proj_states input is orthogonal
+backbone.layers.9.mixer.in_proj_gates input is orthogonal
+backbone.layers.9.mixer.x_proj_dt input is orthogonal
+backbone.layers.9.mixer.x_proj_b input is orthogonal
+backbone.layers.9.mixer.x_proj_c input is orthogonal
+backbone.layers.9.mixer.dt_proj input is orthogonal
+backbone.layers.9.mixer.ssm_matmul input is orthogonal
+backbone.layers.9.mixer.out_proj input is orthogonal
+backbone.layers.10.mixer.in_proj_states input is orthogonal
+backbone.layers.10.mixer.in_proj_gates input is orthogonal
+backbone.layers.10.mixer.x_proj_dt input is orthogonal
+backbone.layers.10.mixer.x_proj_b input is orthogonal
+backbone.layers.10.mixer.x_proj_c input is orthogonal
+backbone.layers.10.mixer.dt_proj input is orthogonal
+backbone.layers.10.mixer.ssm_matmul input is orthogonal
+backbone.layers.10.mixer.out_proj input is orthogonal
+backbone.layers.11.mixer.in_proj_states input is orthogonal
+backbone.layers.11.mixer.in_proj_gates input is orthogonal
+backbone.layers.11.mixer.x_proj_dt input is orthogonal
+backbone.layers.11.mixer.x_proj_b input is orthogonal
+backbone.layers.11.mixer.x_proj_c input is orthogonal
+backbone.layers.11.mixer.dt_proj input is orthogonal
+backbone.layers.11.mixer.ssm_matmul input is orthogonal
+backbone.layers.11.mixer.out_proj input is orthogonal
+backbone.layers.12.mixer.in_proj_states input is orthogonal
+backbone.layers.12.mixer.in_proj_gates input is orthogonal
+backbone.layers.12.mixer.x_proj_dt input is orthogonal
+backbone.layers.12.mixer.x_proj_b input is orthogonal
+backbone.layers.12.mixer.x_proj_c input is orthogonal
+backbone.layers.12.mixer.dt_proj input is orthogonal
+backbone.layers.12.mixer.ssm_matmul input is orthogonal
+backbone.layers.12.mixer.out_proj input is orthogonal
+backbone.layers.13.mixer.in_proj_states input is orthogonal
+backbone.layers.13.mixer.in_proj_gates input is orthogonal
+backbone.layers.13.mixer.x_proj_dt input is orthogonal
+backbone.layers.13.mixer.x_proj_b input is orthogonal
+backbone.layers.13.mixer.x_proj_c input is orthogonal
+backbone.layers.13.mixer.dt_proj input is orthogonal
+backbone.layers.13.mixer.ssm_matmul input is orthogonal
+backbone.layers.13.mixer.out_proj input is orthogonal
+backbone.layers.14.mixer.in_proj_states input is orthogonal
+backbone.layers.14.mixer.in_proj_gates input is orthogonal
+backbone.layers.14.mixer.x_proj_dt input is orthogonal
+backbone.layers.14.mixer.x_proj_b input is orthogonal
+backbone.layers.14.mixer.x_proj_c input is orthogonal
+backbone.layers.14.mixer.dt_proj input is orthogonal
+backbone.layers.14.mixer.ssm_matmul input is orthogonal
+backbone.layers.14.mixer.out_proj input is orthogonal
+backbone.layers.15.mixer.in_proj_states input is orthogonal
+backbone.layers.15.mixer.in_proj_gates input is orthogonal
+backbone.layers.15.mixer.x_proj_dt input is orthogonal
+backbone.layers.15.mixer.x_proj_b input is orthogonal
+backbone.layers.15.mixer.x_proj_c input is orthogonal
+backbone.layers.15.mixer.dt_proj input is orthogonal
+backbone.layers.15.mixer.ssm_matmul input is orthogonal
+backbone.layers.15.mixer.out_proj input is orthogonal
+backbone.layers.16.mixer.in_proj_states input is orthogonal
+backbone.layers.16.mixer.in_proj_gates input is orthogonal
+backbone.layers.16.mixer.x_proj_dt input is orthogonal
+backbone.layers.16.mixer.x_proj_b input is orthogonal
+backbone.layers.16.mixer.x_proj_c input is orthogonal
+backbone.layers.16.mixer.dt_proj input is orthogonal
+backbone.layers.16.mixer.ssm_matmul input is orthogonal
+backbone.layers.16.mixer.out_proj input is orthogonal
+backbone.layers.17.mixer.in_proj_states input is orthogonal
+backbone.layers.17.mixer.in_proj_gates input is orthogonal
+backbone.layers.17.mixer.x_proj_dt input is orthogonal
+backbone.layers.17.mixer.x_proj_b input is orthogonal
+backbone.layers.17.mixer.x_proj_c input is orthogonal
+backbone.layers.17.mixer.dt_proj input is orthogonal
+backbone.layers.17.mixer.ssm_matmul input is orthogonal
+backbone.layers.17.mixer.out_proj input is orthogonal
+backbone.layers.18.mixer.in_proj_states input is orthogonal
+backbone.layers.18.mixer.in_proj_gates input is orthogonal
+backbone.layers.18.mixer.x_proj_dt input is orthogonal
+backbone.layers.18.mixer.x_proj_b input is orthogonal
+backbone.layers.18.mixer.x_proj_c input is orthogonal
+backbone.layers.18.mixer.dt_proj input is orthogonal
+backbone.layers.18.mixer.ssm_matmul input is orthogonal
+backbone.layers.18.mixer.out_proj input is orthogonal
+backbone.layers.19.mixer.in_proj_states input is orthogonal
+backbone.layers.19.mixer.in_proj_gates input is orthogonal
+backbone.layers.19.mixer.x_proj_dt input is orthogonal
+backbone.layers.19.mixer.x_proj_b input is orthogonal
+backbone.layers.19.mixer.x_proj_c input is orthogonal
+backbone.layers.19.mixer.dt_proj input is orthogonal
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf, task: arc_challenge, w4a8_method_2
+model: mamba
+tasks: arc_challenge
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+*************************************
+backbone.layers.0.mixer.in_proj_states input is orthogonal
+backbone.layers.0.mixer.in_proj_gates input is orthogonal
+backbone.layers.0.mixer.x_proj_dt input is orthogonal
+backbone.layers.0.mixer.x_proj_b input is orthogonal
+backbone.layers.0.mixer.x_proj_c input is orthogonal
+backbone.layers.0.mixer.dt_proj input is orthogonal
+backbone.layers.0.mixer.ssm_matmul input is orthogonal
+backbone.layers.0.mixer.out_proj input is orthogonal
+backbone.layers.1.mixer.in_proj_states input is orthogonal
+backbone.layers.1.mixer.in_proj_gates input is orthogonal
+backbone.layers.1.mixer.x_proj_dt input is orthogonal
+backbone.layers.1.mixer.x_proj_b input is orthogonal
+backbone.layers.1.mixer.x_proj_c input is orthogonal
+backbone.layers.1.mixer.dt_proj input is orthogonal
+backbone.layers.1.mixer.ssm_matmul input is orthogonal
+backbone.layers.1.mixer.out_proj input is orthogonal
+backbone.layers.2.mixer.in_proj_states input is orthogonal
+backbone.layers.2.mixer.in_proj_gates input is orthogonal
+backbone.layers.2.mixer.x_proj_dt input is orthogonal
+backbone.layers.2.mixer.x_proj_b input is orthogonal
+backbone.layers.2.mixer.x_proj_c input is orthogonal
+backbone.layers.2.mixer.dt_proj input is orthogonal
+backbone.layers.2.mixer.ssm_matmul input is orthogonal
+backbone.layers.2.mixer.out_proj input is orthogonal
+backbone.layers.3.mixer.in_proj_states input is orthogonal
+backbone.layers.3.mixer.in_proj_gates input is orthogonal
+backbone.layers.3.mixer.x_proj_dt input is orthogonal
+backbone.layers.3.mixer.x_proj_b input is orthogonal
+backbone.layers.3.mixer.x_proj_c input is orthogonal
+backbone.layers.3.mixer.dt_proj input is orthogonal
+backbone.layers.3.mixer.ssm_matmul input is orthogonal
+backbone.layers.3.mixer.out_proj input is orthogonal
+backbone.layers.4.mixer.in_proj_states input is orthogonal
+backbone.layers.4.mixer.in_proj_gates input is orthogonal
+backbone.layers.4.mixer.x_proj_dt input is orthogonal
+backbone.layers.4.mixer.x_proj_b input is orthogonal
+backbone.layers.4.mixer.x_proj_c input is orthogonal
+backbone.layers.4.mixer.dt_proj input is orthogonal
+backbone.layers.4.mixer.ssm_matmul input is orthogonal
+backbone.layers.4.mixer.out_proj input is orthogonal
+backbone.layers.5.mixer.in_proj_states input is orthogonal
+backbone.layers.5.mixer.in_proj_gates input is orthogonal
+backbone.layers.5.mixer.x_proj_dt input is orthogonal
+backbone.layers.5.mixer.x_proj_b input is orthogonal
+backbone.layers.5.mixer.x_proj_c input is orthogonal
+backbone.layers.5.mixer.dt_proj input is orthogonal
+backbone.layers.5.mixer.ssm_matmul input is orthogonal
+backbone.layers.5.mixer.out_proj input is orthogonal
+backbone.layers.6.mixer.in_proj_states input is orthogonal
+backbone.layers.6.mixer.in_proj_gates input is orthogonal
+backbone.layers.6.mixer.x_proj_dt input is orthogonal
+backbone.layers.6.mixer.x_proj_b input is orthogonal
+backbone.layers.6.mixer.x_proj_c input is orthogonal
+backbone.layers.6.mixer.dt_proj input is orthogonal
+backbone.layers.6.mixer.ssm_matmul input is orthogonal
+backbone.layers.6.mixer.out_proj input is orthogonal
+backbone.layers.7.mixer.in_proj_states input is orthogonal
+backbone.layers.7.mixer.in_proj_gates input is orthogonal
+backbone.layers.7.mixer.x_proj_dt input is orthogonal
+backbone.layers.7.mixer.x_proj_b input is orthogonal
+backbone.layers.7.mixer.x_proj_c input is orthogonal
+backbone.layers.7.mixer.dt_proj input is orthogonal
+backbone.layers.7.mixer.ssm_matmul input is orthogonal
+backbone.layers.7.mixer.out_proj input is orthogonal
+backbone.layers.8.mixer.in_proj_states input is orthogonal
+backbone.layers.8.mixer.in_proj_gates input is orthogonal
+backbone.layers.8.mixer.x_proj_dt input is orthogonal
+backbone.layers.8.mixer.x_proj_b input is orthogonal
+backbone.layers.8.mixer.x_proj_c input is orthogonal
+backbone.layers.8.mixer.dt_proj input is orthogonal
+backbone.layers.8.mixer.ssm_matmul input is orthogonal
+backbone.layers.8.mixer.out_proj input is orthogonal
+backbone.layers.9.mixer.in_proj_states input is orthogonal
+backbone.layers.9.mixer.in_proj_gates input is orthogonal
+backbone.layers.9.mixer.x_proj_dt input is orthogonal
+backbone.layers.9.mixer.x_proj_b input is orthogonal
+backbone.layers.9.mixer.x_proj_c input is orthogonal
+backbone.layers.9.mixer.dt_proj input is orthogonal
+backbone.layers.9.mixer.ssm_matmul input is orthogonal
+backbone.layers.9.mixer.out_proj input is orthogonal
+backbone.layers.10.mixer.in_proj_states input is orthogonal
+backbone.layers.10.mixer.in_proj_gates input is orthogonal
+backbone.layers.10.mixer.x_proj_dt input is orthogonal
+backbone.layers.10.mixer.x_proj_b input is orthogonal
+backbone.layers.10.mixer.x_proj_c input is orthogonal
+backbone.layers.10.mixer.dt_proj input is orthogonal
+backbone.layers.10.mixer.ssm_matmul input is orthogonal
+backbone.layers.10.mixer.out_proj input is orthogonal
+backbone.layers.11.mixer.in_proj_states input is orthogonal
+backbone.layers.11.mixer.in_proj_gates input is orthogonal
+backbone.layers.11.mixer.x_proj_dt input is orthogonal
+backbone.layers.11.mixer.x_proj_b input is orthogonal
+backbone.layers.11.mixer.x_proj_c input is orthogonal
+backbone.layers.11.mixer.dt_proj input is orthogonal
+backbone.layers.11.mixer.ssm_matmul input is orthogonal
+backbone.layers.11.mixer.out_proj input is orthogonal
+backbone.layers.12.mixer.in_proj_states input is orthogonal
+backbone.layers.12.mixer.in_proj_gates input is orthogonal
+backbone.layers.12.mixer.x_proj_dt input is orthogonal
+backbone.layers.12.mixer.x_proj_b input is orthogonal
+backbone.layers.12.mixer.x_proj_c input is orthogonal
+backbone.layers.12.mixer.dt_proj input is orthogonal
+backbone.layers.12.mixer.ssm_matmul input is orthogonal
+backbone.layers.12.mixer.out_proj input is orthogonal
+backbone.layers.13.mixer.in_proj_states input is orthogonal
+backbone.layers.13.mixer.in_proj_gates input is orthogonal
+backbone.layers.13.mixer.x_proj_dt input is orthogonal
+backbone.layers.13.mixer.x_proj_b input is orthogonal
+backbone.layers.13.mixer.x_proj_c input is orthogonal
+backbone.layers.13.mixer.dt_proj input is orthogonal
+backbone.layers.13.mixer.ssm_matmul input is orthogonal
+backbone.layers.13.mixer.out_proj input is orthogonal
+backbone.layers.14.mixer.in_proj_states input is orthogonal
+backbone.layers.14.mixer.in_proj_gates input is orthogonal
+backbone.layers.14.mixer.x_proj_dt input is orthogonal
+backbone.layers.14.mixer.x_proj_b input is orthogonal
+backbone.layers.14.mixer.x_proj_c input is orthogonal
+backbone.layers.14.mixer.dt_proj input is orthogonal
+backbone.layers.14.mixer.ssm_matmul input is orthogonal
+backbone.layers.14.mixer.out_proj input is orthogonal
+backbone.layers.15.mixer.in_proj_states input is orthogonal
+backbone.layers.15.mixer.in_proj_gates input is orthogonal
+backbone.layers.15.mixer.x_proj_dt input is orthogonal
+backbone.layers.15.mixer.x_proj_b input is orthogonal
+backbone.layers.15.mixer.x_proj_c input is orthogonal
+backbone.layers.15.mixer.dt_proj input is orthogonal
+backbone.layers.15.mixer.ssm_matmul input is orthogonal
+backbone.layers.15.mixer.out_proj input is orthogonal
+backbone.layers.16.mixer.in_proj_states input is orthogonal
+backbone.layers.16.mixer.in_proj_gates input is orthogonal
+backbone.layers.16.mixer.x_proj_dt input is orthogonal
+backbone.layers.16.mixer.x_proj_b input is orthogonal
+backbone.layers.16.mixer.x_proj_c input is orthogonal
+backbone.layers.16.mixer.dt_proj input is orthogonal
+backbone.layers.16.mixer.ssm_matmul input is orthogonal
+backbone.layers.16.mixer.out_proj input is orthogonal
+backbone.layers.17.mixer.in_proj_states input is orthogonal
+backbone.layers.17.mixer.in_proj_gates input is orthogonal
+backbone.layers.17.mixer.x_proj_dt input is orthogonal
+backbone.layers.17.mixer.x_proj_b input is orthogonal
+backbone.layers.17.mixer.x_proj_c input is orthogonal
+backbone.layers.17.mixer.dt_proj input is orthogonal
+backbone.layers.17.mixer.ssm_matmul input is orthogonal
+backbone.layers.17.mixer.out_proj input is orthogonal
+backbone.layers.18.mixer.in_proj_states input is orthogonal
+backbone.layers.18.mixer.in_proj_gates input is orthogonal
+backbone.layers.18.mixer.x_proj_dt input is orthogonal
+backbone.layers.18.mixer.x_proj_b input is orthogonal
+backbone.layers.18.mixer.x_proj_c input is orthogonal
+backbone.layers.18.mixer.dt_proj input is orthogonal
+backbone.layers.18.mixer.ssm_matmul input is orthogonal
+backbone.layers.18.mixer.out_proj input is orthogonal
+backbone.layers.19.mixer.in_proj_states input is orthogonal
+backbone.layers.19.mixer.in_proj_gates input is orthogonal
+backbone.layers.19.mixer.x_proj_dt input is orthogonal
+backbone.layers.19.mixer.x_proj_b input is orthogonal
+backbone.layers.19.mixer.x_proj_c input is orthogonal
+backbone.layers.19.mixer.dt_proj input is orthogonal
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf, task: piqa, w4a8_method_2
+model: mamba
+tasks: piqa
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+*************************************
+backbone.layers.0.mixer.in_proj_states input is orthogonal
+backbone.layers.0.mixer.in_proj_gates input is orthogonal
+backbone.layers.0.mixer.x_proj_dt input is orthogonal
+backbone.layers.0.mixer.x_proj_b input is orthogonal
+backbone.layers.0.mixer.x_proj_c input is orthogonal
+backbone.layers.0.mixer.dt_proj input is orthogonal
+backbone.layers.0.mixer.ssm_matmul input is orthogonal
+backbone.layers.0.mixer.out_proj input is orthogonal
+backbone.layers.1.mixer.in_proj_states input is orthogonal
+backbone.layers.1.mixer.in_proj_gates input is orthogonal
+backbone.layers.1.mixer.x_proj_dt input is orthogonal
+backbone.layers.1.mixer.x_proj_b input is orthogonal
+backbone.layers.1.mixer.x_proj_c input is orthogonal
+backbone.layers.1.mixer.dt_proj input is orthogonal
+backbone.layers.1.mixer.ssm_matmul input is orthogonal
+backbone.layers.1.mixer.out_proj input is orthogonal
+backbone.layers.2.mixer.in_proj_states input is orthogonal
+backbone.layers.2.mixer.in_proj_gates input is orthogonal
+backbone.layers.2.mixer.x_proj_dt input is orthogonal
+backbone.layers.2.mixer.x_proj_b input is orthogonal
+backbone.layers.2.mixer.x_proj_c input is orthogonal
+backbone.layers.2.mixer.dt_proj input is orthogonal
+backbone.layers.2.mixer.ssm_matmul input is orthogonal
+backbone.layers.2.mixer.out_proj input is orthogonal
+backbone.layers.3.mixer.in_proj_states input is orthogonal
+backbone.layers.3.mixer.in_proj_gates input is orthogonal
+backbone.layers.3.mixer.x_proj_dt input is orthogonal
+backbone.layers.3.mixer.x_proj_b input is orthogonal
+backbone.layers.3.mixer.x_proj_c input is orthogonal
+backbone.layers.3.mixer.dt_proj input is orthogonal
+backbone.layers.3.mixer.ssm_matmul input is orthogonal
+backbone.layers.3.mixer.out_proj input is orthogonal
+backbone.layers.4.mixer.in_proj_states input is orthogonal
+backbone.layers.4.mixer.in_proj_gates input is orthogonal
+backbone.layers.4.mixer.x_proj_dt input is orthogonal
+backbone.layers.4.mixer.x_proj_b input is orthogonal
+backbone.layers.4.mixer.x_proj_c input is orthogonal
+backbone.layers.4.mixer.dt_proj input is orthogonal
+backbone.layers.4.mixer.ssm_matmul input is orthogonal
+backbone.layers.4.mixer.out_proj input is orthogonal
+backbone.layers.5.mixer.in_proj_states input is orthogonal
+backbone.layers.5.mixer.in_proj_gates input is orthogonal
+backbone.layers.5.mixer.x_proj_dt input is orthogonal
+backbone.layers.5.mixer.x_proj_b input is orthogonal
+backbone.layers.5.mixer.x_proj_c input is orthogonal
+backbone.layers.5.mixer.dt_proj input is orthogonal
+backbone.layers.5.mixer.ssm_matmul input is orthogonal
+backbone.layers.5.mixer.out_proj input is orthogonal
+backbone.layers.6.mixer.in_proj_states input is orthogonal
+backbone.layers.6.mixer.in_proj_gates input is orthogonal
+backbone.layers.6.mixer.x_proj_dt input is orthogonal
+backbone.layers.6.mixer.x_proj_b input is orthogonal
+backbone.layers.6.mixer.x_proj_c input is orthogonal
+backbone.layers.6.mixer.dt_proj input is orthogonal
+backbone.layers.6.mixer.ssm_matmul input is orthogonal
+backbone.layers.6.mixer.out_proj input is orthogonal
+backbone.layers.7.mixer.in_proj_states input is orthogonal
+backbone.layers.7.mixer.in_proj_gates input is orthogonal
+backbone.layers.7.mixer.x_proj_dt input is orthogonal
+backbone.layers.7.mixer.x_proj_b input is orthogonal
+backbone.layers.7.mixer.x_proj_c input is orthogonal
+backbone.layers.7.mixer.dt_proj input is orthogonal
+backbone.layers.7.mixer.ssm_matmul input is orthogonal
+backbone.layers.7.mixer.out_proj input is orthogonal
+backbone.layers.8.mixer.in_proj_states input is orthogonal
+backbone.layers.8.mixer.in_proj_gates input is orthogonal
+backbone.layers.8.mixer.x_proj_dt input is orthogonal
+backbone.layers.8.mixer.x_proj_b input is orthogonal
+backbone.layers.8.mixer.x_proj_c input is orthogonal
+backbone.layers.8.mixer.dt_proj input is orthogonal
+backbone.layers.8.mixer.ssm_matmul input is orthogonal
+backbone.layers.8.mixer.out_proj input is orthogonal
+backbone.layers.9.mixer.in_proj_states input is orthogonal
+backbone.layers.9.mixer.in_proj_gates input is orthogonal
+backbone.layers.9.mixer.x_proj_dt input is orthogonal
+backbone.layers.9.mixer.x_proj_b input is orthogonal
+backbone.layers.9.mixer.x_proj_c input is orthogonal
+backbone.layers.9.mixer.dt_proj input is orthogonal
+backbone.layers.9.mixer.ssm_matmul input is orthogonal
+backbone.layers.9.mixer.out_proj input is orthogonal
+backbone.layers.10.mixer.in_proj_states input is orthogonal
+backbone.layers.10.mixer.in_proj_gates input is orthogonal
+backbone.layers.10.mixer.x_proj_dt input is orthogonal
+backbone.layers.10.mixer.x_proj_b input is orthogonal
+backbone.layers.10.mixer.x_proj_c input is orthogonal
+backbone.layers.10.mixer.dt_proj input is orthogonal
+backbone.layers.10.mixer.ssm_matmul input is orthogonal
+backbone.layers.10.mixer.out_proj input is orthogonal
+backbone.layers.11.mixer.in_proj_states input is orthogonal
+backbone.layers.11.mixer.in_proj_gates input is orthogonal
+backbone.layers.11.mixer.x_proj_dt input is orthogonal
+backbone.layers.11.mixer.x_proj_b input is orthogonal
+backbone.layers.11.mixer.x_proj_c input is orthogonal
+backbone.layers.11.mixer.dt_proj input is orthogonal
+backbone.layers.11.mixer.ssm_matmul input is orthogonal
+backbone.layers.11.mixer.out_proj input is orthogonal
+backbone.layers.12.mixer.in_proj_states input is orthogonal
+backbone.layers.12.mixer.in_proj_gates input is orthogonal
+backbone.layers.12.mixer.x_proj_dt input is orthogonal
+backbone.layers.12.mixer.x_proj_b input is orthogonal
+backbone.layers.12.mixer.x_proj_c input is orthogonal
+backbone.layers.12.mixer.dt_proj input is orthogonal
+backbone.layers.12.mixer.ssm_matmul input is orthogonal
+backbone.layers.12.mixer.out_proj input is orthogonal
+backbone.layers.13.mixer.in_proj_states input is orthogonal
+backbone.layers.13.mixer.in_proj_gates input is orthogonal
+backbone.layers.13.mixer.x_proj_dt input is orthogonal
+backbone.layers.13.mixer.x_proj_b input is orthogonal
+backbone.layers.13.mixer.x_proj_c input is orthogonal
+backbone.layers.13.mixer.dt_proj input is orthogonal
+backbone.layers.13.mixer.ssm_matmul input is orthogonal
+backbone.layers.13.mixer.out_proj input is orthogonal
+backbone.layers.14.mixer.in_proj_states input is orthogonal
+backbone.layers.14.mixer.in_proj_gates input is orthogonal
+backbone.layers.14.mixer.x_proj_dt input is orthogonal
+backbone.layers.14.mixer.x_proj_b input is orthogonal
+backbone.layers.14.mixer.x_proj_c input is orthogonal
+backbone.layers.14.mixer.dt_proj input is orthogonal
+backbone.layers.14.mixer.ssm_matmul input is orthogonal
+backbone.layers.14.mixer.out_proj input is orthogonal
+backbone.layers.15.mixer.in_proj_states input is orthogonal
+backbone.layers.15.mixer.in_proj_gates input is orthogonal
+backbone.layers.15.mixer.x_proj_dt input is orthogonal
+backbone.layers.15.mixer.x_proj_b input is orthogonal
+backbone.layers.15.mixer.x_proj_c input is orthogonal
+backbone.layers.15.mixer.dt_proj input is orthogonal
+backbone.layers.15.mixer.ssm_matmul input is orthogonal
+backbone.layers.15.mixer.out_proj input is orthogonal
+backbone.layers.16.mixer.in_proj_states input is orthogonal
+backbone.layers.16.mixer.in_proj_gates input is orthogonal
+backbone.layers.16.mixer.x_proj_dt input is orthogonal
+backbone.layers.16.mixer.x_proj_b input is orthogonal
+backbone.layers.16.mixer.x_proj_c input is orthogonal
+backbone.layers.16.mixer.dt_proj input is orthogonal
+backbone.layers.16.mixer.ssm_matmul input is orthogonal
+backbone.layers.16.mixer.out_proj input is orthogonal
+backbone.layers.17.mixer.in_proj_states input is orthogonal
+backbone.layers.17.mixer.in_proj_gates input is orthogonal
+backbone.layers.17.mixer.x_proj_dt input is orthogonal
+backbone.layers.17.mixer.x_proj_b input is orthogonal
+backbone.layers.17.mixer.x_proj_c input is orthogonal
+backbone.layers.17.mixer.dt_proj input is orthogonal
+backbone.layers.17.mixer.ssm_matmul input is orthogonal
+backbone.layers.17.mixer.out_proj input is orthogonal
+backbone.layers.18.mixer.in_proj_states input is orthogonal
+backbone.layers.18.mixer.in_proj_gates input is orthogonal
+backbone.layers.18.mixer.x_proj_dt input is orthogonal
+backbone.layers.18.mixer.x_proj_b input is orthogonal
+backbone.layers.18.mixer.x_proj_c input is orthogonal
+backbone.layers.18.mixer.dt_proj input is orthogonal
+backbone.layers.18.mixer.ssm_matmul input is orthogonal
+backbone.layers.18.mixer.out_proj input is orthogonal
+backbone.layers.19.mixer.in_proj_states input is orthogonal
+backbone.layers.19.mixer.in_proj_gates input is orthogonal
+backbone.layers.19.mixer.x_proj_dt input is orthogonal
+backbone.layers.19.mixer.x_proj_b input is orthogonal
+backbone.layers.19.mixer.x_proj_c input is orthogonal
+backbone.layers.19.mixer.dt_proj input is orthogonal
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf, task: winogrande, w4a8_method_2
+model: mamba
+tasks: winogrande
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+*************************************
+backbone.layers.0.mixer.in_proj_states input is orthogonal
+backbone.layers.0.mixer.in_proj_gates input is orthogonal
+backbone.layers.0.mixer.x_proj_dt input is orthogonal
+backbone.layers.0.mixer.x_proj_b input is orthogonal
+backbone.layers.0.mixer.x_proj_c input is orthogonal
+backbone.layers.0.mixer.dt_proj input is orthogonal
+backbone.layers.0.mixer.ssm_matmul input is orthogonal
+backbone.layers.0.mixer.out_proj input is orthogonal
+backbone.layers.1.mixer.in_proj_states input is orthogonal
+backbone.layers.1.mixer.in_proj_gates input is orthogonal
+backbone.layers.1.mixer.x_proj_dt input is orthogonal
+backbone.layers.1.mixer.x_proj_b input is orthogonal
+backbone.layers.1.mixer.x_proj_c input is orthogonal
+backbone.layers.1.mixer.dt_proj input is orthogonal
+backbone.layers.1.mixer.ssm_matmul input is orthogonal
+backbone.layers.1.mixer.out_proj input is orthogonal
+backbone.layers.2.mixer.in_proj_states input is orthogonal
+backbone.layers.2.mixer.in_proj_gates input is orthogonal
+backbone.layers.2.mixer.x_proj_dt input is orthogonal
+backbone.layers.2.mixer.x_proj_b input is orthogonal
+backbone.layers.2.mixer.x_proj_c input is orthogonal
+backbone.layers.2.mixer.dt_proj input is orthogonal
+backbone.layers.2.mixer.ssm_matmul input is orthogonal
+backbone.layers.2.mixer.out_proj input is orthogonal
+backbone.layers.3.mixer.in_proj_states input is orthogonal
+backbone.layers.3.mixer.in_proj_gates input is orthogonal
+backbone.layers.3.mixer.x_proj_dt input is orthogonal
+backbone.layers.3.mixer.x_proj_b input is orthogonal
+backbone.layers.3.mixer.x_proj_c input is orthogonal
+backbone.layers.3.mixer.dt_proj input is orthogonal
+backbone.layers.3.mixer.ssm_matmul input is orthogonal
+backbone.layers.3.mixer.out_proj input is orthogonal
+backbone.layers.4.mixer.in_proj_states input is orthogonal
+backbone.layers.4.mixer.in_proj_gates input is orthogonal
+backbone.layers.4.mixer.x_proj_dt input is orthogonal
+backbone.layers.4.mixer.x_proj_b input is orthogonal
+backbone.layers.4.mixer.x_proj_c input is orthogonal
+backbone.layers.4.mixer.dt_proj input is orthogonal
+backbone.layers.4.mixer.ssm_matmul input is orthogonal
+backbone.layers.4.mixer.out_proj input is orthogonal
+backbone.layers.5.mixer.in_proj_states input is orthogonal
+backbone.layers.5.mixer.in_proj_gates input is orthogonal
+backbone.layers.5.mixer.x_proj_dt input is orthogonal
+backbone.layers.5.mixer.x_proj_b input is orthogonal
+backbone.layers.5.mixer.x_proj_c input is orthogonal
+backbone.layers.5.mixer.dt_proj input is orthogonal
+backbone.layers.5.mixer.ssm_matmul input is orthogonal
+backbone.layers.5.mixer.out_proj input is orthogonal
+backbone.layers.6.mixer.in_proj_states input is orthogonal
+backbone.layers.6.mixer.in_proj_gates input is orthogonal
+backbone.layers.6.mixer.x_proj_dt input is orthogonal
+backbone.layers.6.mixer.x_proj_b input is orthogonal
+backbone.layers.6.mixer.x_proj_c input is orthogonal
+backbone.layers.6.mixer.dt_proj input is orthogonal
+backbone.layers.6.mixer.ssm_matmul input is orthogonal
+backbone.layers.6.mixer.out_proj input is orthogonal
+backbone.layers.7.mixer.in_proj_states input is orthogonal
+backbone.layers.7.mixer.in_proj_gates input is orthogonal
+backbone.layers.7.mixer.x_proj_dt input is orthogonal
+backbone.layers.7.mixer.x_proj_b input is orthogonal
+backbone.layers.7.mixer.x_proj_c input is orthogonal
+backbone.layers.7.mixer.dt_proj input is orthogonal
+backbone.layers.7.mixer.ssm_matmul input is orthogonal
+backbone.layers.7.mixer.out_proj input is orthogonal
+backbone.layers.8.mixer.in_proj_states input is orthogonal
+backbone.layers.8.mixer.in_proj_gates input is orthogonal
+backbone.layers.8.mixer.x_proj_dt input is orthogonal
+backbone.layers.8.mixer.x_proj_b input is orthogonal
+backbone.layers.8.mixer.x_proj_c input is orthogonal
+backbone.layers.8.mixer.dt_proj input is orthogonal
+backbone.layers.8.mixer.ssm_matmul input is orthogonal
+backbone.layers.8.mixer.out_proj input is orthogonal
+backbone.layers.9.mixer.in_proj_states input is orthogonal
+backbone.layers.9.mixer.in_proj_gates input is orthogonal
+backbone.layers.9.mixer.x_proj_dt input is orthogonal
+backbone.layers.9.mixer.x_proj_b input is orthogonal
+backbone.layers.9.mixer.x_proj_c input is orthogonal
+backbone.layers.9.mixer.dt_proj input is orthogonal
+backbone.layers.9.mixer.ssm_matmul input is orthogonal
+backbone.layers.9.mixer.out_proj input is orthogonal
+backbone.layers.10.mixer.in_proj_states input is orthogonal
+backbone.layers.10.mixer.in_proj_gates input is orthogonal
+backbone.layers.10.mixer.x_proj_dt input is orthogonal
+backbone.layers.10.mixer.x_proj_b input is orthogonal
+backbone.layers.10.mixer.x_proj_c input is orthogonal
+backbone.layers.10.mixer.dt_proj input is orthogonal
+backbone.layers.10.mixer.ssm_matmul input is orthogonal
+backbone.layers.10.mixer.out_proj input is orthogonal
+backbone.layers.11.mixer.in_proj_states input is orthogonal
+backbone.layers.11.mixer.in_proj_gates input is orthogonal
+backbone.layers.11.mixer.x_proj_dt input is orthogonal
+backbone.layers.11.mixer.x_proj_b input is orthogonal
+backbone.layers.11.mixer.x_proj_c input is orthogonal
+backbone.layers.11.mixer.dt_proj input is orthogonal
+backbone.layers.11.mixer.ssm_matmul input is orthogonal
+backbone.layers.11.mixer.out_proj input is orthogonal
+backbone.layers.12.mixer.in_proj_states input is orthogonal
+backbone.layers.12.mixer.in_proj_gates input is orthogonal
+backbone.layers.12.mixer.x_proj_dt input is orthogonal
+backbone.layers.12.mixer.x_proj_b input is orthogonal
+backbone.layers.12.mixer.x_proj_c input is orthogonal
+backbone.layers.12.mixer.dt_proj input is orthogonal
+backbone.layers.12.mixer.ssm_matmul input is orthogonal
+backbone.layers.12.mixer.out_proj input is orthogonal
+backbone.layers.13.mixer.in_proj_states input is orthogonal
+backbone.layers.13.mixer.in_proj_gates input is orthogonal
+backbone.layers.13.mixer.x_proj_dt input is orthogonal
+backbone.layers.13.mixer.x_proj_b input is orthogonal
+backbone.layers.13.mixer.x_proj_c input is orthogonal
+backbone.layers.13.mixer.dt_proj input is orthogonal
+backbone.layers.13.mixer.ssm_matmul input is orthogonal
+backbone.layers.13.mixer.out_proj input is orthogonal
+backbone.layers.14.mixer.in_proj_states input is orthogonal
+backbone.layers.14.mixer.in_proj_gates input is orthogonal
+backbone.layers.14.mixer.x_proj_dt input is orthogonal
+backbone.layers.14.mixer.x_proj_b input is orthogonal
+backbone.layers.14.mixer.x_proj_c input is orthogonal
+backbone.layers.14.mixer.dt_proj input is orthogonal
+backbone.layers.14.mixer.ssm_matmul input is orthogonal
+backbone.layers.14.mixer.out_proj input is orthogonal
+backbone.layers.15.mixer.in_proj_states input is orthogonal
+backbone.layers.15.mixer.in_proj_gates input is orthogonal
+backbone.layers.15.mixer.x_proj_dt input is orthogonal
+backbone.layers.15.mixer.x_proj_b input is orthogonal
+backbone.layers.15.mixer.x_proj_c input is orthogonal
+backbone.layers.15.mixer.dt_proj input is orthogonal
+backbone.layers.15.mixer.ssm_matmul input is orthogonal
+backbone.layers.15.mixer.out_proj input is orthogonal
+backbone.layers.16.mixer.in_proj_states input is orthogonal
+backbone.layers.16.mixer.in_proj_gates input is orthogonal
+backbone.layers.16.mixer.x_proj_dt input is orthogonal
+backbone.layers.16.mixer.x_proj_b input is orthogonal
+backbone.layers.16.mixer.x_proj_c input is orthogonal
+backbone.layers.16.mixer.dt_proj input is orthogonal
+backbone.layers.16.mixer.ssm_matmul input is orthogonal
+backbone.layers.16.mixer.out_proj input is orthogonal
+backbone.layers.17.mixer.in_proj_states input is orthogonal
+backbone.layers.17.mixer.in_proj_gates input is orthogonal
+backbone.layers.17.mixer.x_proj_dt input is orthogonal
+backbone.layers.17.mixer.x_proj_b input is orthogonal
+backbone.layers.17.mixer.x_proj_c input is orthogonal
+backbone.layers.17.mixer.dt_proj input is orthogonal
+backbone.layers.17.mixer.ssm_matmul input is orthogonal
+backbone.layers.17.mixer.out_proj input is orthogonal
+backbone.layers.18.mixer.in_proj_states input is orthogonal
+backbone.layers.18.mixer.in_proj_gates input is orthogonal
+backbone.layers.18.mixer.x_proj_dt input is orthogonal
+backbone.layers.18.mixer.x_proj_b input is orthogonal
+backbone.layers.18.mixer.x_proj_c input is orthogonal
+backbone.layers.18.mixer.dt_proj input is orthogonal
+backbone.layers.18.mixer.ssm_matmul input is orthogonal
+backbone.layers.18.mixer.out_proj input is orthogonal
+backbone.layers.19.mixer.in_proj_states input is orthogonal
+backbone.layers.19.mixer.in_proj_gates input is orthogonal
+backbone.layers.19.mixer.x_proj_dt input is orthogonal
+backbone.layers.19.mixer.x_proj_b input is orthogonal
+backbone.layers.19.mixer.x_proj_c input is orthogonal
+backbone.layers.19.mixer.dt_proj input is orthogonal
+model: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf, task: hellaswag, w4a8_method_2
+model: mamba
+tasks: hellaswag
+model_args: pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+num_fewshot: None
+batch_size: 64
+max_batch_size: None
+device: cuda
+output_path: None
+limit: None
+use_cache: None
+cache_requests: None
+check_integrity: False
+write_out: False
+log_samples: False
+system_instruction: None
+apply_chat_template: False
+fewshot_as_multiturn: False
+show_config: False
+include_path: None
+gen_kwargs: None
+verbosity: INFO
+wandb_args: 
+hf_hub_log_args: 
+predict_only: False
+seed: [0, 1234, 1234, 1234]
+trust_remote_code: False
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_klt: True
+use_weight_klt: False
+use_S_head: False
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: True
+use_S7: True
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_pertoken: True
+static_quant: False
+quant_weight: True
+quant_act: True
+w_bit: 4
+a_bit: 8
+w_perchannel: True
+observe: percentile
+fake_online_hadamard: False
+use_perkernel: False
+use_reduce_mean: False
+analyse_and_plot: False
+w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+conv1d_w_cfg: {'dynamic_method': 'per_channel', 'per_channel_axes': [0], 'n_bits': 4}
+a_cfg: {'dynamic_method': 'per_tensor', 'n_bits': 8}
+*************************************
+model_path:  pretrained=/data01/home/xuzk/datasets/lm_mamba_weight/mamba-2.8b-hf
+*************************************
+backbone.layers.0.mixer.in_proj_states input is orthogonal
+backbone.layers.0.mixer.in_proj_gates input is orthogonal
+backbone.layers.0.mixer.x_proj_dt input is orthogonal
+backbone.layers.0.mixer.x_proj_b input is orthogonal
+backbone.layers.0.mixer.x_proj_c input is orthogonal
+backbone.layers.0.mixer.dt_proj input is orthogonal
+backbone.layers.0.mixer.ssm_matmul input is orthogonal
+backbone.layers.0.mixer.out_proj input is orthogonal
+backbone.layers.1.mixer.in_proj_states input is orthogonal
+backbone.layers.1.mixer.in_proj_gates input is orthogonal
+backbone.layers.1.mixer.x_proj_dt input is orthogonal
+backbone.layers.1.mixer.x_proj_b input is orthogonal
+backbone.layers.1.mixer.x_proj_c input is orthogonal
+backbone.layers.1.mixer.dt_proj input is orthogonal
+backbone.layers.1.mixer.ssm_matmul input is orthogonal
+backbone.layers.1.mixer.out_proj input is orthogonal
+backbone.layers.2.mixer.in_proj_states input is orthogonal
+backbone.layers.2.mixer.in_proj_gates input is orthogonal
+backbone.layers.2.mixer.x_proj_dt input is orthogonal
+backbone.layers.2.mixer.x_proj_b input is orthogonal
+backbone.layers.2.mixer.x_proj_c input is orthogonal
+backbone.layers.2.mixer.dt_proj input is orthogonal
+backbone.layers.2.mixer.ssm_matmul input is orthogonal
+backbone.layers.2.mixer.out_proj input is orthogonal
+backbone.layers.3.mixer.in_proj_states input is orthogonal
+backbone.layers.3.mixer.in_proj_gates input is orthogonal
+backbone.layers.3.mixer.x_proj_dt input is orthogonal
+backbone.layers.3.mixer.x_proj_b input is orthogonal
+backbone.layers.3.mixer.x_proj_c input is orthogonal
+backbone.layers.3.mixer.dt_proj input is orthogonal
+backbone.layers.3.mixer.ssm_matmul input is orthogonal
+backbone.layers.3.mixer.out_proj input is orthogonal
+backbone.layers.4.mixer.in_proj_states input is orthogonal
+backbone.layers.4.mixer.in_proj_gates input is orthogonal
+backbone.layers.4.mixer.x_proj_dt input is orthogonal
+backbone.layers.4.mixer.x_proj_b input is orthogonal
+backbone.layers.4.mixer.x_proj_c input is orthogonal
+backbone.layers.4.mixer.dt_proj input is orthogonal
+backbone.layers.4.mixer.ssm_matmul input is orthogonal
+backbone.layers.4.mixer.out_proj input is orthogonal
+backbone.layers.5.mixer.in_proj_states input is orthogonal
+backbone.layers.5.mixer.in_proj_gates input is orthogonal
+backbone.layers.5.mixer.x_proj_dt input is orthogonal
+backbone.layers.5.mixer.x_proj_b input is orthogonal
+backbone.layers.5.mixer.x_proj_c input is orthogonal
+backbone.layers.5.mixer.dt_proj input is orthogonal
+backbone.layers.5.mixer.ssm_matmul input is orthogonal
+backbone.layers.5.mixer.out_proj input is orthogonal
+backbone.layers.6.mixer.in_proj_states input is orthogonal
+backbone.layers.6.mixer.in_proj_gates input is orthogonal
+backbone.layers.6.mixer.x_proj_dt input is orthogonal
+backbone.layers.6.mixer.x_proj_b input is orthogonal
+backbone.layers.6.mixer.x_proj_c input is orthogonal
+backbone.layers.6.mixer.dt_proj input is orthogonal
+backbone.layers.6.mixer.ssm_matmul input is orthogonal
+backbone.layers.6.mixer.out_proj input is orthogonal
+backbone.layers.7.mixer.in_proj_states input is orthogonal
+backbone.layers.7.mixer.in_proj_gates input is orthogonal
+backbone.layers.7.mixer.x_proj_dt input is orthogonal
+backbone.layers.7.mixer.x_proj_b input is orthogonal
+backbone.layers.7.mixer.x_proj_c input is orthogonal
+backbone.layers.7.mixer.dt_proj input is orthogonal
+backbone.layers.7.mixer.ssm_matmul input is orthogonal
+backbone.layers.7.mixer.out_proj input is orthogonal
+backbone.layers.8.mixer.in_proj_states input is orthogonal
+backbone.layers.8.mixer.in_proj_gates input is orthogonal
+backbone.layers.8.mixer.x_proj_dt input is orthogonal
+backbone.layers.8.mixer.x_proj_b input is orthogonal
+backbone.layers.8.mixer.x_proj_c input is orthogonal
+backbone.layers.8.mixer.dt_proj input is orthogonal
+backbone.layers.8.mixer.ssm_matmul input is orthogonal
+backbone.layers.8.mixer.out_proj input is orthogonal
+backbone.layers.9.mixer.in_proj_states input is orthogonal
+backbone.layers.9.mixer.in_proj_gates input is orthogonal
+backbone.layers.9.mixer.x_proj_dt input is orthogonal
+backbone.layers.9.mixer.x_proj_b input is orthogonal
+backbone.layers.9.mixer.x_proj_c input is orthogonal
+backbone.layers.9.mixer.dt_proj input is orthogonal
+backbone.layers.9.mixer.ssm_matmul input is orthogonal
+backbone.layers.9.mixer.out_proj input is orthogonal
+backbone.layers.10.mixer.in_proj_states input is orthogonal
+backbone.layers.10.mixer.in_proj_gates input is orthogonal
+backbone.layers.10.mixer.x_proj_dt input is orthogonal
+backbone.layers.10.mixer.x_proj_b input is orthogonal
+backbone.layers.10.mixer.x_proj_c input is orthogonal
+backbone.layers.10.mixer.dt_proj input is orthogonal
+backbone.layers.10.mixer.ssm_matmul input is orthogonal
+backbone.layers.10.mixer.out_proj input is orthogonal
+backbone.layers.11.mixer.in_proj_states input is orthogonal
+backbone.layers.11.mixer.in_proj_gates input is orthogonal
+backbone.layers.11.mixer.x_proj_dt input is orthogonal
+backbone.layers.11.mixer.x_proj_b input is orthogonal
+backbone.layers.11.mixer.x_proj_c input is orthogonal
+backbone.layers.11.mixer.dt_proj input is orthogonal
+backbone.layers.11.mixer.ssm_matmul input is orthogonal
+backbone.layers.11.mixer.out_proj input is orthogonal
+backbone.layers.12.mixer.in_proj_states input is orthogonal
+backbone.layers.12.mixer.in_proj_gates input is orthogonal
+backbone.layers.12.mixer.x_proj_dt input is orthogonal
+backbone.layers.12.mixer.x_proj_b input is orthogonal
+backbone.layers.12.mixer.x_proj_c input is orthogonal
+backbone.layers.12.mixer.dt_proj input is orthogonal
+backbone.layers.12.mixer.ssm_matmul input is orthogonal
+backbone.layers.12.mixer.out_proj input is orthogonal
+backbone.layers.13.mixer.in_proj_states input is orthogonal
+backbone.layers.13.mixer.in_proj_gates input is orthogonal
+backbone.layers.13.mixer.x_proj_dt input is orthogonal
+backbone.layers.13.mixer.x_proj_b input is orthogonal
+backbone.layers.13.mixer.x_proj_c input is orthogonal
+backbone.layers.13.mixer.dt_proj input is orthogonal
+backbone.layers.13.mixer.ssm_matmul input is orthogonal
+backbone.layers.13.mixer.out_proj input is orthogonal
+backbone.layers.14.mixer.in_proj_states input is orthogonal
+backbone.layers.14.mixer.in_proj_gates input is orthogonal
+backbone.layers.14.mixer.x_proj_dt input is orthogonal
+backbone.layers.14.mixer.x_proj_b input is orthogonal
+backbone.layers.14.mixer.x_proj_c input is orthogonal
+backbone.layers.14.mixer.dt_proj input is orthogonal
+backbone.layers.14.mixer.ssm_matmul input is orthogonal
+backbone.layers.14.mixer.out_proj input is orthogonal
+backbone.layers.15.mixer.in_proj_states input is orthogonal
+backbone.layers.15.mixer.in_proj_gates input is orthogonal
+backbone.layers.15.mixer.x_proj_dt input is orthogonal
+backbone.layers.15.mixer.x_proj_b input is orthogonal
+backbone.layers.15.mixer.x_proj_c input is orthogonal
+backbone.layers.15.mixer.dt_proj input is orthogonal
+backbone.layers.15.mixer.ssm_matmul input is orthogonal
+backbone.layers.15.mixer.out_proj input is orthogonal
+backbone.layers.16.mixer.in_proj_states input is orthogonal
+backbone.layers.16.mixer.in_proj_gates input is orthogonal
+backbone.layers.16.mixer.x_proj_dt input is orthogonal
+backbone.layers.16.mixer.x_proj_b input is orthogonal
+backbone.layers.16.mixer.x_proj_c input is orthogonal
+backbone.layers.16.mixer.dt_proj input is orthogonal
+backbone.layers.16.mixer.ssm_matmul input is orthogonal
+backbone.layers.16.mixer.out_proj input is orthogonal
+backbone.layers.17.mixer.in_proj_states input is orthogonal
+backbone.layers.17.mixer.in_proj_gates input is orthogonal
+backbone.layers.17.mixer.x_proj_dt input is orthogonal
+backbone.layers.17.mixer.x_proj_b input is orthogonal
+backbone.layers.17.mixer.x_proj_c input is orthogonal
+backbone.layers.17.mixer.dt_proj input is orthogonal
+backbone.layers.17.mixer.ssm_matmul input is orthogonal
+backbone.layers.17.mixer.out_proj input is orthogonal
+backbone.layers.18.mixer.in_proj_states input is orthogonal
+backbone.layers.18.mixer.in_proj_gates input is orthogonal
+backbone.layers.18.mixer.x_proj_dt input is orthogonal
+backbone.layers.18.mixer.x_proj_b input is orthogonal
+backbone.layers.18.mixer.x_proj_c input is orthogonal
+backbone.layers.18.mixer.dt_proj input is orthogonal
+backbone.layers.18.mixer.ssm_matmul input is orthogonal
+backbone.layers.18.mixer.out_proj input is orthogonal
+backbone.layers.19.mixer.in_proj_states input is orthogonal
+backbone.layers.19.mixer.in_proj_gates input is orthogonal
+backbone.layers.19.mixer.x_proj_dt input is orthogonal
+backbone.layers.19.mixer.x_proj_b input is orthogonal
+backbone.layers.19.mixer.x_proj_c input is orthogonal
+backbone.layers.19.mixer.dt_proj input is orthogonal

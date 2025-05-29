@@ -1,0 +1,279 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "quant_vim_naive",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tools/main_quant_naive.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/model_vim_quant",
+            "pythonPath": "/data01/home/xuzk/anaconda3/envs/mamba/bin/python",
+            "args": [
+                "--eval",
+                "--resume", 
+                // "./saved_checkpoint/vim_t_midclstok_76p1acc.pth",
+                // "./saved_checkpoint/vim_t+_midclstok_ft_78p3acc.pth",
+                // "./saved_checkpoint/vim_s_midclstok_80p5acc.pth",
+                // "./saved_checkpoint/vim_s+_midclstok_ft_81p6acc.pth",
+                "./saved_checkpoint/vim_b_midclstok_81p9acc.pth",
+                "--model",
+                // "vim_tiny_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_midclstok_div2",
+                // "vim_tinyplus_patch16_stride8_224_bimambav2_final_pool_mean_abs_pos_embed_with_midclstok_div2",
+                // "vim_small_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_midclstok_div2",
+                // "vim_smallplus_patch16_stride8_224_bimambav2_final_pool_mean_abs_pos_embed_with_midclstok_div2",
+                "vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2",
+                "--data-path", "/data01/datasets/imagenet",
+                "--batch-size", "64",
+                "--use_vim_torch","True",
+                // "--static_quant",
+                // "--quant_weight",
+                // "--quant_act",
+                "--w_bit","8",
+                "--a_bit","8",
+                "--w_perchannel",
+                "--observe","percentile",//method 2_A
+                // "--use_smoothquant","True",
+                // "--use_gptq",
+                "--use_split",
+                // "--use_hadmard",      //method 1  2 3 4
+                // "--use_S1",           //method 2_B
+                // "--use_S2",           //method 1_A
+                // "--use_S3",           //method 2_B
+                // "--use_S4",           //method 1_A
+                // "--use_S5",           //method 2_B
+                // "--use_S7",           //method 3*
+                // "--use_hadmard_R1",    //method 1_B
+                // "--use_hadmard_R2",    //method 1_C
+                // "--use_hadmard_R3",    //method 1_C
+                // "--use_hadmard_R4",
+                // "--use_hadmard_R5",    //method 1_B
+                // "--use_hadmard_R6",    
+                // "--use_reduce_mean",   //method 3
+                // "--use_klt",           //method 2_A
+                // "--fake_online_hadamard",  //method 1 2
+                // "--use_pertoken",
+                // "--generate_klt",
+                // "--use_perkernel",
+                // "--analyse_and_plot",
+                // 依次添加的顺序是：R1, R3, R2, R4, R5     S3, S2, S7, S1，S4(可能会降低), S5
+            ],
+            "env": { "CUDA_VISIBLE_DEVICES": "1"},
+        },
+
+        {
+            "name": "quant_classifier",
+            "type": "python",
+            "request": "launch",
+            "program": "tools/quant_naive.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/model_image_classification/",
+            "pythonPath": "/data01/home/xuzk/anaconda3/envs/mamba-nd/bin/python",
+            "args": [
+                "--config",
+                "./config/mamba2d_s.py",
+                // "./config/mamba2d_b.py",
+                "--checkpoint",
+                "./ckpt/mamba2d_s.pth",
+                // "./ckpt/mamba2d_b.pth",
+                "--static_quant",
+                "--quant_weight",
+                "--quant_act",
+                "--w_bit","4",
+                "--a_bit","8",
+                "--observe","percentile",//method 2_A
+                // "--use_smoothquant","True",
+                // "--use_gptq",
+                "--use_S2",
+                "--use_hadmard",
+                "--use_hadmard_R1",
+                "--use_hadmard_R3",
+                "--use_hadmard_R4",
+                "--use_hadmard_R5",
+                // "--fake_online_hadamard",  //method 1 2
+                // "--use_perkernel",
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "3",
+                "MASTER_ADDR": "127.0.0.2",
+                "MASTER_PORT": "29544",
+                "WORLD_SIZE": "1",
+                "RANK": "0"
+            },
+        },
+
+
+        {
+            "name": "quant-video-classify",
+            "type": "python",
+            "request": "launch",
+            "program": "tools/quant_naive.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/model_video_classification/",
+            "pythonPath": "/data01/home/xuzk/anaconda3/envs/mamba-nd/bin/python",
+            "args": [
+                "./config/ucf101.py",
+                "./ckpt/ucf101.pth",
+                "--static_quant",
+                "--quant_weight",
+                "--quant_act",
+                "--w_bit","8",
+                "--a_bit","8",
+                // "--use_smoothquant","True",
+                // "--use_gptq",
+                "--use_hadmard",
+                "--use_hadmard_R1",
+                "--use_hadmard_R3S",
+                "--use_hadmard_R4",
+                "--use_hadmard_R5",
+                // "--use_perkernel",
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "2",
+                "MASTER_ADDR": "127.0.0.2",
+                "MASTER_PORT": "29544",
+                "WORLD_SIZE": "1",
+                "RANK": "0"
+            },
+        },
+
+
+        {
+            "name": "quant-video-segmentation",
+            "type": "python",
+            "request": "launch",
+            "program": "quant_naive.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/model_segmentation",
+            "pythonPath": "/data01/home/xuzk/anaconda3/envs/mamba-nd/bin/python",
+            "args": [
+                "--val",
+                "--use_mamba",
+                "--hidden_size", "384",
+                "--load_ckpt", "./ckpt/mamband-s.pt",
+                "--resume_ckpt",
+                "--feature_size", "32",
+                "--batch_size","1", 
+                "--logdir","mamba-nd-s",
+                "--data_dir","./data",
+                "--static_quant",
+                "--quant_weight",
+                "--quant_act",
+                "--w_bit","4",
+                "--a_bit","8",
+                // "--use_smoothquant","True",
+                // "--use_gptq",
+                "--use_hadmard",
+                "--use_hadmard_R1",
+                "--use_hadmard_R3S",
+                "--use_perkernel",
+                "--use_split",
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "2",
+                "MASTER_ADDR": "127.0.0.2",
+                "MASTER_PORT": "29544",
+                "WORLD_SIZE": "1",
+                "RANK": "0"
+            },
+        },
+
+        {
+            "name": "quant_llm_naive",
+            "type": "python",
+            "request": "launch",
+            "program": "tests/quant_naive.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/model_llm",
+            "pythonPath": "/data01/home/xuzk/anaconda3/envs/mamba-nd/bin/python",
+            "args": [
+                "--model", "mamba",
+                "--model_args", 
+                // "pretrained=./state-spaces/mamba-130m-hf",
+                "pretrained=./state-spaces/mamba-370m-hf",
+                // "pretrained=./state-spaces/mamba-790m-hf",
+                // "pretrained=./state-spaces/mamba-1.4b-hf",
+                // "pretrained=./state-spaces/mamba-2.8b-hf",
+                "--tasks", "piqa,winogrande,arc_challenge,arc_easy,hellaswag"//"hellaswag,winogrande,piqa,arc_challenge,arc_easy,lambada_openai,rte,copa"
+                "--device", "cuda",
+                "--batch_size", "128",
+                // "--use_cache", "/data01/home/xuzk/.cache/huggingface/datasets/",
+                // "--static_quant",
+                "--quant_weight",
+                "--quant_act",
+                "--w_bit","4",
+                "--a_bit","8",
+                "--w_perchannel",
+                "--observe","percentile", //method 2_A
+                // "--use_smoothquant",
+                "--use_gptq",
+                // "--use_perkernel",
+                "--use_hadmard",
+                // "--use_S_head",
+                // "--use_S1",               //method 2_B
+                "--use_S2",               //method 1_A
+                "--use_S3",               //method 2_B
+                "--use_S4",           //method 1_A
+                "--use_S5",               //method 2_B
+                // "--use_S7",               //method 3
+                "--use_hadmard_R1",       //method 1_B
+                "--use_hadmard_R2",       //method 1_C
+                "--use_hadmard_R3",       //method 1_C
+                // "--use_hadmard_R4",       
+                "--use_hadmard_R5",       //method 1_B
+                "--use_hadmard_R6",
+                // "--use_reduce_mean",      //method 3
+                "--use_klt",              //method 2_A
+                // "--use_weight_klt",              //method 2_A
+                // "--fake_online_hadamard", //method 1 2
+                // "--generate_klt",
+                // "--analyse_and_plot",
+            ], 
+            "env": { "CUDA_VISIBLE_DEVICES": "6",
+                     "HF_DATASETS_CACHE": "/data01/home/xuzk/.cache/huggingface/datasets/",},
+        },
+
+        {
+            "name": "llm_analyse",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "tests/mamba_chat.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/model_llm",
+            "pythonPath": "/data01/home/xuzk/anaconda3/envs/mamba-nd/bin/python",
+            "args": [
+                "--model", "mamba",
+                "--model_args", "pretrained=./state-spaces/mamba-1.4b-hf",
+                "--tasks", "copa"//,rte,copa,lambada_openai
+                "--device", "cuda",
+                "--batch_size", "64",
+            ], 
+            "env": { "CUDA_VISIBLE_DEVICES": "2"},
+        },
+
+        {
+            "name": "rwkv_test",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "scripts/test.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/model_rwkv",
+            "pythonPath": "/data01/home/xuzk/anaconda3/envs/mamba-nd/bin/python",
+            "args": [
+            ], 
+            "env": { "CUDA_VISIBLE_DEVICES": "4"},
+        },
+
+    ]
+}

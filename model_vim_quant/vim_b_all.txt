@@ -1,0 +1,1725 @@
+vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2 w8a8 method_2 -------------------------------------------------
+Not using distributed mode
+batch_size: 128
+epochs: 300
+bce_loss: False
+unscale_lr: False
+model: vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2
+input_size: 224
+drop: 0.0
+drop_path: 0.1
+model_ema: True
+model_ema_decay: 0.99996
+model_ema_force_cpu: False
+opt: adamw
+opt_eps: 1e-08
+opt_betas: None
+clip_grad: None
+momentum: 0.9
+weight_decay: 0.05
+sched: cosine
+lr: 0.0005
+lr_noise: None
+lr_noise_pct: 0.67
+lr_noise_std: 1.0
+warmup_lr: 1e-06
+min_lr: 1e-05
+decay_epochs: 30
+warmup_epochs: 5
+cooldown_epochs: 10
+patience_epochs: 10
+decay_rate: 0.1
+color_jitter: 0.3
+aa: rand-m9-mstd0.5-inc1
+smoothing: 0.1
+train_interpolation: bicubic
+repeated_aug: True
+train_mode: True
+ThreeAugment: False
+src: False
+reprob: 0.25
+remode: pixel
+recount: 1
+resplit: False
+mixup: 0.8
+cutmix: 1.0
+cutmix_minmax: None
+mixup_prob: 1.0
+mixup_switch_prob: 0.5
+mixup_mode: batch
+teacher_model: regnety_160
+teacher_path: 
+distillation_type: none
+distillation_alpha: 0.5
+distillation_tau: 1.0
+cosub: False
+finetune: 
+attn_only: False
+data_path: /data01/datasets/imagenet
+data_set: IMNET
+inat_category: name
+output_dir: 
+device: cuda
+seed: 0
+resume: ./saved_checkpoint/vim_b_midclstok_81p9acc.pth
+start_epoch: 0
+eval: True
+eval_crop_ratio: 0.875
+dist_eval: False
+num_workers: 10
+pin_mem: True
+distributed: False
+world_size: 1
+dist_url: env://
+if_amp: True
+if_continue_inf: False
+if_nan2num: False
+if_random_cls_token_position: False
+if_random_token_rank: False
+local_rank: 0
+use_vim_torch: True
+static_quant: True
+observe: percentile
+quant_weight: True
+quant_act: True
+a_bit: 8
+w_bit: 8
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_reduce_mean: True
+use_pertoken: True
+use_split: True
+use_klt: True
+generate_klt: False
+use_perkernel: False
+w_perchannel: True
+fake_online_hadamard: False
+analyse_and_plot: False
+use_adaround: False
+adaround_iter: 200
+b_start: 20
+b_end: 2
+warmup: 0.2
+Creating model: vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2
+number of params: 97598440
+Test:  [0/3]  eta: 0:02:17  loss: 0.7432 (0.7432)  acc1: 83.3333 (83.3333)  acc5: 94.7917 (94.7917)  time: 45.6744  data: 1.9732  max mem: 14451
+Test:  [2/3]  eta: 0:00:34  loss: 0.6302 (0.6222)  acc1: 88.5417 (87.2000)  acc5: 97.9167 (97.2000)  time: 34.2901  data: 0.6579  max mem: 14451
+Test: Total time: 0:01:43 (34.3350 s / it)
+* Acc@1 87.200 Acc@5 97.200 loss 0.622
+Fp Accuracy of the network on the 50000 test images: 87.2%
+Test:  [  0/521]  eta: 5:40:10  loss: 0.3691 (0.3691)  acc1: 93.7500 (93.7500)  acc5: 98.9583 (98.9583)  time: 39.1747  data: 1.6396  max mem: 18844
+Test:  [  5/521]  eta: 2:03:54  loss: 0.5634 (0.5241)  acc1: 87.5000 (90.2778)  acc5: 97.9167 (98.0903)  time: 14.4084  data: 0.2735  max mem: 18879
+Test:  [ 10/521]  eta: 1:43:34  loss: 0.4950 (0.4590)  acc1: 93.7500 (92.4242)  acc5: 98.9583 (98.2008)  time: 12.1610  data: 0.1493  max mem: 18879
+Test:  [ 15/521]  eta: 1:35:26  loss: 0.4950 (0.5103)  acc1: 92.7083 (91.2109)  acc5: 97.9167 (98.0469)  time: 11.3179  data: 0.1027  max mem: 18879
+Test:  [ 20/521]  eta: 1:30:50  loss: 0.6022 (0.6161)  acc1: 87.5000 (87.6488)  acc5: 97.9167 (97.7183)  time: 9.4635  data: 0.0002  max mem: 18879
+Test:  [ 25/521]  eta: 1:27:41  loss: 0.6464 (0.6611)  acc1: 87.5000 (86.2580)  acc5: 96.8750 (97.4359)  time: 9.4669  data: 0.0002  max mem: 18879
+Test:  [ 30/521]  eta: 1:25:18  loss: 0.7290 (0.6900)  acc1: 82.2917 (85.1479)  acc5: 96.8750 (97.3118)  time: 9.4687  data: 0.0002  max mem: 18879
+Test:  [ 35/521]  eta: 1:23:21  loss: 1.0307 (0.7662)  acc1: 77.0833 (82.8125)  acc5: 95.8333 (96.8171)  time: 9.4694  data: 0.0002  max mem: 18879
+Test:  [ 40/521]  eta: 1:21:41  loss: 0.7489 (0.7692)  acc1: 77.0833 (82.7490)  acc5: 95.8333 (96.7988)  time: 9.4674  data: 0.0002  max mem: 18879
+Test:  [ 45/521]  eta: 1:20:13  loss: 0.7290 (0.7472)  acc1: 82.2917 (83.6504)  acc5: 96.8750 (96.8976)  time: 9.4681  data: 0.0002  max mem: 18879
+Test:  [ 50/521]  eta: 1:18:53  loss: 0.5692 (0.7039)  acc1: 89.5833 (84.9060)  acc5: 96.8750 (97.0588)  time: 9.4677  data: 0.0002  max mem: 18879
+Test:  [ 55/521]  eta: 1:17:38  loss: 0.5084 (0.6914)  acc1: 91.6667 (85.3237)  acc5: 97.9167 (97.0610)  time: 9.4675  data: 0.0002  max mem: 18879
+Test:  [ 60/521]  eta: 1:16:28  loss: 0.5084 (0.6926)  acc1: 91.6667 (85.5362)  acc5: 97.9167 (97.0458)  time: 9.4668  data: 0.0002  max mem: 18879
+Test:  [ 65/521]  eta: 1:15:21  loss: 0.5568 (0.7083)  acc1: 88.5417 (85.3062)  acc5: 95.8333 (96.9224)  time: 9.4628  data: 0.0002  max mem: 18879
+Test:  [ 70/521]  eta: 1:14:17  loss: 0.6732 (0.6880)  acc1: 88.5417 (85.8421)  acc5: 95.8333 (96.9777)  time: 9.4620  data: 0.0002  max mem: 18879
+Test:  [ 75/521]  eta: 1:13:15  loss: 0.5172 (0.6626)  acc1: 90.6250 (86.4995)  acc5: 97.9167 (97.1080)  time: 9.4629  data: 0.0002  max mem: 18879
+Test:  [ 80/521]  eta: 1:12:16  loss: 0.4612 (0.6570)  acc1: 90.6250 (86.6255)  acc5: 97.9167 (97.1322)  time: 9.4643  data: 0.0002  max mem: 18879
+Test:  [ 85/521]  eta: 1:11:17  loss: 0.4612 (0.6695)  acc1: 90.6250 (86.2524)  acc5: 97.9167 (97.0688)  time: 9.4679  data: 0.0002  max mem: 18879
+Test:  [ 90/521]  eta: 1:10:20  loss: 0.6530 (0.6971)  acc1: 86.4583 (85.5082)  acc5: 96.8750 (96.9208)  time: 9.4692  data: 0.0002  max mem: 18879
+Test:  [ 95/521]  eta: 1:09:24  loss: 0.7865 (0.7001)  acc1: 82.2917 (85.3516)  acc5: 96.8750 (96.9618)  time: 9.4691  data: 0.0002  max mem: 18879
+Test:  [100/521]  eta: 1:08:29  loss: 0.8101 (0.7161)  acc1: 81.2500 (84.9010)  acc5: 95.8333 (96.8441)  time: 9.4696  data: 0.0002  max mem: 18879
+Test:  [105/521]  eta: 1:07:34  loss: 0.8101 (0.7182)  acc1: 81.2500 (84.8074)  acc5: 95.8333 (96.8848)  time: 9.4706  data: 0.0002  max mem: 18879
+Test:  [110/521]  eta: 1:05:52  loss: 0.7405 (0.7193)  acc1: 82.2917 (84.7222)  acc5: 96.8750 (96.8656)  time: 8.8133  data: 0.0002  max mem: 18879
+Test:  [115/521]  eta: 1:03:31  loss: 0.7235 (0.7187)  acc1: 82.2917 (84.7971)  acc5: 95.8333 (96.8660)  time: 7.5265  data: 0.0002  max mem: 18879
+Test:  [120/521]  eta: 1:01:21  loss: 0.7131 (0.7228)  acc1: 84.3750 (84.7107)  acc5: 96.8750 (96.8233)  time: 6.2540  data: 0.0001  max mem: 18879
+Test:  [125/521]  eta: 0:59:19  loss: 0.7234 (0.7276)  acc1: 82.2917 (84.5155)  acc5: 96.8750 (96.8171)  time: 4.9692  data: 0.0001  max mem: 18879
+Test:  [130/521]  eta: 0:57:39  loss: 0.8105 (0.7286)  acc1: 82.2917 (84.3193)  acc5: 96.8750 (96.8273)  time: 4.5883  data: 0.0001  max mem: 18879
+Test:  [135/521]  eta: 0:56:09  loss: 0.7067 (0.7189)  acc1: 85.4167 (84.6124)  acc5: 96.8750 (96.8597)  time: 4.9121  data: 0.0001  max mem: 18879
+Test:  [140/521]  eta: 0:54:34  loss: 0.6464 (0.7168)  acc1: 85.4167 (84.5892)  acc5: 97.9167 (96.8972)  time: 5.0561  data: 0.0002  max mem: 18879
+Test:  [145/521]  eta: 0:53:18  loss: 0.6390 (0.7224)  acc1: 85.4167 (84.5106)  acc5: 98.9583 (96.8679)  time: 5.4794  data: 0.0002  max mem: 18879
+Test:  [150/521]  eta: 0:52:48  loss: 0.6390 (0.7317)  acc1: 85.4167 (84.2301)  acc5: 97.9167 (96.8543)  time: 6.5268  data: 0.0002  max mem: 18879
+Test:  [155/521]  eta: 0:52:17  loss: 0.6540 (0.7268)  acc1: 84.3750 (84.4551)  acc5: 97.9167 (96.8616)  time: 7.4999  data: 0.0002  max mem: 18879
+Test:  [160/521]  eta: 0:51:45  loss: 0.6390 (0.7236)  acc1: 85.4167 (84.4785)  acc5: 97.9167 (96.9203)  time: 8.6397  data: 0.0002  max mem: 18879
+Test:  [165/521]  eta: 0:51:11  loss: 0.7474 (0.7282)  acc1: 85.4167 (84.4315)  acc5: 96.8750 (96.8562)  time: 9.5091  data: 0.0002  max mem: 18879
+Test:  [170/521]  eta: 0:50:37  loss: 0.5355 (0.7178)  acc1: 90.6250 (84.7222)  acc5: 97.9167 (96.9116)  time: 9.5083  data: 0.0002  max mem: 18879
+Test:  [175/521]  eta: 0:50:02  loss: 0.5355 (0.7151)  acc1: 89.5833 (84.8426)  acc5: 97.9167 (96.9283)  time: 9.5035  data: 0.0002  max mem: 18879
+Test:  [180/521]  eta: 0:49:26  loss: 0.5736 (0.7130)  acc1: 86.4583 (84.8757)  acc5: 96.8750 (96.9383)  time: 9.5023  data: 0.0002  max mem: 18879
+Test:  [185/521]  eta: 0:48:50  loss: 0.5362 (0.7119)  acc1: 89.5833 (84.7894)  acc5: 97.9167 (96.9926)  time: 9.5034  data: 0.0002  max mem: 18879
+Test:  [190/521]  eta: 0:48:13  loss: 0.6201 (0.7123)  acc1: 86.4583 (84.7786)  acc5: 97.9167 (96.9841)  time: 9.5029  data: 0.0002  max mem: 18879
+Test:  [195/521]  eta: 0:47:36  loss: 0.6871 (0.7156)  acc1: 85.4167 (84.7577)  acc5: 96.8750 (96.9707)  time: 9.5045  data: 0.0002  max mem: 18879
+Test:  [200/521]  eta: 0:46:58  loss: 0.7066 (0.7205)  acc1: 83.3333 (84.5771)  acc5: 96.8750 (96.9372)  time: 9.5041  data: 0.0002  max mem: 18879
+Test:  [205/521]  eta: 0:46:20  loss: 0.7066 (0.7176)  acc1: 83.3333 (84.6481)  acc5: 96.8750 (96.9812)  time: 9.5042  data: 0.0002  max mem: 18879
+Test:  [210/521]  eta: 0:45:41  loss: 0.7103 (0.7190)  acc1: 83.3333 (84.6367)  acc5: 95.8333 (96.9491)  time: 9.5054  data: 0.0002  max mem: 18879
+Test:  [215/521]  eta: 0:45:02  loss: 0.8259 (0.7291)  acc1: 82.2917 (84.3557)  acc5: 95.8333 (96.8750)  time: 9.5068  data: 0.0002  max mem: 18879
+Test:  [220/521]  eta: 0:44:22  loss: 0.8141 (0.7363)  acc1: 83.3333 (84.1346)  acc5: 95.8333 (96.8090)  time: 9.5065  data: 0.0002  max mem: 18879
+Test:  [225/521]  eta: 0:43:42  loss: 0.8141 (0.7353)  acc1: 83.3333 (84.1445)  acc5: 94.7917 (96.7920)  time: 9.5052  data: 0.0002  max mem: 18879
+Test:  [230/521]  eta: 0:43:02  loss: 0.9225 (0.7438)  acc1: 79.1667 (83.9466)  acc5: 93.7500 (96.7127)  time: 9.5024  data: 0.0002  max mem: 18879
+Test:  [235/521]  eta: 0:42:22  loss: 0.8141 (0.7464)  acc1: 83.3333 (83.9336)  acc5: 94.7917 (96.6631)  time: 9.5041  data: 0.0002  max mem: 18879
+Test:  [240/521]  eta: 0:41:41  loss: 0.9225 (0.7550)  acc1: 83.3333 (83.7958)  acc5: 93.7500 (96.5681)  time: 9.5046  data: 0.0002  max mem: 18879
+Test:  [245/521]  eta: 0:41:00  loss: 1.1317 (0.7645)  acc1: 73.9583 (83.6424)  acc5: 92.7083 (96.4727)  time: 9.5057  data: 0.0002  max mem: 18879
+Test:  [250/521]  eta: 0:40:18  loss: 0.9915 (0.7710)  acc1: 83.3333 (83.5367)  acc5: 92.7083 (96.3936)  time: 9.5087  data: 0.0002  max mem: 18879
+Test:  [255/521]  eta: 0:39:37  loss: 1.0441 (0.7810)  acc1: 72.9167 (83.2235)  acc5: 92.7083 (96.3257)  time: 9.5082  data: 0.0002  max mem: 18879
+Test:  [260/521]  eta: 0:38:55  loss: 1.3150 (0.7909)  acc1: 71.8750 (83.0260)  acc5: 92.7083 (96.2324)  time: 9.5084  data: 0.0002  max mem: 18879
+Test:  [265/521]  eta: 0:37:55  loss: 1.2794 (0.8029)  acc1: 70.8333 (82.7303)  acc5: 91.6667 (96.1114)  time: 8.5859  data: 0.0002  max mem: 18879
+Test:  [270/521]  eta: 0:36:49  loss: 1.1533 (0.8046)  acc1: 71.8750 (82.6722)  acc5: 91.6667 (96.0909)  time: 7.2910  data: 0.0002  max mem: 18879
+Test:  [275/521]  eta: 0:35:46  loss: 1.1533 (0.8102)  acc1: 71.8750 (82.5181)  acc5: 92.7083 (96.0371)  time: 6.0057  data: 0.0001  max mem: 18879
+Test:  [280/521]  eta: 0:34:43  loss: 1.1119 (0.8143)  acc1: 73.9583 (82.4251)  acc5: 92.7083 (96.0113)  time: 4.7116  data: 0.0001  max mem: 18879
+Test:  [285/521]  eta: 0:33:44  loss: 0.9080 (0.8171)  acc1: 78.1250 (82.3427)  acc5: 93.7500 (95.9572)  time: 4.4388  data: 0.0002  max mem: 18879
+Test:  [290/521]  eta: 0:32:55  loss: 1.0590 (0.8201)  acc1: 78.1250 (82.2881)  acc5: 92.7083 (95.9264)  time: 5.1047  data: 0.0002  max mem: 18879
+Test:  [295/521]  eta: 0:32:15  loss: 0.8953 (0.8193)  acc1: 79.1667 (82.3269)  acc5: 94.7917 (95.9354)  time: 6.3836  data: 0.0002  max mem: 18879
+Test:  [300/521]  eta: 0:31:36  loss: 0.6882 (0.8154)  acc1: 85.4167 (82.4405)  acc5: 94.7917 (95.9406)  time: 7.6749  data: 0.0002  max mem: 18879
+Test:  [305/521]  eta: 0:30:56  loss: 0.6882 (0.8224)  acc1: 85.4167 (82.2576)  acc5: 95.8333 (95.8742)  time: 8.8676  data: 0.0002  max mem: 18879
+Test:  [310/521]  eta: 0:30:16  loss: 0.7655 (0.8263)  acc1: 85.4167 (82.1845)  acc5: 95.8333 (95.8266)  time: 9.4925  data: 0.0002  max mem: 18879
+Test:  [315/521]  eta: 0:29:36  loss: 0.7852 (0.8294)  acc1: 79.1667 (82.1236)  acc5: 94.7917 (95.7905)  time: 9.4934  data: 0.0002  max mem: 18879
+Test:  [320/521]  eta: 0:28:56  loss: 1.0047 (0.8274)  acc1: 78.1250 (82.1878)  acc5: 93.7500 (95.7782)  time: 9.4937  data: 0.0002  max mem: 18879
+Test:  [325/521]  eta: 0:28:15  loss: 1.0047 (0.8364)  acc1: 78.1250 (81.9402)  acc5: 93.7500 (95.6991)  time: 9.4930  data: 0.0002  max mem: 18879
+Test:  [330/521]  eta: 0:27:34  loss: 1.0047 (0.8429)  acc1: 78.1250 (81.8448)  acc5: 93.7500 (95.6288)  time: 9.4916  data: 0.0002  max mem: 18879
+Test:  [335/521]  eta: 0:26:53  loss: 0.9585 (0.8442)  acc1: 78.1250 (81.7522)  acc5: 94.7917 (95.6194)  time: 9.4948  data: 0.0002  max mem: 18879
+Test:  [340/521]  eta: 0:26:12  loss: 1.1430 (0.8487)  acc1: 75.0000 (81.6868)  acc5: 92.7083 (95.5676)  time: 9.4917  data: 0.0002  max mem: 18879
+Test:  [345/521]  eta: 0:25:31  loss: 1.1313 (0.8544)  acc1: 76.0417 (81.4909)  acc5: 92.7083 (95.5383)  time: 9.4918  data: 0.0002  max mem: 18879
+Test:  [350/521]  eta: 0:24:49  loss: 1.0600 (0.8531)  acc1: 76.0417 (81.4577)  acc5: 94.7917 (95.5633)  time: 9.4911  data: 0.0002  max mem: 18879
+Test:  [355/521]  eta: 0:24:07  loss: 1.1780 (0.8580)  acc1: 72.9167 (81.3407)  acc5: 92.7083 (95.4939)  time: 9.4892  data: 0.0002  max mem: 18879
+Test:  [360/521]  eta: 0:23:26  loss: 1.1518 (0.8616)  acc1: 72.9167 (81.2789)  acc5: 93.7500 (95.4524)  time: 9.4917  data: 0.0002  max mem: 18879
+Test:  [365/521]  eta: 0:22:43  loss: 0.9234 (0.8611)  acc1: 78.1250 (81.3069)  acc5: 94.7917 (95.4577)  time: 9.4915  data: 0.0002  max mem: 18879
+Test:  [370/521]  eta: 0:22:01  loss: 1.1086 (0.8647)  acc1: 78.1250 (81.2444)  acc5: 92.7083 (95.4346)  time: 9.4942  data: 0.0002  max mem: 18879
+Test:  [375/521]  eta: 0:21:19  loss: 0.8190 (0.8634)  acc1: 82.2917 (81.2860)  acc5: 94.7917 (95.4344)  time: 9.4937  data: 0.0002  max mem: 18879
+Test:  [380/521]  eta: 0:20:36  loss: 0.8190 (0.8672)  acc1: 81.2500 (81.2117)  acc5: 94.7917 (95.3822)  time: 9.4919  data: 0.0002  max mem: 18879
+Test:  [385/521]  eta: 0:19:54  loss: 0.9060 (0.8702)  acc1: 78.1250 (81.1717)  acc5: 93.7500 (95.3395)  time: 9.4900  data: 0.0002  max mem: 18879
+Test:  [390/521]  eta: 0:19:11  loss: 0.9947 (0.8770)  acc1: 78.1250 (80.9996)  acc5: 92.7083 (95.2739)  time: 9.4904  data: 0.0002  max mem: 18879
+Test:  [395/521]  eta: 0:18:28  loss: 1.0678 (0.8773)  acc1: 76.0417 (81.0080)  acc5: 92.7083 (95.2809)  time: 9.4931  data: 0.0002  max mem: 18879
+Test:  [400/521]  eta: 0:17:45  loss: 1.0678 (0.8806)  acc1: 76.0417 (80.9565)  acc5: 92.7083 (95.2307)  time: 9.4955  data: 0.0002  max mem: 18879
+Test:  [405/521]  eta: 0:17:02  loss: 1.0678 (0.8827)  acc1: 76.0417 (80.9267)  acc5: 92.7083 (95.1970)  time: 9.4970  data: 0.0002  max mem: 18879
+Test:  [410/521]  eta: 0:16:13  loss: 0.9871 (0.8853)  acc1: 76.0417 (80.8648)  acc5: 93.7500 (95.1490)  time: 8.3561  data: 0.0002  max mem: 18879
+Test:  [415/521]  eta: 0:15:23  loss: 1.1227 (0.8881)  acc1: 76.0417 (80.8093)  acc5: 90.6250 (95.1147)  time: 7.0700  data: 0.0002  max mem: 18879
+Test:  [420/521]  eta: 0:14:35  loss: 1.0856 (0.8880)  acc1: 76.0417 (80.8393)  acc5: 91.6667 (95.1010)  time: 5.7851  data: 0.0002  max mem: 18879
+Test:  [425/521]  eta: 0:13:46  loss: 1.0856 (0.8913)  acc1: 76.0417 (80.7561)  acc5: 91.6667 (95.0827)  time: 4.4958  data: 0.0002  max mem: 18879
+Test:  [430/521]  eta: 0:12:59  loss: 1.0485 (0.8925)  acc1: 77.0833 (80.7352)  acc5: 92.7083 (95.0624)  time: 4.4455  data: 0.0001  max mem: 18879
+Test:  [435/521]  eta: 0:12:13  loss: 1.0707 (0.8960)  acc1: 76.0417 (80.6527)  acc5: 91.6667 (95.0210)  time: 4.5059  data: 0.0001  max mem: 18879
+Test:  [440/521]  eta: 0:11:27  loss: 1.2871 (0.9021)  acc1: 75.0000 (80.5060)  acc5: 91.6667 (94.9617)  time: 4.7362  data: 0.0001  max mem: 18879
+Test:  [445/521]  eta: 0:10:45  loss: 1.0707 (0.9027)  acc1: 76.0417 (80.4676)  acc5: 91.6667 (94.9598)  time: 5.9972  data: 0.0002  max mem: 18879
+Test:  [450/521]  eta: 0:10:04  loss: 1.1164 (0.9057)  acc1: 72.9167 (80.4000)  acc5: 90.6250 (94.9279)  time: 7.1836  data: 0.0002  max mem: 18879
+Test:  [455/521]  eta: 0:09:22  loss: 0.9776 (0.9041)  acc1: 79.1667 (80.4459)  acc5: 93.7500 (94.9333)  time: 8.4026  data: 0.0002  max mem: 18879
+Test:  [460/521]  eta: 0:08:40  loss: 0.9776 (0.9054)  acc1: 79.1667 (80.3529)  acc5: 94.7917 (94.9295)  time: 9.4520  data: 0.0002  max mem: 18879
+Test:  [465/521]  eta: 0:07:58  loss: 1.0270 (0.9077)  acc1: 78.1250 (80.3223)  acc5: 94.7917 (94.8990)  time: 9.4760  data: 0.0002  max mem: 18879
+Test:  [470/521]  eta: 0:07:15  loss: 0.9220 (0.9101)  acc1: 80.2083 (80.2835)  acc5: 94.7917 (94.8669)  time: 9.4758  data: 0.0002  max mem: 18879
+Test:  [475/521]  eta: 0:06:33  loss: 1.0488 (0.9159)  acc1: 76.0417 (80.1274)  acc5: 92.7083 (94.8398)  time: 9.4744  data: 0.0002  max mem: 18879
+Test:  [480/521]  eta: 0:05:51  loss: 1.0220 (0.9140)  acc1: 78.1250 (80.1845)  acc5: 92.7083 (94.8610)  time: 9.4746  data: 0.0002  max mem: 18879
+Test:  [485/521]  eta: 0:05:08  loss: 1.0220 (0.9149)  acc1: 78.1250 (80.1397)  acc5: 93.7500 (94.8624)  time: 9.4733  data: 0.0002  max mem: 18879
+Test:  [490/521]  eta: 0:04:26  loss: 0.8920 (0.9128)  acc1: 79.1667 (80.1914)  acc5: 96.8750 (94.8850)  time: 9.4711  data: 0.0002  max mem: 18879
+Test:  [495/521]  eta: 0:03:43  loss: 0.8920 (0.9124)  acc1: 79.1667 (80.1810)  acc5: 96.8750 (94.9030)  time: 9.4736  data: 0.0002  max mem: 18879
+Test:  [500/521]  eta: 0:03:00  loss: 0.7889 (0.9108)  acc1: 79.1667 (80.2333)  acc5: 96.8750 (94.9143)  time: 9.4729  data: 0.0002  max mem: 18879
+Test:  [505/521]  eta: 0:02:17  loss: 0.8413 (0.9150)  acc1: 79.1667 (80.1301)  acc5: 95.8333 (94.8781)  time: 9.4714  data: 0.0002  max mem: 18879
+Test:  [510/521]  eta: 0:01:34  loss: 0.9827 (0.9177)  acc1: 78.1250 (80.0330)  acc5: 94.7917 (94.8814)  time: 9.4735  data: 0.0001  max mem: 18879
+Test:  [515/521]  eta: 0:00:51  loss: 0.8076 (0.9141)  acc1: 82.2917 (80.1094)  acc5: 94.7917 (94.9088)  time: 9.4735  data: 0.0001  max mem: 18879
+Test:  [520/521]  eta: 0:00:08  loss: 0.8413 (0.9127)  acc1: 73.9583 (80.1360)  acc5: 94.7917 (94.9240)  time: 9.4188  data: 0.0001  max mem: 18879
+Test: Total time: 1:14:59 (8.6360 s / it)
+* Acc@1 80.136 Acc@5 94.924 loss 0.913
+Accuracy of the network on the 50000 test images: 80.1%
+vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2 w8a8 method_1.5 -------------------------------------------------
+Not using distributed mode
+batch_size: 128
+epochs: 300
+bce_loss: False
+unscale_lr: False
+model: vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2
+input_size: 224
+drop: 0.0
+drop_path: 0.1
+model_ema: True
+model_ema_decay: 0.99996
+model_ema_force_cpu: False
+opt: adamw
+opt_eps: 1e-08
+opt_betas: None
+clip_grad: None
+momentum: 0.9
+weight_decay: 0.05
+sched: cosine
+lr: 0.0005
+lr_noise: None
+lr_noise_pct: 0.67
+lr_noise_std: 1.0
+warmup_lr: 1e-06
+min_lr: 1e-05
+decay_epochs: 30
+warmup_epochs: 5
+cooldown_epochs: 10
+patience_epochs: 10
+decay_rate: 0.1
+color_jitter: 0.3
+aa: rand-m9-mstd0.5-inc1
+smoothing: 0.1
+train_interpolation: bicubic
+repeated_aug: True
+train_mode: True
+ThreeAugment: False
+src: False
+reprob: 0.25
+remode: pixel
+recount: 1
+resplit: False
+mixup: 0.8
+cutmix: 1.0
+cutmix_minmax: None
+mixup_prob: 1.0
+mixup_switch_prob: 0.5
+mixup_mode: batch
+teacher_model: regnety_160
+teacher_path: 
+distillation_type: none
+distillation_alpha: 0.5
+distillation_tau: 1.0
+cosub: False
+finetune: 
+attn_only: False
+data_path: /data01/datasets/imagenet
+data_set: IMNET
+inat_category: name
+output_dir: 
+device: cuda
+seed: 0
+resume: ./saved_checkpoint/vim_b_midclstok_81p9acc.pth
+start_epoch: 0
+eval: True
+eval_crop_ratio: 0.875
+dist_eval: False
+num_workers: 10
+pin_mem: True
+distributed: False
+world_size: 1
+dist_url: env://
+if_amp: True
+if_continue_inf: False
+if_nan2num: False
+if_random_cls_token_position: False
+if_random_token_rank: False
+local_rank: 0
+use_vim_torch: True
+static_quant: True
+observe: percentile
+quant_weight: True
+quant_act: True
+a_bit: 8
+w_bit: 8
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: False
+use_hadmard_R3: False
+use_hadmard_R4: False
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_reduce_mean: True
+use_pertoken: True
+use_split: True
+use_klt: True
+generate_klt: False
+use_perkernel: False
+w_perchannel: True
+fake_online_hadamard: False
+analyse_and_plot: False
+use_adaround: False
+adaround_iter: 200
+b_start: 20
+b_end: 2
+warmup: 0.2
+Creating model: vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2
+number of params: 97598440
+Test:  [0/3]  eta: 0:03:26  loss: 0.7431 (0.7431)  acc1: 83.3333 (83.3333)  acc5: 94.7917 (94.7917)  time: 68.8012  data: 2.0463  max mem: 14446
+Test:  [2/3]  eta: 0:00:44  loss: 0.6302 (0.6222)  acc1: 88.5417 (87.2000)  acc5: 97.9167 (97.2000)  time: 44.6095  data: 0.6822  max mem: 14447
+Test: Total time: 0:02:13 (44.6497 s / it)
+* Acc@1 87.200 Acc@5 97.200 loss 0.622
+Fp Accuracy of the network on the 50000 test images: 87.2%
+Test:  [  0/521]  eta: 5:30:53  loss: 0.3446 (0.3446)  acc1: 94.7917 (94.7917)  acc5: 98.9583 (98.9583)  time: 38.1064  data: 2.0948  max mem: 19733
+Test:  [  5/521]  eta: 1:23:12  loss: 0.5622 (0.5106)  acc1: 87.5000 (90.1042)  acc5: 97.9167 (98.0903)  time: 9.6761  data: 0.3493  max mem: 19768
+Test:  [ 10/521]  eta: 1:00:54  loss: 0.4531 (0.4412)  acc1: 93.7500 (92.3295)  acc5: 97.9167 (98.2955)  time: 7.1522  data: 0.1906  max mem: 19768
+Test:  [ 15/521]  eta: 0:52:13  loss: 0.4774 (0.4952)  acc1: 92.7083 (91.1458)  acc5: 97.9167 (98.1771)  time: 6.1924  data: 0.1311  max mem: 19768
+Test:  [ 20/521]  eta: 0:47:30  loss: 0.5649 (0.6047)  acc1: 87.5000 (87.5992)  acc5: 97.9167 (97.6687)  time: 4.0689  data: 0.0001  max mem: 19768
+Test:  [ 25/521]  eta: 0:45:01  loss: 0.6170 (0.6509)  acc1: 87.5000 (86.3381)  acc5: 96.8750 (97.3558)  time: 4.1779  data: 0.0001  max mem: 19768
+Test:  [ 30/521]  eta: 0:43:10  loss: 0.7028 (0.6796)  acc1: 83.3333 (85.2823)  acc5: 96.8750 (97.2446)  time: 4.2446  data: 0.0001  max mem: 19768
+Test:  [ 35/521]  eta: 0:42:10  loss: 1.0248 (0.7603)  acc1: 78.1250 (82.8414)  acc5: 95.8333 (96.6435)  time: 4.4166  data: 0.0001  max mem: 19768
+Test:  [ 40/521]  eta: 0:44:33  loss: 0.7207 (0.7620)  acc1: 78.1250 (82.8252)  acc5: 95.8333 (96.5955)  time: 5.4190  data: 0.0002  max mem: 19768
+Test:  [ 45/521]  eta: 0:47:03  loss: 0.7143 (0.7392)  acc1: 83.3333 (83.6277)  acc5: 95.8333 (96.6712)  time: 6.5600  data: 0.0002  max mem: 19768
+Test:  [ 50/521]  eta: 0:48:54  loss: 0.5388 (0.6952)  acc1: 89.5833 (84.8448)  acc5: 96.8750 (96.8750)  time: 7.7065  data: 0.0002  max mem: 19768
+Test:  [ 55/521]  eta: 0:50:17  loss: 0.4912 (0.6811)  acc1: 91.6667 (85.3051)  acc5: 97.9167 (96.8378)  time: 8.7616  data: 0.0002  max mem: 19768
+Test:  [ 60/521]  eta: 0:51:20  loss: 0.4912 (0.6811)  acc1: 90.6250 (85.5362)  acc5: 97.9167 (96.8067)  time: 8.9865  data: 0.0002  max mem: 19768
+Test:  [ 65/521]  eta: 0:52:06  loss: 0.5117 (0.6964)  acc1: 88.5417 (85.2588)  acc5: 96.8750 (96.6698)  time: 8.9860  data: 0.0002  max mem: 19768
+Test:  [ 70/521]  eta: 0:52:39  loss: 0.6432 (0.6760)  acc1: 88.5417 (85.7981)  acc5: 95.8333 (96.7430)  time: 8.9881  data: 0.0002  max mem: 19768
+Test:  [ 75/521]  eta: 0:53:02  loss: 0.4940 (0.6503)  acc1: 90.6250 (86.4720)  acc5: 97.9167 (96.8887)  time: 8.9869  data: 0.0002  max mem: 19768
+Test:  [ 80/521]  eta: 0:53:17  loss: 0.4182 (0.6449)  acc1: 90.6250 (86.5741)  acc5: 97.9167 (96.9393)  time: 8.9856  data: 0.0002  max mem: 19768
+Test:  [ 85/521]  eta: 0:53:25  loss: 0.4182 (0.6563)  acc1: 90.6250 (86.2161)  acc5: 97.9167 (96.9113)  time: 8.9868  data: 0.0002  max mem: 19768
+Test:  [ 90/521]  eta: 0:53:27  loss: 0.6230 (0.6865)  acc1: 86.4583 (85.4396)  acc5: 96.8750 (96.7376)  time: 8.9842  data: 0.0002  max mem: 19768
+Test:  [ 95/521]  eta: 0:53:24  loss: 0.7551 (0.6883)  acc1: 84.3750 (85.3082)  acc5: 95.8333 (96.7665)  time: 8.9848  data: 0.0002  max mem: 19768
+Test:  [100/521]  eta: 0:53:17  loss: 0.7830 (0.7039)  acc1: 80.2083 (84.8494)  acc5: 95.8333 (96.6687)  time: 8.9844  data: 0.0002  max mem: 19768
+Test:  [105/521]  eta: 0:53:06  loss: 0.7818 (0.7060)  acc1: 81.2500 (84.7583)  acc5: 95.8333 (96.7178)  time: 8.9837  data: 0.0002  max mem: 19768
+Test:  [110/521]  eta: 0:52:52  loss: 0.7440 (0.7069)  acc1: 82.2917 (84.6941)  acc5: 95.8333 (96.7249)  time: 8.9852  data: 0.0002  max mem: 19768
+Test:  [115/521]  eta: 0:52:36  loss: 0.7242 (0.7064)  acc1: 82.2917 (84.7432)  acc5: 96.8750 (96.7313)  time: 8.9855  data: 0.0002  max mem: 19768
+Test:  [120/521]  eta: 0:52:17  loss: 0.7106 (0.7103)  acc1: 83.3333 (84.6505)  acc5: 96.8750 (96.7028)  time: 8.9875  data: 0.0002  max mem: 19768
+Test:  [125/521]  eta: 0:51:56  loss: 0.7106 (0.7150)  acc1: 84.3750 (84.4659)  acc5: 96.8750 (96.6931)  time: 8.9818  data: 0.0002  max mem: 19768
+Test:  [130/521]  eta: 0:51:33  loss: 0.8025 (0.7151)  acc1: 83.3333 (84.3273)  acc5: 96.8750 (96.7001)  time: 8.9840  data: 0.0002  max mem: 19768
+Test:  [135/521]  eta: 0:51:09  loss: 0.6862 (0.7045)  acc1: 85.4167 (84.6278)  acc5: 97.9167 (96.7601)  time: 8.9849  data: 0.0002  max mem: 19768
+Test:  [140/521]  eta: 0:50:43  loss: 0.6087 (0.7018)  acc1: 85.4167 (84.6483)  acc5: 97.9167 (96.8011)  time: 8.9824  data: 0.0002  max mem: 19768
+Test:  [145/521]  eta: 0:50:16  loss: 0.6087 (0.7077)  acc1: 85.4167 (84.5320)  acc5: 97.9167 (96.7823)  time: 8.9836  data: 0.0002  max mem: 19768
+Test:  [150/521]  eta: 0:49:48  loss: 0.6087 (0.7175)  acc1: 85.4167 (84.2646)  acc5: 97.9167 (96.7646)  time: 8.9846  data: 0.0002  max mem: 19768
+Test:  [155/521]  eta: 0:49:18  loss: 0.6233 (0.7121)  acc1: 85.4167 (84.4818)  acc5: 97.9167 (96.7748)  time: 8.9844  data: 0.0002  max mem: 19768
+Test:  [160/521]  eta: 0:48:48  loss: 0.6374 (0.7093)  acc1: 85.4167 (84.5173)  acc5: 97.9167 (96.8427)  time: 8.9854  data: 0.0002  max mem: 19768
+Test:  [165/521]  eta: 0:48:17  loss: 0.7177 (0.7138)  acc1: 85.4167 (84.4754)  acc5: 96.8750 (96.7872)  time: 8.9893  data: 0.0002  max mem: 19768
+Test:  [170/521]  eta: 0:47:00  loss: 0.5203 (0.7031)  acc1: 90.6250 (84.7649)  acc5: 97.9167 (96.8506)  time: 7.8837  data: 0.0002  max mem: 19768
+Test:  [175/521]  eta: 0:45:40  loss: 0.5203 (0.7002)  acc1: 89.5833 (84.8722)  acc5: 97.9167 (96.8750)  time: 6.6533  data: 0.0002  max mem: 19768
+Test:  [180/521]  eta: 0:44:25  loss: 0.5688 (0.6980)  acc1: 89.5833 (84.9275)  acc5: 96.8750 (96.8865)  time: 5.4314  data: 0.0002  max mem: 19768
+Test:  [185/521]  eta: 0:43:12  loss: 0.5126 (0.6966)  acc1: 89.5833 (84.8510)  acc5: 97.9167 (96.9534)  time: 4.2019  data: 0.0002  max mem: 19768
+Test:  [190/521]  eta: 0:42:02  loss: 0.6426 (0.6971)  acc1: 86.4583 (84.8495)  acc5: 97.9167 (96.9459)  time: 4.0879  data: 0.0002  max mem: 19768
+Test:  [195/521]  eta: 0:41:10  loss: 0.6847 (0.7006)  acc1: 85.4167 (84.8161)  acc5: 96.8750 (96.9175)  time: 4.5396  data: 0.0002  max mem: 19768
+Test:  [200/521]  eta: 0:40:13  loss: 0.7063 (0.7056)  acc1: 83.3333 (84.6030)  acc5: 96.8750 (96.8854)  time: 4.8347  data: 0.0002  max mem: 19768
+Test:  [205/521]  eta: 0:39:30  loss: 0.7025 (0.7029)  acc1: 84.3750 (84.6733)  acc5: 96.8750 (96.9205)  time: 5.5194  data: 0.0001  max mem: 19768
+Test:  [210/521]  eta: 0:39:04  loss: 0.7025 (0.7046)  acc1: 84.3750 (84.6367)  acc5: 95.8333 (96.8947)  time: 6.7441  data: 0.0002  max mem: 19768
+Test:  [215/521]  eta: 0:38:37  loss: 0.8117 (0.7140)  acc1: 82.2917 (84.3605)  acc5: 95.8333 (96.8123)  time: 7.5272  data: 0.0002  max mem: 19768
+Test:  [220/521]  eta: 0:38:08  loss: 0.8117 (0.7213)  acc1: 82.2917 (84.1393)  acc5: 95.8333 (96.7430)  time: 8.4590  data: 0.0002  max mem: 19768
+Test:  [225/521]  eta: 0:37:40  loss: 0.8117 (0.7205)  acc1: 82.2917 (84.1538)  acc5: 94.7917 (96.7321)  time: 9.0106  data: 0.0002  max mem: 19768
+Test:  [230/521]  eta: 0:37:10  loss: 0.8985 (0.7288)  acc1: 79.1667 (83.9917)  acc5: 94.7917 (96.6315)  time: 9.0097  data: 0.0002  max mem: 19768
+Test:  [235/521]  eta: 0:36:40  loss: 0.8149 (0.7313)  acc1: 83.3333 (83.9778)  acc5: 94.7917 (96.5837)  time: 9.0124  data: 0.0002  max mem: 19768
+Test:  [240/521]  eta: 0:36:09  loss: 0.9447 (0.7400)  acc1: 81.2500 (83.8434)  acc5: 92.7083 (96.4946)  time: 9.0160  data: 0.0002  max mem: 19768
+Test:  [245/521]  eta: 0:35:38  loss: 1.1200 (0.7494)  acc1: 76.0417 (83.6933)  acc5: 92.7083 (96.3753)  time: 9.0123  data: 0.0002  max mem: 19768
+Test:  [250/521]  eta: 0:35:06  loss: 0.9604 (0.7558)  acc1: 81.2500 (83.5533)  acc5: 92.7083 (96.3023)  time: 9.0121  data: 0.0002  max mem: 19768
+Test:  [255/521]  eta: 0:34:33  loss: 1.0334 (0.7658)  acc1: 75.0000 (83.2520)  acc5: 92.7083 (96.2362)  time: 9.0089  data: 0.0002  max mem: 19768
+Test:  [260/521]  eta: 0:34:01  loss: 1.2977 (0.7760)  acc1: 69.7917 (83.0380)  acc5: 92.7083 (96.1327)  time: 9.0057  data: 0.0002  max mem: 19768
+Test:  [265/521]  eta: 0:33:27  loss: 1.2882 (0.7882)  acc1: 69.7917 (82.7498)  acc5: 91.6667 (96.0174)  time: 9.0093  data: 0.0002  max mem: 19768
+Test:  [270/521]  eta: 0:32:53  loss: 1.1439 (0.7902)  acc1: 69.7917 (82.6799)  acc5: 91.6667 (95.9986)  time: 9.0115  data: 0.0002  max mem: 19768
+Test:  [275/521]  eta: 0:32:19  loss: 1.1439 (0.7958)  acc1: 69.7917 (82.5106)  acc5: 91.6667 (95.9352)  time: 9.0135  data: 0.0002  max mem: 19768
+Test:  [280/521]  eta: 0:31:45  loss: 1.1161 (0.8000)  acc1: 72.9167 (82.4029)  acc5: 92.7083 (95.9112)  time: 9.0144  data: 0.0002  max mem: 19768
+Test:  [285/521]  eta: 0:31:10  loss: 0.9014 (0.8030)  acc1: 76.0417 (82.3244)  acc5: 93.7500 (95.8698)  time: 9.0143  data: 0.0002  max mem: 19768
+Test:  [290/521]  eta: 0:30:34  loss: 1.0468 (0.8063)  acc1: 76.0417 (82.2845)  acc5: 93.7500 (95.8369)  time: 9.0109  data: 0.0002  max mem: 19768
+Test:  [295/521]  eta: 0:29:59  loss: 0.8885 (0.8056)  acc1: 79.1667 (82.3163)  acc5: 94.7917 (95.8474)  time: 9.0100  data: 0.0002  max mem: 19768
+Test:  [300/521]  eta: 0:29:23  loss: 0.6804 (0.8017)  acc1: 86.4583 (82.4336)  acc5: 94.7917 (95.8576)  time: 9.0110  data: 0.0002  max mem: 19768
+Test:  [305/521]  eta: 0:28:47  loss: 0.6880 (0.8087)  acc1: 86.4583 (82.2440)  acc5: 95.8333 (95.8061)  time: 9.0119  data: 0.0002  max mem: 19768
+Test:  [310/521]  eta: 0:28:10  loss: 0.7060 (0.8126)  acc1: 82.2917 (82.1543)  acc5: 95.8333 (95.7529)  time: 9.0141  data: 0.0002  max mem: 19768
+Test:  [315/521]  eta: 0:27:33  loss: 0.7972 (0.8150)  acc1: 78.1250 (82.1104)  acc5: 94.7917 (95.7246)  time: 9.0161  data: 0.0002  max mem: 19768
+Test:  [320/521]  eta: 0:26:56  loss: 0.9777 (0.8131)  acc1: 78.1250 (82.1651)  acc5: 94.7917 (95.7100)  time: 9.0164  data: 0.0002  max mem: 19768
+Test:  [325/521]  eta: 0:26:19  loss: 0.9777 (0.8224)  acc1: 78.1250 (81.9178)  acc5: 94.7917 (95.6193)  time: 9.0157  data: 0.0002  max mem: 19768
+Test:  [330/521]  eta: 0:25:30  loss: 0.9682 (0.8289)  acc1: 78.1250 (81.8039)  acc5: 94.7917 (95.5438)  time: 8.0673  data: 0.0002  max mem: 19768
+Test:  [335/521]  eta: 0:24:40  loss: 0.9473 (0.8300)  acc1: 78.1250 (81.7243)  acc5: 94.7917 (95.5450)  time: 6.8883  data: 0.0003  max mem: 19768
+Test:  [340/521]  eta: 0:23:51  loss: 1.1199 (0.8345)  acc1: 76.0417 (81.6563)  acc5: 92.7083 (95.5034)  time: 5.7827  data: 0.0003  max mem: 19768
+Test:  [345/521]  eta: 0:23:12  loss: 1.1191 (0.8405)  acc1: 77.0833 (81.4909)  acc5: 92.7083 (95.4660)  time: 5.5712  data: 0.0003  max mem: 19768
+Test:  [350/521]  eta: 0:22:36  loss: 1.0661 (0.8395)  acc1: 76.0417 (81.4518)  acc5: 95.8333 (95.4980)  time: 6.5182  data: 0.0003  max mem: 19768
+Test:  [355/521]  eta: 0:21:58  loss: 1.1508 (0.8447)  acc1: 71.8750 (81.3261)  acc5: 92.7083 (95.4266)  time: 7.6919  data: 0.0002  max mem: 19768
+Test:  [360/521]  eta: 0:21:21  loss: 1.1282 (0.8482)  acc1: 71.8750 (81.2558)  acc5: 93.7500 (95.3890)  time: 8.7932  data: 0.0002  max mem: 19768
+Test:  [365/521]  eta: 0:20:43  loss: 0.9050 (0.8476)  acc1: 77.0833 (81.2898)  acc5: 94.7917 (95.4064)  time: 9.0013  data: 0.0002  max mem: 19768
+Test:  [370/521]  eta: 0:20:06  loss: 1.1135 (0.8512)  acc1: 78.1250 (81.2500)  acc5: 93.7500 (95.3785)  time: 9.0578  data: 0.0002  max mem: 19768
+Test:  [375/521]  eta: 0:19:29  loss: 0.7719 (0.8501)  acc1: 82.2917 (81.2805)  acc5: 94.7917 (95.3790)  time: 9.1328  data: 0.0002  max mem: 19768
+Test:  [380/521]  eta: 0:18:51  loss: 0.8481 (0.8542)  acc1: 80.2083 (81.2063)  acc5: 94.7917 (95.3193)  time: 9.2047  data: 0.0002  max mem: 19768
+Test:  [385/521]  eta: 0:18:13  loss: 0.9641 (0.8570)  acc1: 78.1250 (81.1529)  acc5: 93.7500 (95.2666)  time: 9.2652  data: 0.0002  max mem: 19768
+Test:  [390/521]  eta: 0:17:35  loss: 1.0088 (0.8640)  acc1: 77.0833 (80.9783)  acc5: 90.6250 (95.1860)  time: 9.2625  data: 0.0002  max mem: 19768
+Test:  [395/521]  eta: 0:16:56  loss: 1.0088 (0.8642)  acc1: 75.0000 (80.9843)  acc5: 90.6250 (95.1836)  time: 9.2566  data: 0.0002  max mem: 19768
+Test:  [400/521]  eta: 0:16:18  loss: 1.0088 (0.8674)  acc1: 77.0833 (80.9383)  acc5: 90.6250 (95.1424)  time: 9.2397  data: 0.0002  max mem: 19768
+Test:  [405/521]  eta: 0:15:39  loss: 1.0088 (0.8696)  acc1: 75.0000 (80.9139)  acc5: 91.6667 (95.1124)  time: 9.2346  data: 0.0002  max mem: 19768
+Test:  [410/521]  eta: 0:15:00  loss: 0.9845 (0.8723)  acc1: 78.1250 (80.8445)  acc5: 92.7083 (95.0629)  time: 9.1859  data: 0.0002  max mem: 19768
+Test:  [415/521]  eta: 0:14:20  loss: 1.1270 (0.8750)  acc1: 77.0833 (80.8068)  acc5: 92.7083 (95.0346)  time: 9.1180  data: 0.0002  max mem: 19768
+Test:  [420/521]  eta: 0:13:41  loss: 1.0691 (0.8748)  acc1: 77.0833 (80.8343)  acc5: 92.7083 (95.0243)  time: 9.0646  data: 0.0002  max mem: 19768
+Test:  [425/521]  eta: 0:13:01  loss: 1.0691 (0.8780)  acc1: 77.0833 (80.7536)  acc5: 92.7083 (95.0068)  time: 9.0095  data: 0.0002  max mem: 19768
+Test:  [430/521]  eta: 0:12:21  loss: 1.0105 (0.8793)  acc1: 78.1250 (80.7159)  acc5: 92.7083 (94.9899)  time: 9.0027  data: 0.0002  max mem: 19768
+Test:  [435/521]  eta: 0:11:41  loss: 1.0691 (0.8827)  acc1: 77.0833 (80.6312)  acc5: 91.6667 (94.9541)  time: 9.0025  data: 0.0002  max mem: 19768
+Test:  [440/521]  eta: 0:11:01  loss: 1.2472 (0.8888)  acc1: 73.9583 (80.4847)  acc5: 91.6667 (94.9003)  time: 9.0031  data: 0.0002  max mem: 19768
+Test:  [445/521]  eta: 0:10:21  loss: 1.0610 (0.8892)  acc1: 73.9583 (80.4466)  acc5: 91.6667 (94.8991)  time: 9.0019  data: 0.0002  max mem: 19768
+Test:  [450/521]  eta: 0:09:41  loss: 1.0855 (0.8923)  acc1: 73.9583 (80.3885)  acc5: 91.6667 (94.8679)  time: 9.0021  data: 0.0002  max mem: 19768
+Test:  [455/521]  eta: 0:09:01  loss: 0.9595 (0.8905)  acc1: 79.1667 (80.4413)  acc5: 93.7500 (94.8739)  time: 9.0028  data: 0.0002  max mem: 19768
+Test:  [460/521]  eta: 0:08:20  loss: 0.9595 (0.8917)  acc1: 79.1667 (80.3575)  acc5: 94.7917 (94.8617)  time: 9.0017  data: 0.0002  max mem: 19768
+Test:  [465/521]  eta: 0:07:40  loss: 0.9787 (0.8941)  acc1: 78.1250 (80.3179)  acc5: 94.7917 (94.8364)  time: 8.9875  data: 0.0002  max mem: 19768
+Test:  [470/521]  eta: 0:06:56  loss: 0.9426 (0.8966)  acc1: 80.2083 (80.2680)  acc5: 94.7917 (94.8027)  time: 7.7190  data: 0.0002  max mem: 19768
+Test:  [475/521]  eta: 0:06:13  loss: 1.0510 (0.9029)  acc1: 72.9167 (80.0945)  acc5: 92.7083 (94.7764)  time: 6.4496  data: 0.0002  max mem: 19768
+Test:  [480/521]  eta: 0:05:31  loss: 1.0002 (0.9010)  acc1: 78.1250 (80.1412)  acc5: 94.7917 (94.8047)  time: 5.1805  data: 0.0002  max mem: 19768
+Test:  [485/521]  eta: 0:04:49  loss: 0.9959 (0.9019)  acc1: 77.0833 (80.0947)  acc5: 94.7917 (94.8088)  time: 3.9262  data: 0.0002  max mem: 19768
+Test:  [490/521]  eta: 0:04:07  loss: 0.8748 (0.9000)  acc1: 77.0833 (80.1362)  acc5: 96.8750 (94.8320)  time: 3.9256  data: 0.0002  max mem: 19768
+Test:  [495/521]  eta: 0:03:26  loss: 0.8748 (0.8995)  acc1: 77.0833 (80.1180)  acc5: 96.8750 (94.8484)  time: 3.9257  data: 0.0001  max mem: 19768
+Test:  [500/521]  eta: 0:02:46  loss: 0.7885 (0.8980)  acc1: 77.0833 (80.1730)  acc5: 96.8750 (94.8603)  time: 3.9252  data: 0.0001  max mem: 19768
+Test:  [505/521]  eta: 0:02:06  loss: 0.8427 (0.9023)  acc1: 77.0833 (80.0622)  acc5: 95.8333 (94.8287)  time: 3.9249  data: 0.0001  max mem: 19768
+Test:  [510/521]  eta: 0:01:26  loss: 0.9363 (0.9052)  acc1: 76.0417 (79.9617)  acc5: 95.8333 (94.8284)  time: 3.9246  data: 0.0001  max mem: 19768
+Test:  [515/521]  eta: 0:00:46  loss: 0.8312 (0.9017)  acc1: 79.1667 (80.0287)  acc5: 95.8333 (94.8583)  time: 3.9241  data: 0.0001  max mem: 19768
+Test:  [520/521]  eta: 0:00:07  loss: 0.8427 (0.9004)  acc1: 76.0417 (80.0600)  acc5: 95.8333 (94.8740)  time: 3.8946  data: 0.0001  max mem: 19768
+Test: Total time: 1:07:23 (7.7619 s / it)
+* Acc@1 80.060 Acc@5 94.874 loss 0.900
+Accuracy of the network on the 50000 test images: 80.1%
+vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2 w8a8 method_1.5 -------------------------------------------------
+Not using distributed mode
+batch_size: 128
+epochs: 300
+bce_loss: False
+unscale_lr: False
+model: vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2
+input_size: 224
+drop: 0.0
+drop_path: 0.1
+model_ema: True
+model_ema_decay: 0.99996
+model_ema_force_cpu: False
+opt: adamw
+opt_eps: 1e-08
+opt_betas: None
+clip_grad: None
+momentum: 0.9
+weight_decay: 0.05
+sched: cosine
+lr: 0.0005
+lr_noise: None
+lr_noise_pct: 0.67
+lr_noise_std: 1.0
+warmup_lr: 1e-06
+min_lr: 1e-05
+decay_epochs: 30
+warmup_epochs: 5
+cooldown_epochs: 10
+patience_epochs: 10
+decay_rate: 0.1
+color_jitter: 0.3
+aa: rand-m9-mstd0.5-inc1
+smoothing: 0.1
+train_interpolation: bicubic
+repeated_aug: True
+train_mode: True
+ThreeAugment: False
+src: False
+reprob: 0.25
+remode: pixel
+recount: 1
+resplit: False
+mixup: 0.8
+cutmix: 1.0
+cutmix_minmax: None
+mixup_prob: 1.0
+mixup_switch_prob: 0.5
+mixup_mode: batch
+teacher_model: regnety_160
+teacher_path: 
+distillation_type: none
+distillation_alpha: 0.5
+distillation_tau: 1.0
+cosub: False
+finetune: 
+attn_only: False
+data_path: /data01/datasets/imagenet
+data_set: IMNET
+inat_category: name
+output_dir: 
+device: cuda
+seed: 0
+resume: ./saved_checkpoint/vim_b_midclstok_81p9acc.pth
+start_epoch: 0
+eval: True
+eval_crop_ratio: 0.875
+dist_eval: False
+num_workers: 10
+pin_mem: True
+distributed: False
+world_size: 1
+dist_url: env://
+if_amp: True
+if_continue_inf: False
+if_nan2num: False
+if_random_cls_token_position: False
+if_random_token_rank: False
+local_rank: 0
+use_vim_torch: True
+static_quant: True
+observe: percentile
+quant_weight: True
+quant_act: True
+a_bit: 8
+w_bit: 8
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_S1: False
+use_S2: False
+use_S3: False
+use_S4: False
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: False
+use_hadmard_R3: False
+use_hadmard_R4: False
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_reduce_mean: True
+use_pertoken: False
+use_split: True
+use_klt: True
+generate_klt: False
+use_perkernel: False
+w_perchannel: True
+fake_online_hadamard: False
+analyse_and_plot: False
+use_adaround: False
+adaround_iter: 200
+b_start: 20
+b_end: 2
+warmup: 0.2
+Creating model: vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2
+number of params: 97598440
+Test:  [0/3]  eta: 0:02:35  loss: 0.7432 (0.7432)  acc1: 83.3333 (83.3333)  acc5: 94.7917 (94.7917)  time: 51.8326  data: 1.7515  max mem: 16314
+Test:  [2/3]  eta: 0:00:44  loss: 0.6305 (0.6223)  acc1: 88.5417 (87.2000)  acc5: 97.9167 (97.2000)  time: 44.5484  data: 0.5840  max mem: 16315
+Test: Total time: 0:02:13 (44.5930 s / it)
+* Acc@1 87.200 Acc@5 97.200 loss 0.622
+Fp Accuracy of the network on the 50000 test images: 87.2%
+Test:  [  0/521]  eta: 1:38:40  loss: 0.4506 (0.4506)  acc1: 92.7083 (92.7083)  acc5: 96.8750 (96.8750)  time: 11.3634  data: 1.7088  max mem: 20271
+Test:  [  5/521]  eta: 0:43:16  loss: 0.7737 (0.7275)  acc1: 79.1667 (82.6389)  acc5: 96.8750 (96.0069)  time: 5.0318  data: 0.2849  max mem: 20306
+Test:  [ 10/521]  eta: 0:37:56  loss: 0.6004 (0.6095)  acc1: 90.6250 (87.4053)  acc5: 96.8750 (96.5909)  time: 4.4542  data: 0.1555  max mem: 20306
+Test:  [ 15/521]  eta: 0:35:45  loss: 0.6097 (0.6910)  acc1: 85.4167 (86.3281)  acc5: 94.7917 (95.5078)  time: 4.2392  data: 0.1069  max mem: 20306
+Test:  [ 20/521]  eta: 0:34:27  loss: 0.7876 (0.8496)  acc1: 80.2083 (82.2917)  acc5: 94.7917 (93.9980)  time: 3.7639  data: 0.0001  max mem: 20306
+Test:  [ 25/521]  eta: 0:33:31  loss: 0.9596 (0.9112)  acc1: 79.1667 (80.3686)  acc5: 94.7917 (93.6699)  time: 3.7632  data: 0.0001  max mem: 20306
+Test:  [ 30/521]  eta: 0:32:48  loss: 0.9982 (0.9357)  acc1: 76.0417 (79.3683)  acc5: 93.7500 (93.6492)  time: 3.7632  data: 0.0001  max mem: 20306
+Test:  [ 35/521]  eta: 0:32:11  loss: 1.0827 (1.0197)  acc1: 69.7917 (76.9097)  acc5: 92.7083 (93.0266)  time: 3.7624  data: 0.0001  max mem: 20306
+Test:  [ 40/521]  eta: 0:31:39  loss: 1.0788 (1.0034)  acc1: 71.8750 (77.3628)  acc5: 93.7500 (93.2673)  time: 3.7622  data: 0.0001  max mem: 20306
+Test:  [ 45/521]  eta: 0:31:09  loss: 0.9689 (0.9734)  acc1: 77.0833 (78.2382)  acc5: 93.7500 (93.5236)  time: 3.7614  data: 0.0001  max mem: 20306
+Test:  [ 50/521]  eta: 0:30:42  loss: 0.6817 (0.9187)  acc1: 85.4167 (79.6977)  acc5: 95.8333 (93.8930)  time: 3.7625  data: 0.0001  max mem: 20306
+Test:  [ 55/521]  eta: 0:30:16  loss: 0.6670 (0.9148)  acc1: 88.5417 (80.0223)  acc5: 95.8333 (93.7872)  time: 3.7630  data: 0.0001  max mem: 20306
+Test:  [ 60/521]  eta: 0:29:52  loss: 0.7099 (0.9189)  acc1: 84.3750 (80.0376)  acc5: 94.7917 (93.6817)  time: 3.7630  data: 0.0008  max mem: 20306
+Test:  [ 65/521]  eta: 0:29:28  loss: 0.8642 (0.9447)  acc1: 82.2917 (79.4350)  acc5: 92.7083 (93.5133)  time: 3.7630  data: 0.0008  max mem: 20306
+Test:  [ 70/521]  eta: 0:29:05  loss: 0.8881 (0.9150)  acc1: 82.2917 (80.0910)  acc5: 92.7083 (93.7940)  time: 3.7623  data: 0.0008  max mem: 20306
+Test:  [ 75/521]  eta: 0:28:42  loss: 0.7791 (0.8806)  acc1: 84.3750 (80.9211)  acc5: 94.7917 (94.0927)  time: 3.7614  data: 0.0008  max mem: 20306
+Test:  [ 80/521]  eta: 0:28:20  loss: 0.5766 (0.8737)  acc1: 86.4583 (81.0442)  acc5: 95.8333 (94.2644)  time: 3.7612  data: 0.0002  max mem: 20306
+Test:  [ 85/521]  eta: 0:27:59  loss: 0.5766 (0.8809)  acc1: 86.4583 (80.7534)  acc5: 97.9167 (94.2466)  time: 3.7618  data: 0.0002  max mem: 20306
+Test:  [ 90/521]  eta: 0:27:37  loss: 0.7079 (0.9219)  acc1: 81.2500 (79.6131)  acc5: 95.8333 (93.8988)  time: 3.7614  data: 0.0001  max mem: 20306
+Test:  [ 95/521]  eta: 0:27:16  loss: 0.9218 (0.9270)  acc1: 75.0000 (79.3294)  acc5: 94.7917 (93.9128)  time: 3.7610  data: 0.0001  max mem: 20306
+Test:  [100/521]  eta: 0:26:55  loss: 1.2503 (0.9494)  acc1: 68.7500 (78.6407)  acc5: 91.6667 (93.7294)  time: 3.7606  data: 0.0001  max mem: 20306
+Test:  [105/521]  eta: 0:26:34  loss: 1.1291 (0.9493)  acc1: 68.7500 (78.5083)  acc5: 91.6667 (93.8778)  time: 3.7601  data: 0.0001  max mem: 20306
+Test:  [110/521]  eta: 0:26:14  loss: 1.0440 (0.9522)  acc1: 72.9167 (78.3596)  acc5: 93.7500 (93.8814)  time: 3.7597  data: 0.0001  max mem: 20306
+Test:  [115/521]  eta: 0:25:53  loss: 1.0440 (0.9480)  acc1: 75.0000 (78.4842)  acc5: 93.7500 (93.9565)  time: 3.7597  data: 0.0001  max mem: 20306
+Test:  [120/521]  eta: 0:25:33  loss: 0.9709 (0.9526)  acc1: 76.0417 (78.3144)  acc5: 95.8333 (93.8964)  time: 3.7600  data: 0.0001  max mem: 20306
+Test:  [125/521]  eta: 0:25:13  loss: 0.9865 (0.9575)  acc1: 76.0417 (78.0341)  acc5: 93.7500 (93.9319)  time: 3.7605  data: 0.0002  max mem: 20306
+Test:  [130/521]  eta: 0:24:53  loss: 0.9365 (0.9549)  acc1: 78.1250 (77.9421)  acc5: 94.7917 (94.0045)  time: 3.7625  data: 0.0002  max mem: 20306
+Test:  [135/521]  eta: 0:24:33  loss: 0.8770 (0.9437)  acc1: 80.2083 (78.2399)  acc5: 95.8333 (94.1176)  time: 3.7630  data: 0.0002  max mem: 20306
+Test:  [140/521]  eta: 0:24:13  loss: 0.9365 (0.9475)  acc1: 79.1667 (78.0733)  acc5: 96.8750 (94.1489)  time: 3.7638  data: 0.0002  max mem: 20306
+Test:  [145/521]  eta: 0:23:54  loss: 0.9365 (0.9504)  acc1: 79.1667 (78.0537)  acc5: 96.8750 (94.1495)  time: 3.7630  data: 0.0001  max mem: 20306
+Test:  [150/521]  eta: 0:23:34  loss: 0.9838 (0.9571)  acc1: 78.1250 (77.8974)  acc5: 95.8333 (94.1708)  time: 3.7612  data: 0.0001  max mem: 20306
+Test:  [155/521]  eta: 0:23:14  loss: 1.0397 (0.9509)  acc1: 77.0833 (78.1384)  acc5: 95.8333 (94.1974)  time: 3.7610  data: 0.0001  max mem: 20306
+Test:  [160/521]  eta: 0:22:55  loss: 1.0126 (0.9490)  acc1: 78.1250 (78.1315)  acc5: 94.7917 (94.2482)  time: 3.7599  data: 0.0001  max mem: 20306
+Test:  [165/521]  eta: 0:22:35  loss: 1.0126 (0.9557)  acc1: 80.2083 (77.9618)  acc5: 94.7917 (94.2018)  time: 3.7601  data: 0.0001  max mem: 20306
+Test:  [170/521]  eta: 0:22:15  loss: 0.6925 (0.9411)  acc1: 81.2500 (78.3748)  acc5: 95.8333 (94.3165)  time: 3.7604  data: 0.0001  max mem: 20306
+Test:  [175/521]  eta: 0:21:56  loss: 0.7373 (0.9375)  acc1: 81.2500 (78.4979)  acc5: 95.8333 (94.3478)  time: 3.7610  data: 0.0001  max mem: 20306
+Test:  [180/521]  eta: 0:21:37  loss: 0.8200 (0.9376)  acc1: 81.2500 (78.5336)  acc5: 93.7500 (94.3140)  time: 3.7609  data: 0.0001  max mem: 20306
+Test:  [185/521]  eta: 0:21:17  loss: 0.6627 (0.9358)  acc1: 82.2917 (78.4498)  acc5: 95.8333 (94.3660)  time: 3.7625  data: 0.0001  max mem: 20306
+Test:  [190/521]  eta: 0:20:58  loss: 0.8265 (0.9350)  acc1: 81.2500 (78.4195)  acc5: 94.7917 (94.3881)  time: 3.7627  data: 0.0001  max mem: 20306
+Test:  [195/521]  eta: 0:20:38  loss: 0.8751 (0.9391)  acc1: 78.1250 (78.3801)  acc5: 93.7500 (94.3187)  time: 3.7615  data: 0.0001  max mem: 20306
+Test:  [200/521]  eta: 0:20:19  loss: 0.8380 (0.9429)  acc1: 78.1250 (78.2494)  acc5: 94.7917 (94.3045)  time: 3.7629  data: 0.0001  max mem: 20306
+Test:  [205/521]  eta: 0:20:00  loss: 0.8380 (0.9390)  acc1: 80.2083 (78.3475)  acc5: 94.7917 (94.3366)  time: 3.7617  data: 0.0001  max mem: 20306
+Test:  [210/521]  eta: 0:19:41  loss: 0.8520 (0.9388)  acc1: 80.2083 (78.3373)  acc5: 92.7083 (94.3325)  time: 3.7613  data: 0.0001  max mem: 20306
+Test:  [215/521]  eta: 0:19:21  loss: 0.9498 (0.9502)  acc1: 77.0833 (78.0237)  acc5: 93.7500 (94.2371)  time: 3.7615  data: 0.0001  max mem: 20306
+Test:  [220/521]  eta: 0:19:02  loss: 1.0564 (0.9591)  acc1: 73.9583 (77.8422)  acc5: 92.7083 (94.1224)  time: 3.7606  data: 0.0001  max mem: 20306
+Test:  [225/521]  eta: 0:18:43  loss: 1.0773 (0.9612)  acc1: 73.9583 (77.8162)  acc5: 92.7083 (94.1095)  time: 3.7600  data: 0.0001  max mem: 20306
+Test:  [230/521]  eta: 0:18:24  loss: 1.1092 (0.9735)  acc1: 71.8750 (77.5929)  acc5: 91.6667 (93.9439)  time: 3.7604  data: 0.0001  max mem: 20306
+Test:  [235/521]  eta: 0:18:05  loss: 1.1092 (0.9800)  acc1: 71.8750 (77.4894)  acc5: 91.6667 (93.8162)  time: 3.7604  data: 0.0001  max mem: 20306
+Test:  [240/521]  eta: 0:17:45  loss: 1.2514 (0.9887)  acc1: 71.8750 (77.2951)  acc5: 89.5833 (93.7068)  time: 3.7601  data: 0.0001  max mem: 20306
+Test:  [245/521]  eta: 0:17:26  loss: 1.3492 (1.0003)  acc1: 69.7917 (77.1469)  acc5: 88.5417 (93.5171)  time: 3.7602  data: 0.0001  max mem: 20306
+Test:  [250/521]  eta: 0:17:07  loss: 1.2631 (1.0079)  acc1: 70.8333 (76.9920)  acc5: 89.5833 (93.4304)  time: 3.7599  data: 0.0001  max mem: 20306
+Test:  [255/521]  eta: 0:16:48  loss: 1.3680 (1.0174)  acc1: 66.6667 (76.7171)  acc5: 90.6250 (93.3716)  time: 3.7602  data: 0.0002  max mem: 20306
+Test:  [260/521]  eta: 0:16:29  loss: 1.5402 (1.0287)  acc1: 66.6667 (76.4807)  acc5: 87.5000 (93.2072)  time: 3.7605  data: 0.0002  max mem: 20306
+Test:  [265/521]  eta: 0:16:10  loss: 1.5663 (1.0444)  acc1: 61.4583 (76.1513)  acc5: 87.5000 (93.0099)  time: 3.7612  data: 0.0001  max mem: 20306
+Test:  [270/521]  eta: 0:15:51  loss: 1.5663 (1.0489)  acc1: 61.4583 (76.0570)  acc5: 87.5000 (92.9620)  time: 3.7612  data: 0.0001  max mem: 20306
+Test:  [275/521]  eta: 0:15:32  loss: 1.4871 (1.0573)  acc1: 63.5417 (75.8605)  acc5: 86.4583 (92.8593)  time: 3.7610  data: 0.0001  max mem: 20306
+Test:  [280/521]  eta: 0:15:13  loss: 1.4136 (1.0626)  acc1: 64.5833 (75.7488)  acc5: 88.5417 (92.8121)  time: 3.7611  data: 0.0001  max mem: 20306
+Test:  [285/521]  eta: 0:14:53  loss: 1.3201 (1.0676)  acc1: 69.7917 (75.6447)  acc5: 88.5417 (92.7156)  time: 3.7607  data: 0.0002  max mem: 20306
+Test:  [290/521]  eta: 0:14:34  loss: 1.3056 (1.0727)  acc1: 66.6667 (75.5942)  acc5: 88.5417 (92.6403)  time: 3.7610  data: 0.0002  max mem: 20306
+Test:  [295/521]  eta: 0:14:15  loss: 1.2893 (1.0727)  acc1: 72.9167 (75.6264)  acc5: 88.5417 (92.6098)  time: 3.7611  data: 0.0001  max mem: 20306
+Test:  [300/521]  eta: 0:13:56  loss: 0.8839 (1.0677)  acc1: 80.2083 (75.7925)  acc5: 92.7083 (92.6426)  time: 3.7604  data: 0.0001  max mem: 20306
+Test:  [305/521]  eta: 0:13:37  loss: 0.9989 (1.0759)  acc1: 79.1667 (75.6127)  acc5: 92.7083 (92.5313)  time: 3.7603  data: 0.0001  max mem: 20306
+Test:  [310/521]  eta: 0:13:18  loss: 0.9989 (1.0824)  acc1: 73.9583 (75.4756)  acc5: 91.6667 (92.4437)  time: 3.7601  data: 0.0001  max mem: 20306
+Test:  [315/521]  eta: 0:12:59  loss: 1.2093 (1.0865)  acc1: 70.8333 (75.4384)  acc5: 91.6667 (92.3787)  time: 3.7602  data: 0.0002  max mem: 20306
+Test:  [320/521]  eta: 0:12:40  loss: 1.2684 (1.0844)  acc1: 70.8333 (75.5160)  acc5: 87.5000 (92.3806)  time: 3.7604  data: 0.0001  max mem: 20306
+Test:  [325/521]  eta: 0:12:21  loss: 1.2179 (1.0935)  acc1: 70.8333 (75.2780)  acc5: 87.5000 (92.2610)  time: 3.7603  data: 0.0002  max mem: 20306
+Test:  [330/521]  eta: 0:12:02  loss: 1.2093 (1.1025)  acc1: 70.8333 (75.1164)  acc5: 91.6667 (92.1513)  time: 3.7606  data: 0.0001  max mem: 20306
+Test:  [335/521]  eta: 0:11:43  loss: 1.2159 (1.1046)  acc1: 66.6667 (74.9969)  acc5: 91.6667 (92.1565)  time: 3.7607  data: 0.0002  max mem: 20306
+Test:  [340/521]  eta: 0:11:24  loss: 1.4497 (1.1122)  acc1: 63.5417 (74.8870)  acc5: 86.4583 (92.0516)  time: 3.7607  data: 0.0002  max mem: 20306
+Test:  [345/521]  eta: 0:11:05  loss: 1.4497 (1.1200)  acc1: 63.5417 (74.6538)  acc5: 86.4583 (91.9768)  time: 3.7609  data: 0.0002  max mem: 20306
+Test:  [350/521]  eta: 0:10:46  loss: 1.3408 (1.1217)  acc1: 63.5417 (74.5786)  acc5: 86.4583 (91.9634)  time: 3.7603  data: 0.0002  max mem: 20306
+Test:  [355/521]  eta: 0:10:27  loss: 1.7072 (1.1300)  acc1: 62.5000 (74.3914)  acc5: 85.4167 (91.8656)  time: 3.7601  data: 0.0002  max mem: 20306
+Test:  [360/521]  eta: 0:10:08  loss: 1.6486 (1.1347)  acc1: 59.3750 (74.3161)  acc5: 86.4583 (91.7907)  time: 3.7598  data: 0.0002  max mem: 20306
+Test:  [365/521]  eta: 0:09:49  loss: 1.2669 (1.1360)  acc1: 69.7917 (74.2885)  acc5: 89.5833 (91.7663)  time: 3.7598  data: 0.0001  max mem: 20306
+Test:  [370/521]  eta: 0:09:31  loss: 1.5116 (1.1428)  acc1: 68.7500 (74.1661)  acc5: 88.5417 (91.6863)  time: 3.7602  data: 0.0002  max mem: 20306
+Test:  [375/521]  eta: 0:09:12  loss: 1.2232 (1.1428)  acc1: 71.8750 (74.1883)  acc5: 89.5833 (91.6750)  time: 3.7601  data: 0.0002  max mem: 20306
+Test:  [380/521]  eta: 0:08:53  loss: 1.2256 (1.1479)  acc1: 70.8333 (74.1251)  acc5: 88.5417 (91.5792)  time: 3.7601  data: 0.0001  max mem: 20306
+Test:  [385/521]  eta: 0:08:34  loss: 1.2256 (1.1512)  acc1: 71.8750 (74.0771)  acc5: 88.5417 (91.5371)  time: 3.7604  data: 0.0002  max mem: 20306
+Test:  [390/521]  eta: 0:08:15  loss: 1.2388 (1.1599)  acc1: 71.8750 (73.8757)  acc5: 87.5000 (91.4162)  time: 3.7603  data: 0.0001  max mem: 20306
+Test:  [395/521]  eta: 0:07:56  loss: 1.2388 (1.1597)  acc1: 70.8333 (73.9084)  acc5: 87.5000 (91.4063)  time: 3.7603  data: 0.0002  max mem: 20306
+Test:  [400/521]  eta: 0:07:37  loss: 1.3702 (1.1647)  acc1: 68.7500 (73.8051)  acc5: 86.4583 (91.3134)  time: 3.7602  data: 0.0002  max mem: 20306
+Test:  [405/521]  eta: 0:07:18  loss: 1.3837 (1.1693)  acc1: 65.6250 (73.7326)  acc5: 85.4167 (91.2433)  time: 3.7598  data: 0.0002  max mem: 20306
+Test:  [410/521]  eta: 0:06:59  loss: 1.3702 (1.1716)  acc1: 70.8333 (73.6897)  acc5: 87.5000 (91.1902)  time: 3.7594  data: 0.0002  max mem: 20306
+Test:  [415/521]  eta: 0:06:40  loss: 1.5600 (1.1762)  acc1: 65.6250 (73.6228)  acc5: 84.3750 (91.1158)  time: 3.7594  data: 0.0002  max mem: 20306
+Test:  [420/521]  eta: 0:06:21  loss: 1.3976 (1.1760)  acc1: 71.8750 (73.6565)  acc5: 86.4583 (91.1075)  time: 3.7601  data: 0.0002  max mem: 20306
+Test:  [425/521]  eta: 0:06:02  loss: 1.3976 (1.1783)  acc1: 71.8750 (73.5842)  acc5: 87.5000 (91.1092)  time: 3.7601  data: 0.0002  max mem: 20306
+Test:  [430/521]  eta: 0:05:43  loss: 1.4654 (1.1816)  acc1: 70.8333 (73.5185)  acc5: 87.5000 (91.0600)  time: 3.7601  data: 0.0001  max mem: 20306
+Test:  [435/521]  eta: 0:05:24  loss: 1.4603 (1.1852)  acc1: 69.7917 (73.4375)  acc5: 88.5417 (91.0264)  time: 3.7600  data: 0.0001  max mem: 20306
+Test:  [440/521]  eta: 0:05:06  loss: 1.5423 (1.1921)  acc1: 65.6250 (73.2804)  acc5: 87.5000 (90.9533)  time: 3.7595  data: 0.0001  max mem: 20306
+Test:  [445/521]  eta: 0:04:47  loss: 1.4603 (1.1924)  acc1: 66.6667 (73.2530)  acc5: 88.5417 (90.9707)  time: 3.7596  data: 0.0001  max mem: 20306
+Test:  [450/521]  eta: 0:04:28  loss: 1.5098 (1.1962)  acc1: 66.6667 (73.1730)  acc5: 88.5417 (90.9206)  time: 3.7599  data: 0.0001  max mem: 20306
+Test:  [455/521]  eta: 0:04:09  loss: 1.2877 (1.1950)  acc1: 68.7500 (73.2136)  acc5: 90.6250 (90.9471)  time: 3.7602  data: 0.0001  max mem: 20306
+Test:  [460/521]  eta: 0:03:50  loss: 1.2156 (1.1963)  acc1: 69.7917 (73.1562)  acc5: 90.6250 (90.9481)  time: 3.7601  data: 0.0001  max mem: 20306
+Test:  [465/521]  eta: 0:03:31  loss: 1.2156 (1.1996)  acc1: 68.7500 (73.1022)  acc5: 89.5833 (90.9178)  time: 3.7599  data: 0.0001  max mem: 20306
+Test:  [470/521]  eta: 0:03:12  loss: 1.1425 (1.2008)  acc1: 70.8333 (73.0936)  acc5: 90.6250 (90.8926)  time: 3.7596  data: 0.0001  max mem: 20306
+Test:  [475/521]  eta: 0:02:53  loss: 1.4740 (1.2077)  acc1: 69.7917 (72.9123)  acc5: 89.5833 (90.8438)  time: 3.7600  data: 0.0001  max mem: 20306
+Test:  [480/521]  eta: 0:02:34  loss: 1.2827 (1.2057)  acc1: 70.8333 (72.9665)  acc5: 90.6250 (90.8784)  time: 3.7606  data: 0.0001  max mem: 20306
+Test:  [485/521]  eta: 0:02:15  loss: 1.2541 (1.2081)  acc1: 69.7917 (72.9038)  acc5: 90.6250 (90.8629)  time: 3.7605  data: 0.0001  max mem: 20306
+Test:  [490/521]  eta: 0:01:57  loss: 1.2438 (1.2058)  acc1: 68.7500 (72.9400)  acc5: 91.6667 (90.9050)  time: 3.7608  data: 0.0001  max mem: 20306
+Test:  [495/521]  eta: 0:01:38  loss: 1.1762 (1.2043)  acc1: 70.8333 (72.9608)  acc5: 92.7083 (90.9400)  time: 3.7601  data: 0.0001  max mem: 20306
+Test:  [500/521]  eta: 0:01:19  loss: 1.1001 (1.2025)  acc1: 72.9167 (73.0248)  acc5: 93.7500 (90.9369)  time: 3.7599  data: 0.0001  max mem: 20306
+Test:  [505/521]  eta: 0:01:00  loss: 1.1001 (1.2078)  acc1: 70.8333 (72.9126)  acc5: 92.7083 (90.8864)  time: 3.7599  data: 0.0001  max mem: 20306
+Test:  [510/521]  eta: 0:00:41  loss: 1.2495 (1.2121)  acc1: 67.7083 (72.7944)  acc5: 91.6667 (90.8594)  time: 3.7596  data: 0.0001  max mem: 20306
+Test:  [515/521]  eta: 0:00:22  loss: 1.2290 (1.2077)  acc1: 67.7083 (72.8924)  acc5: 90.6250 (90.8975)  time: 3.7596  data: 0.0001  max mem: 20306
+Test:  [520/521]  eta: 0:00:03  loss: 1.2480 (1.2056)  acc1: 66.6667 (72.9440)  acc5: 90.6250 (90.9320)  time: 3.7308  data: 0.0001  max mem: 20306
+Test: Total time: 0:32:46 (3.7748 s / it)
+* Acc@1 72.944 Acc@5 90.932 loss 1.206
+Accuracy of the network on the 50000 test images: 72.9%
+vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2 w8a8 method_0.5 -------------------------------------------------
+Not using distributed mode
+batch_size: 128
+epochs: 300
+bce_loss: False
+unscale_lr: False
+model: deit_base_patch16_224
+input_size: 224
+drop: 0.0
+drop_path: 0.1
+model_ema: True
+model_ema_decay: 0.99996
+model_ema_force_cpu: False
+opt: adamw
+opt_eps: 1e-08
+opt_betas: None
+clip_grad: None
+momentum: 0.9
+weight_decay: 0.05
+sched: cosine
+lr: 0.0005
+lr_noise: None
+lr_noise_pct: 0.67
+lr_noise_std: 1.0
+warmup_lr: 1e-06
+min_lr: 1e-05
+decay_epochs: 30
+warmup_epochs: 5
+cooldown_epochs: 10
+patience_epochs: 10
+decay_rate: 0.1
+color_jitter: 0.3
+aa: rand-m9-mstd0.5-inc1
+smoothing: 0.1
+train_interpolation: bicubic
+repeated_aug: True
+train_mode: True
+ThreeAugment: False
+src: False
+reprob: 0.25
+remode: pixel
+recount: 1
+resplit: False
+mixup: 0.8
+cutmix: 1.0
+cutmix_minmax: None
+mixup_prob: 1.0
+mixup_switch_prob: 0.5
+mixup_mode: batch
+teacher_model: regnety_160
+teacher_path: 
+distillation_type: none
+distillation_alpha: 0.5
+distillation_tau: 1.0
+cosub: False
+finetune: 
+attn_only: False
+data_path: /datasets01/imagenet_full_size/061417/
+data_set: IMNET
+inat_category: name
+output_dir: 
+device: cuda
+seed: 0
+resume: 
+start_epoch: 0
+eval: False
+eval_crop_ratio: 0.875
+dist_eval: False
+num_workers: 10
+pin_mem: True
+distributed: False
+world_size: 1
+dist_url: env://
+if_amp: True
+if_continue_inf: False
+if_nan2num: False
+if_random_cls_token_position: False
+if_random_token_rank: False
+local_rank: 0
+use_vim_torch: False
+static_quant: False
+observe: minmax
+quant_weight: False
+quant_act: False
+a_bit: 8
+w_bit: 8
+use_smoothquant: False
+use_gptq: False
+use_hadmard: False
+use_S1: False
+use_S2: False
+use_S3: False
+use_S4: False
+use_S5: False
+use_S7: False
+use_hadmard_R1: False
+use_hadmard_R2: False
+use_hadmard_R3: False
+use_hadmard_R4: False
+use_hadmard_R5: False
+use_hadmard_R6: False
+use_reduce_mean: False
+use_pertoken: False
+use_split: False
+use_klt: False
+generate_klt: False
+use_perkernel: False
+w_perchannel: False
+fake_online_hadamard: False
+analyse_and_plot: False
+use_adaround: False
+adaround_iter: 200
+b_start: 20
+b_end: 2
+warmup: 0.2
+vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2 w4a8 method_2 -------------------------------------------------
+Not using distributed mode
+batch_size: 128
+epochs: 300
+bce_loss: False
+unscale_lr: False
+model: vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2
+input_size: 224
+drop: 0.0
+drop_path: 0.1
+model_ema: True
+model_ema_decay: 0.99996
+model_ema_force_cpu: False
+opt: adamw
+opt_eps: 1e-08
+opt_betas: None
+clip_grad: None
+momentum: 0.9
+weight_decay: 0.05
+sched: cosine
+lr: 0.0005
+lr_noise: None
+lr_noise_pct: 0.67
+lr_noise_std: 1.0
+warmup_lr: 1e-06
+min_lr: 1e-05
+decay_epochs: 30
+warmup_epochs: 5
+cooldown_epochs: 10
+patience_epochs: 10
+decay_rate: 0.1
+color_jitter: 0.3
+aa: rand-m9-mstd0.5-inc1
+smoothing: 0.1
+train_interpolation: bicubic
+repeated_aug: True
+train_mode: True
+ThreeAugment: False
+src: False
+reprob: 0.25
+remode: pixel
+recount: 1
+resplit: False
+mixup: 0.8
+cutmix: 1.0
+cutmix_minmax: None
+mixup_prob: 1.0
+mixup_switch_prob: 0.5
+mixup_mode: batch
+teacher_model: regnety_160
+teacher_path: 
+distillation_type: none
+distillation_alpha: 0.5
+distillation_tau: 1.0
+cosub: False
+finetune: 
+attn_only: False
+data_path: /data01/datasets/imagenet
+data_set: IMNET
+inat_category: name
+output_dir: 
+device: cuda
+seed: 0
+resume: ./saved_checkpoint/vim_b_midclstok_81p9acc.pth
+start_epoch: 0
+eval: True
+eval_crop_ratio: 0.875
+dist_eval: False
+num_workers: 10
+pin_mem: True
+distributed: False
+world_size: 1
+dist_url: env://
+if_amp: True
+if_continue_inf: False
+if_nan2num: False
+if_random_cls_token_position: False
+if_random_token_rank: False
+local_rank: 0
+use_vim_torch: True
+static_quant: True
+observe: percentile
+quant_weight: True
+quant_act: True
+a_bit: 8
+w_bit: 4
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: True
+use_hadmard_R3: False
+use_hadmard_R4: True
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_reduce_mean: True
+use_pertoken: True
+use_split: True
+use_klt: True
+generate_klt: False
+use_perkernel: False
+w_perchannel: True
+fake_online_hadamard: False
+analyse_and_plot: False
+use_adaround: False
+adaround_iter: 200
+b_start: 20
+b_end: 2
+warmup: 0.2
+Creating model: vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2
+number of params: 97598440
+Test:  [0/3]  eta: 0:00:36  loss: 0.7432 (0.7432)  acc1: 83.3333 (83.3333)  acc5: 94.7917 (94.7917)  time: 12.2582  data: 1.8064  max mem: 14451
+Test:  [2/3]  eta: 0:00:09  loss: 0.6302 (0.6222)  acc1: 88.5417 (87.2000)  acc5: 97.9167 (97.2000)  time: 9.0018  data: 0.6022  max mem: 14451
+Test: Total time: 0:00:27 (9.0563 s / it)
+* Acc@1 87.200 Acc@5 97.200 loss 0.622
+Fp Accuracy of the network on the 50000 test images: 87.2%
+Test:  [  0/521]  eta: 1:22:45  loss: 0.3430 (0.3430)  acc1: 93.7500 (93.7500)  acc5: 98.9583 (98.9583)  time: 9.5315  data: 2.0641  max mem: 18844
+Test:  [  5/521]  eta: 0:43:27  loss: 0.5616 (0.5414)  acc1: 87.5000 (89.2361)  acc5: 97.9167 (97.7431)  time: 5.0532  data: 0.3441  max mem: 18879
+Test:  [ 10/521]  eta: 0:39:34  loss: 0.4815 (0.4656)  acc1: 93.7500 (91.7614)  acc5: 97.9167 (97.9167)  time: 4.6469  data: 0.1878  max mem: 18879
+Test:  [ 15/521]  eta: 0:37:54  loss: 0.4936 (0.5179)  acc1: 92.7083 (90.5599)  acc5: 97.9167 (97.9167)  time: 4.4949  data: 0.1291  max mem: 18879
+Test:  [ 20/521]  eta: 0:36:51  loss: 0.6372 (0.6341)  acc1: 87.5000 (86.8056)  acc5: 97.9167 (97.5694)  time: 4.1592  data: 0.0001  max mem: 18879
+Test:  [ 25/521]  eta: 0:36:05  loss: 0.6372 (0.6785)  acc1: 86.4583 (85.3766)  acc5: 96.8750 (97.3157)  time: 4.1594  data: 0.0001  max mem: 18879
+Test:  [ 30/521]  eta: 0:35:27  loss: 0.7510 (0.7083)  acc1: 80.2083 (84.2406)  acc5: 96.8750 (97.2446)  time: 4.1597  data: 0.0001  max mem: 18879
+Test:  [ 35/521]  eta: 0:34:53  loss: 1.0449 (0.7851)  acc1: 76.0417 (82.2338)  acc5: 95.8333 (96.7014)  time: 4.1589  data: 0.0001  max mem: 18879
+Test:  [ 40/521]  eta: 0:34:23  loss: 0.7805 (0.7870)  acc1: 78.1250 (82.3425)  acc5: 95.8333 (96.6463)  time: 4.1587  data: 0.0001  max mem: 18879
+Test:  [ 45/521]  eta: 0:33:55  loss: 0.7610 (0.7664)  acc1: 80.2083 (83.1975)  acc5: 96.8750 (96.6712)  time: 4.1592  data: 0.0001  max mem: 18879
+Test:  [ 50/521]  eta: 0:33:28  loss: 0.5794 (0.7237)  acc1: 90.6250 (84.4567)  acc5: 96.8750 (96.8342)  time: 4.1589  data: 0.0001  max mem: 18879
+Test:  [ 55/521]  eta: 0:33:02  loss: 0.5320 (0.7113)  acc1: 91.6667 (84.9888)  acc5: 96.8750 (96.8006)  time: 4.1597  data: 0.0001  max mem: 18879
+Test:  [ 60/521]  eta: 0:32:37  loss: 0.5320 (0.7143)  acc1: 91.6667 (85.1776)  acc5: 97.9167 (96.7213)  time: 4.1598  data: 0.0001  max mem: 18879
+Test:  [ 65/521]  eta: 0:32:13  loss: 0.5989 (0.7317)  acc1: 88.5417 (84.7854)  acc5: 95.8333 (96.5751)  time: 4.1600  data: 0.0001  max mem: 18879
+Test:  [ 70/521]  eta: 0:31:50  loss: 0.6827 (0.7104)  acc1: 88.5417 (85.3140)  acc5: 95.8333 (96.6843)  time: 4.1605  data: 0.0002  max mem: 18879
+Test:  [ 75/521]  eta: 0:31:26  loss: 0.5273 (0.6848)  acc1: 89.5833 (85.9649)  acc5: 97.9167 (96.8339)  time: 4.1597  data: 0.0002  max mem: 18879
+Test:  [ 80/521]  eta: 0:31:03  loss: 0.4881 (0.6779)  acc1: 89.5833 (86.0983)  acc5: 98.9583 (96.9136)  time: 4.1593  data: 0.0001  max mem: 18879
+Test:  [ 85/521]  eta: 0:30:40  loss: 0.4881 (0.6903)  acc1: 89.5833 (85.7195)  acc5: 98.9583 (96.8629)  time: 4.1587  data: 0.0001  max mem: 18879
+Test:  [ 90/521]  eta: 0:30:18  loss: 0.6844 (0.7199)  acc1: 84.3750 (84.9931)  acc5: 96.8750 (96.7033)  time: 4.1586  data: 0.0001  max mem: 18879
+Test:  [ 95/521]  eta: 0:29:55  loss: 0.7841 (0.7224)  acc1: 82.2917 (84.7656)  acc5: 96.8750 (96.7122)  time: 4.1594  data: 0.0001  max mem: 18879
+Test:  [100/521]  eta: 0:29:33  loss: 0.8393 (0.7398)  acc1: 79.1667 (84.2925)  acc5: 94.7917 (96.5759)  time: 4.1595  data: 0.0002  max mem: 18879
+Test:  [105/521]  eta: 0:29:11  loss: 0.8393 (0.7418)  acc1: 79.1667 (84.1686)  acc5: 95.8333 (96.6293)  time: 4.1591  data: 0.0002  max mem: 18879
+Test:  [110/521]  eta: 0:28:49  loss: 0.7992 (0.7423)  acc1: 80.2083 (84.0841)  acc5: 96.8750 (96.6216)  time: 4.1596  data: 0.0002  max mem: 18879
+Test:  [115/521]  eta: 0:28:27  loss: 0.7975 (0.7412)  acc1: 80.2083 (84.1505)  acc5: 96.8750 (96.6325)  time: 4.1593  data: 0.0001  max mem: 18879
+Test:  [120/521]  eta: 0:28:05  loss: 0.7593 (0.7448)  acc1: 82.2917 (84.0565)  acc5: 96.8750 (96.5909)  time: 4.1593  data: 0.0001  max mem: 18879
+Test:  [125/521]  eta: 0:27:43  loss: 0.7593 (0.7498)  acc1: 82.2917 (83.8376)  acc5: 96.8750 (96.6187)  time: 4.1602  data: 0.0001  max mem: 18879
+Test:  [130/521]  eta: 0:27:22  loss: 0.8315 (0.7508)  acc1: 80.2083 (83.6594)  acc5: 96.8750 (96.6365)  time: 4.1592  data: 0.0001  max mem: 18879
+Test:  [135/521]  eta: 0:27:00  loss: 0.7090 (0.7407)  acc1: 84.3750 (83.9767)  acc5: 97.9167 (96.7065)  time: 4.1587  data: 0.0001  max mem: 18879
+Test:  [140/521]  eta: 0:26:39  loss: 0.6730 (0.7390)  acc1: 84.3750 (83.9465)  acc5: 98.9583 (96.7494)  time: 4.1599  data: 0.0002  max mem: 18879
+Test:  [145/521]  eta: 0:26:17  loss: 0.6727 (0.7447)  acc1: 84.3750 (83.8542)  acc5: 98.9583 (96.7252)  time: 4.1592  data: 0.0002  max mem: 18879
+Test:  [150/521]  eta: 0:25:56  loss: 0.6727 (0.7544)  acc1: 84.3750 (83.5817)  acc5: 97.9167 (96.6887)  time: 4.1601  data: 0.0002  max mem: 18879
+Test:  [155/521]  eta: 0:25:34  loss: 0.6734 (0.7494)  acc1: 84.3750 (83.8408)  acc5: 96.8750 (96.6880)  time: 4.1614  data: 0.0002  max mem: 18879
+Test:  [160/521]  eta: 0:25:13  loss: 0.6727 (0.7457)  acc1: 85.4167 (83.8898)  acc5: 96.8750 (96.7585)  time: 4.1616  data: 0.0001  max mem: 18879
+Test:  [165/521]  eta: 0:24:52  loss: 0.7807 (0.7500)  acc1: 86.4583 (83.8291)  acc5: 96.8750 (96.6930)  time: 4.1621  data: 0.0002  max mem: 18879
+Test:  [170/521]  eta: 0:24:31  loss: 0.5455 (0.7394)  acc1: 90.6250 (84.1192)  acc5: 97.9167 (96.7532)  time: 4.1613  data: 0.0001  max mem: 18879
+Test:  [175/521]  eta: 0:24:09  loss: 0.5455 (0.7367)  acc1: 87.5000 (84.2507)  acc5: 97.9167 (96.7803)  time: 4.1605  data: 0.0001  max mem: 18879
+Test:  [180/521]  eta: 0:23:48  loss: 0.5747 (0.7340)  acc1: 87.5000 (84.2887)  acc5: 96.8750 (96.8002)  time: 4.1591  data: 0.0001  max mem: 18879
+Test:  [185/521]  eta: 0:23:27  loss: 0.5295 (0.7322)  acc1: 87.5000 (84.2182)  acc5: 98.9583 (96.8638)  time: 4.1586  data: 0.0001  max mem: 18879
+Test:  [190/521]  eta: 0:23:06  loss: 0.6234 (0.7328)  acc1: 86.4583 (84.2059)  acc5: 97.9167 (96.8695)  time: 4.1584  data: 0.0001  max mem: 18879
+Test:  [195/521]  eta: 0:22:44  loss: 0.6844 (0.7357)  acc1: 85.4167 (84.2102)  acc5: 97.9167 (96.8591)  time: 4.1577  data: 0.0001  max mem: 18879
+Test:  [200/521]  eta: 0:22:23  loss: 0.7408 (0.7403)  acc1: 84.3750 (84.0433)  acc5: 97.9167 (96.8232)  time: 4.1579  data: 0.0001  max mem: 18879
+Test:  [205/521]  eta: 0:22:02  loss: 0.7071 (0.7368)  acc1: 85.4167 (84.1525)  acc5: 96.8750 (96.8598)  time: 4.1579  data: 0.0001  max mem: 18879
+Test:  [210/521]  eta: 0:21:41  loss: 0.7071 (0.7376)  acc1: 85.4167 (84.1430)  acc5: 95.8333 (96.8454)  time: 4.1576  data: 0.0001  max mem: 18879
+Test:  [215/521]  eta: 0:21:20  loss: 0.8361 (0.7476)  acc1: 82.2917 (83.8927)  acc5: 95.8333 (96.7689)  time: 4.1583  data: 0.0001  max mem: 18879
+Test:  [220/521]  eta: 0:20:59  loss: 0.8453 (0.7541)  acc1: 82.2917 (83.7010)  acc5: 94.7917 (96.6912)  time: 4.1580  data: 0.0001  max mem: 18879
+Test:  [225/521]  eta: 0:20:38  loss: 0.8453 (0.7539)  acc1: 82.2917 (83.7251)  acc5: 94.7917 (96.6584)  time: 4.1587  data: 0.0001  max mem: 18879
+Test:  [230/521]  eta: 0:20:17  loss: 0.9823 (0.7628)  acc1: 82.2917 (83.5317)  acc5: 93.7500 (96.5774)  time: 4.1599  data: 0.0001  max mem: 18879
+Test:  [235/521]  eta: 0:19:56  loss: 0.8239 (0.7651)  acc1: 82.2917 (83.5143)  acc5: 93.7500 (96.5307)  time: 4.1593  data: 0.0001  max mem: 18879
+Test:  [240/521]  eta: 0:19:35  loss: 0.9824 (0.7735)  acc1: 79.1667 (83.3809)  acc5: 93.7500 (96.4212)  time: 4.1602  data: 0.0001  max mem: 18879
+Test:  [245/521]  eta: 0:19:14  loss: 1.1720 (0.7837)  acc1: 72.9167 (83.2190)  acc5: 91.6667 (96.2991)  time: 4.1597  data: 0.0001  max mem: 18879
+Test:  [250/521]  eta: 0:18:52  loss: 0.9511 (0.7901)  acc1: 79.1667 (83.0719)  acc5: 92.7083 (96.2276)  time: 4.1585  data: 0.0001  max mem: 18879
+Test:  [255/521]  eta: 0:18:31  loss: 1.0534 (0.7999)  acc1: 71.8750 (82.7759)  acc5: 92.7083 (96.1670)  time: 4.1594  data: 0.0001  max mem: 18879
+Test:  [260/521]  eta: 0:18:10  loss: 1.3276 (0.8099)  acc1: 70.8333 (82.5671)  acc5: 92.7083 (96.0728)  time: 4.1587  data: 0.0001  max mem: 18879
+Test:  [265/521]  eta: 0:17:49  loss: 1.3000 (0.8230)  acc1: 69.7917 (82.2447)  acc5: 91.6667 (95.9352)  time: 4.1587  data: 0.0001  max mem: 18879
+Test:  [270/521]  eta: 0:17:28  loss: 1.2631 (0.8252)  acc1: 69.7917 (82.1764)  acc5: 91.6667 (95.9102)  time: 4.1592  data: 0.0001  max mem: 18879
+Test:  [275/521]  eta: 0:17:07  loss: 1.2631 (0.8314)  acc1: 69.7917 (81.9860)  acc5: 92.7083 (95.8673)  time: 4.1592  data: 0.0001  max mem: 18879
+Test:  [280/521]  eta: 0:16:47  loss: 1.1172 (0.8353)  acc1: 72.9167 (81.8913)  acc5: 93.7500 (95.8407)  time: 4.1602  data: 0.0001  max mem: 18879
+Test:  [285/521]  eta: 0:16:26  loss: 0.9313 (0.8386)  acc1: 76.0417 (81.8073)  acc5: 94.7917 (95.7896)  time: 4.1613  data: 0.0001  max mem: 18879
+Test:  [290/521]  eta: 0:16:05  loss: 1.0527 (0.8415)  acc1: 76.0417 (81.7798)  acc5: 92.7083 (95.7510)  time: 4.1607  data: 0.0001  max mem: 18879
+Test:  [295/521]  eta: 0:15:44  loss: 0.9144 (0.8406)  acc1: 80.2083 (81.8271)  acc5: 94.7917 (95.7489)  time: 4.1599  data: 0.0001  max mem: 18879
+Test:  [300/521]  eta: 0:15:23  loss: 0.6892 (0.8362)  acc1: 85.4167 (81.9421)  acc5: 94.7917 (95.7572)  time: 4.1593  data: 0.0001  max mem: 18879
+Test:  [305/521]  eta: 0:15:02  loss: 0.6892 (0.8429)  acc1: 84.3750 (81.7640)  acc5: 94.7917 (95.7040)  time: 4.1585  data: 0.0001  max mem: 18879
+Test:  [310/521]  eta: 0:14:41  loss: 0.6892 (0.8466)  acc1: 83.3333 (81.6921)  acc5: 94.7917 (95.6525)  time: 4.1589  data: 0.0002  max mem: 18879
+Test:  [315/521]  eta: 0:14:20  loss: 0.7952 (0.8501)  acc1: 79.1667 (81.6192)  acc5: 94.7917 (95.6125)  time: 4.1587  data: 0.0001  max mem: 18879
+Test:  [320/521]  eta: 0:13:59  loss: 0.9789 (0.8477)  acc1: 79.1667 (81.6946)  acc5: 93.7500 (95.5964)  time: 4.1581  data: 0.0001  max mem: 18879
+Test:  [325/521]  eta: 0:13:38  loss: 0.9789 (0.8565)  acc1: 78.1250 (81.4321)  acc5: 92.7083 (95.5394)  time: 4.1580  data: 0.0001  max mem: 18879
+Test:  [330/521]  eta: 0:13:17  loss: 0.9789 (0.8634)  acc1: 77.0833 (81.3098)  acc5: 92.7083 (95.4651)  time: 4.1588  data: 0.0001  max mem: 18879
+Test:  [335/521]  eta: 0:12:56  loss: 0.9623 (0.8646)  acc1: 77.0833 (81.2159)  acc5: 94.7917 (95.4706)  time: 4.1608  data: 0.0001  max mem: 18879
+Test:  [340/521]  eta: 0:12:35  loss: 1.1645 (0.8692)  acc1: 73.9583 (81.1584)  acc5: 92.7083 (95.4087)  time: 4.1617  data: 0.0001  max mem: 18879
+Test:  [345/521]  eta: 0:12:14  loss: 1.1393 (0.8753)  acc1: 75.0000 (80.9851)  acc5: 91.6667 (95.3727)  time: 4.1624  data: 0.0001  max mem: 18879
+Test:  [350/521]  eta: 0:11:53  loss: 1.1240 (0.8742)  acc1: 75.0000 (80.9681)  acc5: 93.7500 (95.3911)  time: 4.1616  data: 0.0001  max mem: 18879
+Test:  [355/521]  eta: 0:11:32  loss: 1.2123 (0.8799)  acc1: 70.8333 (80.8404)  acc5: 91.6667 (95.3037)  time: 4.1607  data: 0.0001  max mem: 18879
+Test:  [360/521]  eta: 0:11:12  loss: 1.1975 (0.8842)  acc1: 70.8333 (80.7652)  acc5: 91.6667 (95.2591)  time: 4.1602  data: 0.0001  max mem: 18879
+Test:  [365/521]  eta: 0:10:51  loss: 0.9504 (0.8835)  acc1: 78.1250 (80.8003)  acc5: 93.7500 (95.2755)  time: 4.1589  data: 0.0001  max mem: 18879
+Test:  [370/521]  eta: 0:10:30  loss: 1.1753 (0.8872)  acc1: 78.1250 (80.7474)  acc5: 92.7083 (95.2381)  time: 4.1593  data: 0.0002  max mem: 18879
+Test:  [375/521]  eta: 0:10:09  loss: 0.8676 (0.8861)  acc1: 82.2917 (80.7846)  acc5: 93.7500 (95.2349)  time: 4.1599  data: 0.0002  max mem: 18879
+Test:  [380/521]  eta: 0:09:48  loss: 0.8693 (0.8902)  acc1: 80.2083 (80.6977)  acc5: 93.7500 (95.1717)  time: 4.1606  data: 0.0002  max mem: 18879
+Test:  [385/521]  eta: 0:09:27  loss: 0.9124 (0.8932)  acc1: 78.1250 (80.6401)  acc5: 93.7500 (95.1209)  time: 4.1621  data: 0.0002  max mem: 18879
+Test:  [390/521]  eta: 0:09:06  loss: 0.9973 (0.9000)  acc1: 75.0000 (80.4561)  acc5: 92.7083 (95.0554)  time: 4.1621  data: 0.0001  max mem: 18879
+Test:  [395/521]  eta: 0:08:45  loss: 1.0558 (0.9002)  acc1: 75.0000 (80.4766)  acc5: 91.6667 (95.0547)  time: 4.1624  data: 0.0002  max mem: 18879
+Test:  [400/521]  eta: 0:08:24  loss: 1.0558 (0.9038)  acc1: 75.0000 (80.4213)  acc5: 91.6667 (94.9943)  time: 4.1623  data: 0.0002  max mem: 18879
+Test:  [405/521]  eta: 0:08:04  loss: 1.0558 (0.9061)  acc1: 75.0000 (80.4008)  acc5: 91.6667 (94.9584)  time: 4.1619  data: 0.0002  max mem: 18879
+Test:  [410/521]  eta: 0:07:43  loss: 1.0200 (0.9091)  acc1: 75.0000 (80.3224)  acc5: 91.6667 (94.9184)  time: 4.1620  data: 0.0001  max mem: 18879
+Test:  [415/521]  eta: 0:07:22  loss: 1.1647 (0.9124)  acc1: 75.0000 (80.2684)  acc5: 90.6250 (94.8843)  time: 4.1619  data: 0.0001  max mem: 18879
+Test:  [420/521]  eta: 0:07:01  loss: 1.0751 (0.9121)  acc1: 76.0417 (80.2999)  acc5: 91.6667 (94.8807)  time: 4.1613  data: 0.0001  max mem: 18879
+Test:  [425/521]  eta: 0:06:40  loss: 1.0751 (0.9150)  acc1: 76.0417 (80.2255)  acc5: 90.6250 (94.8577)  time: 4.1612  data: 0.0001  max mem: 18879
+Test:  [430/521]  eta: 0:06:19  loss: 1.0227 (0.9162)  acc1: 77.0833 (80.1987)  acc5: 91.6667 (94.8424)  time: 4.1608  data: 0.0001  max mem: 18879
+Test:  [435/521]  eta: 0:05:58  loss: 1.0751 (0.9200)  acc1: 76.0417 (80.1080)  acc5: 91.6667 (94.7988)  time: 4.1606  data: 0.0001  max mem: 18879
+Test:  [440/521]  eta: 0:05:37  loss: 1.2804 (0.9262)  acc1: 70.8333 (79.9556)  acc5: 90.6250 (94.7492)  time: 4.1609  data: 0.0001  max mem: 18879
+Test:  [445/521]  eta: 0:05:17  loss: 1.1422 (0.9267)  acc1: 75.0000 (79.9141)  acc5: 91.6667 (94.7543)  time: 4.1611  data: 0.0001  max mem: 18879
+Test:  [450/521]  eta: 0:04:56  loss: 1.1483 (0.9298)  acc1: 71.8750 (79.8365)  acc5: 91.6667 (94.7247)  time: 4.1606  data: 0.0001  max mem: 18879
+Test:  [455/521]  eta: 0:04:35  loss: 1.0741 (0.9280)  acc1: 78.1250 (79.8977)  acc5: 93.7500 (94.7323)  time: 4.1600  data: 0.0001  max mem: 18879
+Test:  [460/521]  eta: 0:04:14  loss: 0.9523 (0.9290)  acc1: 78.1250 (79.8219)  acc5: 94.7917 (94.7329)  time: 4.1600  data: 0.0001  max mem: 18879
+Test:  [465/521]  eta: 0:03:53  loss: 0.9931 (0.9316)  acc1: 76.0417 (79.7836)  acc5: 93.7500 (94.6978)  time: 4.1588  data: 0.0001  max mem: 18879
+Test:  [470/521]  eta: 0:03:32  loss: 0.9414 (0.9336)  acc1: 78.1250 (79.7527)  acc5: 93.7500 (94.6767)  time: 4.1596  data: 0.0001  max mem: 18879
+Test:  [475/521]  eta: 0:03:11  loss: 1.1042 (0.9391)  acc1: 76.0417 (79.5868)  acc5: 92.7083 (94.6494)  time: 4.1587  data: 0.0001  max mem: 18879
+Test:  [480/521]  eta: 0:02:51  loss: 1.0074 (0.9372)  acc1: 78.1250 (79.6496)  acc5: 93.7500 (94.6704)  time: 4.1594  data: 0.0001  max mem: 18879
+Test:  [485/521]  eta: 0:02:30  loss: 1.0074 (0.9385)  acc1: 78.1250 (79.5889)  acc5: 92.7083 (94.6631)  time: 4.1597  data: 0.0001  max mem: 18879
+Test:  [490/521]  eta: 0:02:09  loss: 0.9595 (0.9362)  acc1: 79.1667 (79.6546)  acc5: 94.7917 (94.6920)  time: 4.1592  data: 0.0001  max mem: 18879
+Test:  [495/521]  eta: 0:01:48  loss: 0.9590 (0.9356)  acc1: 79.1667 (79.6392)  acc5: 95.8333 (94.7119)  time: 4.1610  data: 0.0001  max mem: 18879
+Test:  [500/521]  eta: 0:01:27  loss: 0.8128 (0.9336)  acc1: 79.1667 (79.7052)  acc5: 96.8750 (94.7272)  time: 4.1601  data: 0.0001  max mem: 18879
+Test:  [505/521]  eta: 0:01:06  loss: 0.9498 (0.9378)  acc1: 78.1250 (79.5969)  acc5: 95.8333 (94.6908)  time: 4.1597  data: 0.0001  max mem: 18879
+Test:  [510/521]  eta: 0:00:45  loss: 0.9755 (0.9407)  acc1: 76.0417 (79.5071)  acc5: 95.8333 (94.6897)  time: 4.1594  data: 0.0001  max mem: 18879
+Test:  [515/521]  eta: 0:00:25  loss: 0.7946 (0.9366)  acc1: 76.0417 (79.5926)  acc5: 95.8333 (94.7210)  time: 4.1575  data: 0.0001  max mem: 18879
+Test:  [520/521]  eta: 0:00:04  loss: 0.9498 (0.9351)  acc1: 73.9583 (79.6200)  acc5: 95.8333 (94.7380)  time: 4.1412  data: 0.0001  max mem: 18879
+Test: Total time: 0:36:12 (4.1700 s / it)
+* Acc@1 79.620 Acc@5 94.738 loss 0.935
+Accuracy of the network on the 50000 test images: 79.6%
+vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2 w4a8 method_1.5 -------------------------------------------------
+Not using distributed mode
+batch_size: 128
+epochs: 300
+bce_loss: False
+unscale_lr: False
+model: vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2
+input_size: 224
+drop: 0.0
+drop_path: 0.1
+model_ema: True
+model_ema_decay: 0.99996
+model_ema_force_cpu: False
+opt: adamw
+opt_eps: 1e-08
+opt_betas: None
+clip_grad: None
+momentum: 0.9
+weight_decay: 0.05
+sched: cosine
+lr: 0.0005
+lr_noise: None
+lr_noise_pct: 0.67
+lr_noise_std: 1.0
+warmup_lr: 1e-06
+min_lr: 1e-05
+decay_epochs: 30
+warmup_epochs: 5
+cooldown_epochs: 10
+patience_epochs: 10
+decay_rate: 0.1
+color_jitter: 0.3
+aa: rand-m9-mstd0.5-inc1
+smoothing: 0.1
+train_interpolation: bicubic
+repeated_aug: True
+train_mode: True
+ThreeAugment: False
+src: False
+reprob: 0.25
+remode: pixel
+recount: 1
+resplit: False
+mixup: 0.8
+cutmix: 1.0
+cutmix_minmax: None
+mixup_prob: 1.0
+mixup_switch_prob: 0.5
+mixup_mode: batch
+teacher_model: regnety_160
+teacher_path: 
+distillation_type: none
+distillation_alpha: 0.5
+distillation_tau: 1.0
+cosub: False
+finetune: 
+attn_only: False
+data_path: /data01/datasets/imagenet
+data_set: IMNET
+inat_category: name
+output_dir: 
+device: cuda
+seed: 0
+resume: ./saved_checkpoint/vim_b_midclstok_81p9acc.pth
+start_epoch: 0
+eval: True
+eval_crop_ratio: 0.875
+dist_eval: False
+num_workers: 10
+pin_mem: True
+distributed: False
+world_size: 1
+dist_url: env://
+if_amp: True
+if_continue_inf: False
+if_nan2num: False
+if_random_cls_token_position: False
+if_random_token_rank: False
+local_rank: 0
+use_vim_torch: True
+static_quant: True
+observe: percentile
+quant_weight: True
+quant_act: True
+a_bit: 8
+w_bit: 4
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_S1: False
+use_S2: True
+use_S3: True
+use_S4: False
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: False
+use_hadmard_R3: False
+use_hadmard_R4: False
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_reduce_mean: True
+use_pertoken: True
+use_split: True
+use_klt: True
+generate_klt: False
+use_perkernel: False
+w_perchannel: True
+fake_online_hadamard: False
+analyse_and_plot: False
+use_adaround: False
+adaround_iter: 200
+b_start: 20
+b_end: 2
+warmup: 0.2
+Creating model: vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2
+number of params: 97598440
+Test:  [0/3]  eta: 0:00:54  loss: 0.7431 (0.7431)  acc1: 83.3333 (83.3333)  acc5: 94.7917 (94.7917)  time: 18.0394  data: 2.1318  max mem: 14446
+Test:  [2/3]  eta: 0:00:13  loss: 0.6302 (0.6222)  acc1: 88.5417 (87.2000)  acc5: 97.9167 (97.2000)  time: 13.2167  data: 0.7107  max mem: 14447
+Test: Total time: 0:00:39 (13.2577 s / it)
+* Acc@1 87.200 Acc@5 97.200 loss 0.622
+Fp Accuracy of the network on the 50000 test images: 87.2%
+Test:  [  0/521]  eta: 1:40:55  loss: 0.4003 (0.4003)  acc1: 93.7500 (93.7500)  acc5: 98.9583 (98.9583)  time: 11.6221  data: 1.8096  max mem: 19733
+Test:  [  5/521]  eta: 0:44:46  loss: 0.6374 (0.5769)  acc1: 86.4583 (88.7153)  acc5: 97.9167 (97.7431)  time: 5.2073  data: 0.3017  max mem: 19768
+Test:  [ 10/521]  eta: 0:39:22  loss: 0.4973 (0.4944)  acc1: 93.7500 (91.5720)  acc5: 97.9167 (98.0114)  time: 4.6241  data: 0.1646  max mem: 19768
+Test:  [ 15/521]  eta: 0:37:09  loss: 0.5087 (0.5469)  acc1: 90.6250 (90.4297)  acc5: 97.9167 (98.0469)  time: 4.4054  data: 0.1132  max mem: 19768
+Test:  [ 20/521]  eta: 0:35:49  loss: 0.6410 (0.6588)  acc1: 86.4583 (86.9544)  acc5: 97.9167 (97.5198)  time: 3.9242  data: 0.0001  max mem: 19768
+Test:  [ 25/521]  eta: 0:34:53  loss: 0.6739 (0.7033)  acc1: 86.4583 (85.6170)  acc5: 96.8750 (97.1955)  time: 3.9241  data: 0.0001  max mem: 19768
+Test:  [ 30/521]  eta: 0:34:08  loss: 0.7474 (0.7259)  acc1: 82.2917 (84.7446)  acc5: 96.8750 (97.1102)  time: 3.9240  data: 0.0001  max mem: 19768
+Test:  [ 35/521]  eta: 0:33:31  loss: 1.0515 (0.8086)  acc1: 77.0833 (82.5232)  acc5: 94.7917 (96.4120)  time: 3.9240  data: 0.0001  max mem: 19768
+Test:  [ 40/521]  eta: 0:32:57  loss: 0.8027 (0.8084)  acc1: 79.1667 (82.5711)  acc5: 95.8333 (96.3669)  time: 3.9238  data: 0.0001  max mem: 19768
+Test:  [ 45/521]  eta: 0:32:27  loss: 0.7521 (0.7900)  acc1: 83.3333 (83.3560)  acc5: 95.8333 (96.4447)  time: 3.9244  data: 0.0001  max mem: 19768
+Test:  [ 50/521]  eta: 0:31:59  loss: 0.6048 (0.7463)  acc1: 90.6250 (84.5793)  acc5: 96.8750 (96.6503)  time: 3.9244  data: 0.0001  max mem: 19768
+Test:  [ 55/521]  eta: 0:31:32  loss: 0.5627 (0.7321)  acc1: 91.6667 (85.1190)  acc5: 96.8750 (96.6518)  time: 3.9246  data: 0.0001  max mem: 19768
+Test:  [ 60/521]  eta: 0:31:07  loss: 0.5627 (0.7338)  acc1: 91.6667 (85.2801)  acc5: 97.9167 (96.5847)  time: 3.9259  data: 0.0001  max mem: 19768
+Test:  [ 65/521]  eta: 0:30:42  loss: 0.5952 (0.7502)  acc1: 87.5000 (84.9432)  acc5: 96.8750 (96.4489)  time: 3.9252  data: 0.0001  max mem: 19768
+Test:  [ 70/521]  eta: 0:30:18  loss: 0.7000 (0.7286)  acc1: 87.5000 (85.4900)  acc5: 95.8333 (96.5229)  time: 3.9251  data: 0.0001  max mem: 19768
+Test:  [ 75/521]  eta: 0:29:55  loss: 0.5284 (0.7046)  acc1: 90.6250 (86.1157)  acc5: 96.8750 (96.6968)  time: 3.9261  data: 0.0001  max mem: 19768
+Test:  [ 80/521]  eta: 0:29:32  loss: 0.5124 (0.7000)  acc1: 90.6250 (86.1626)  acc5: 97.9167 (96.7721)  time: 3.9249  data: 0.0001  max mem: 19768
+Test:  [ 85/521]  eta: 0:29:10  loss: 0.5124 (0.7127)  acc1: 90.6250 (85.7922)  acc5: 98.9583 (96.7297)  time: 3.9250  data: 0.0002  max mem: 19768
+Test:  [ 90/521]  eta: 0:28:48  loss: 0.6818 (0.7426)  acc1: 85.4167 (85.0504)  acc5: 96.8750 (96.5545)  time: 3.9259  data: 0.0001  max mem: 19768
+Test:  [ 95/521]  eta: 0:28:26  loss: 0.8088 (0.7438)  acc1: 82.2917 (84.8850)  acc5: 96.8750 (96.5929)  time: 3.9248  data: 0.0001  max mem: 19768
+Test:  [100/521]  eta: 0:28:04  loss: 0.8402 (0.7582)  acc1: 77.0833 (84.4472)  acc5: 94.7917 (96.4831)  time: 3.9266  data: 0.0001  max mem: 19768
+Test:  [105/521]  eta: 0:27:43  loss: 0.8402 (0.7603)  acc1: 77.0833 (84.2964)  acc5: 95.8333 (96.5311)  time: 3.9270  data: 0.0001  max mem: 19768
+Test:  [110/521]  eta: 0:27:21  loss: 0.8088 (0.7628)  acc1: 81.2500 (84.1873)  acc5: 96.8750 (96.5278)  time: 3.9268  data: 0.0001  max mem: 19768
+Test:  [115/521]  eta: 0:27:00  loss: 0.8058 (0.7621)  acc1: 81.2500 (84.2762)  acc5: 96.8750 (96.5427)  time: 3.9282  data: 0.0001  max mem: 19768
+Test:  [120/521]  eta: 0:26:39  loss: 0.7512 (0.7658)  acc1: 83.3333 (84.1856)  acc5: 96.8750 (96.4962)  time: 3.9281  data: 0.0001  max mem: 19768
+Test:  [125/521]  eta: 0:26:18  loss: 0.7512 (0.7698)  acc1: 83.3333 (83.9947)  acc5: 96.8750 (96.4947)  time: 3.9281  data: 0.0001  max mem: 19768
+Test:  [130/521]  eta: 0:25:57  loss: 0.8185 (0.7686)  acc1: 83.3333 (83.8661)  acc5: 96.8750 (96.5251)  time: 3.9286  data: 0.0001  max mem: 19768
+Test:  [135/521]  eta: 0:25:37  loss: 0.6663 (0.7580)  acc1: 86.4583 (84.1759)  acc5: 96.8750 (96.5763)  time: 3.9276  data: 0.0001  max mem: 19768
+Test:  [140/521]  eta: 0:25:16  loss: 0.6513 (0.7555)  acc1: 86.4583 (84.1755)  acc5: 97.9167 (96.6386)  time: 3.9264  data: 0.0001  max mem: 19768
+Test:  [145/521]  eta: 0:24:55  loss: 0.6425 (0.7604)  acc1: 86.4583 (84.0896)  acc5: 97.9167 (96.6182)  time: 3.9266  data: 0.0001  max mem: 19768
+Test:  [150/521]  eta: 0:24:35  loss: 0.6425 (0.7704)  acc1: 86.4583 (83.7955)  acc5: 97.9167 (96.6129)  time: 3.9267  data: 0.0002  max mem: 19768
+Test:  [155/521]  eta: 0:24:14  loss: 0.7330 (0.7655)  acc1: 85.4167 (84.0144)  acc5: 97.9167 (96.6146)  time: 3.9262  data: 0.0001  max mem: 19768
+Test:  [160/521]  eta: 0:23:54  loss: 0.7107 (0.7624)  acc1: 85.4167 (84.0256)  acc5: 97.9167 (96.6809)  time: 3.9258  data: 0.0001  max mem: 19768
+Test:  [165/521]  eta: 0:23:34  loss: 0.8146 (0.7673)  acc1: 85.4167 (83.9546)  acc5: 97.9167 (96.6491)  time: 3.9255  data: 0.0001  max mem: 19768
+Test:  [170/521]  eta: 0:23:13  loss: 0.5754 (0.7559)  acc1: 89.5833 (84.2532)  acc5: 97.9167 (96.7166)  time: 3.9246  data: 0.0001  max mem: 19768
+Test:  [175/521]  eta: 0:22:53  loss: 0.5754 (0.7529)  acc1: 89.5833 (84.3632)  acc5: 97.9167 (96.7389)  time: 3.9245  data: 0.0001  max mem: 19768
+Test:  [180/521]  eta: 0:22:33  loss: 0.6111 (0.7509)  acc1: 87.5000 (84.4095)  acc5: 96.8750 (96.7484)  time: 3.9244  data: 0.0001  max mem: 19768
+Test:  [185/521]  eta: 0:22:12  loss: 0.5373 (0.7490)  acc1: 89.5833 (84.3246)  acc5: 98.9583 (96.8190)  time: 3.9240  data: 0.0001  max mem: 19768
+Test:  [190/521]  eta: 0:21:52  loss: 0.7166 (0.7495)  acc1: 87.5000 (84.2823)  acc5: 96.8750 (96.8259)  time: 3.9238  data: 0.0002  max mem: 19768
+Test:  [195/521]  eta: 0:21:32  loss: 0.7288 (0.7527)  acc1: 85.4167 (84.2528)  acc5: 96.8750 (96.8112)  time: 3.9243  data: 0.0002  max mem: 19768
+Test:  [200/521]  eta: 0:21:12  loss: 0.7333 (0.7578)  acc1: 82.2917 (84.0537)  acc5: 96.8750 (96.7765)  time: 3.9246  data: 0.0001  max mem: 19768
+Test:  [205/521]  eta: 0:20:52  loss: 0.7333 (0.7547)  acc1: 85.4167 (84.1626)  acc5: 96.8750 (96.8143)  time: 3.9245  data: 0.0001  max mem: 19768
+Test:  [210/521]  eta: 0:20:32  loss: 0.7408 (0.7566)  acc1: 85.4167 (84.1331)  acc5: 95.8333 (96.7960)  time: 3.9259  data: 0.0001  max mem: 19768
+Test:  [215/521]  eta: 0:20:12  loss: 0.8641 (0.7658)  acc1: 81.2500 (83.8686)  acc5: 95.8333 (96.7062)  time: 3.9252  data: 0.0001  max mem: 19768
+Test:  [220/521]  eta: 0:19:52  loss: 0.8641 (0.7734)  acc1: 82.2917 (83.6303)  acc5: 94.7917 (96.6299)  time: 3.9261  data: 0.0001  max mem: 19768
+Test:  [225/521]  eta: 0:19:32  loss: 0.8641 (0.7727)  acc1: 82.2917 (83.6421)  acc5: 94.7917 (96.6031)  time: 3.9267  data: 0.0001  max mem: 19768
+Test:  [230/521]  eta: 0:19:12  loss: 0.9466 (0.7818)  acc1: 79.1667 (83.4371)  acc5: 93.7500 (96.5052)  time: 3.9250  data: 0.0001  max mem: 19768
+Test:  [235/521]  eta: 0:18:52  loss: 0.8937 (0.7843)  acc1: 82.2917 (83.3995)  acc5: 94.7917 (96.4557)  time: 3.9257  data: 0.0001  max mem: 19768
+Test:  [240/521]  eta: 0:18:32  loss: 0.9632 (0.7919)  acc1: 81.2500 (83.2815)  acc5: 93.7500 (96.3650)  time: 3.9247  data: 0.0001  max mem: 19768
+Test:  [245/521]  eta: 0:18:12  loss: 1.0615 (0.8020)  acc1: 73.9583 (83.1301)  acc5: 91.6667 (96.2483)  time: 3.9251  data: 0.0001  max mem: 19768
+Test:  [250/521]  eta: 0:17:52  loss: 0.9555 (0.8084)  acc1: 81.2500 (82.9889)  acc5: 92.7083 (96.1944)  time: 3.9266  data: 0.0001  max mem: 19768
+Test:  [255/521]  eta: 0:17:32  loss: 1.1228 (0.8184)  acc1: 76.0417 (82.6660)  acc5: 91.6667 (96.1100)  time: 3.9260  data: 0.0001  max mem: 19768
+Test:  [260/521]  eta: 0:17:12  loss: 1.3282 (0.8287)  acc1: 72.9167 (82.4713)  acc5: 91.6667 (95.9690)  time: 3.9260  data: 0.0001  max mem: 19768
+Test:  [265/521]  eta: 0:16:52  loss: 1.3161 (0.8412)  acc1: 72.9167 (82.2016)  acc5: 89.5833 (95.8255)  time: 3.9250  data: 0.0001  max mem: 19768
+Test:  [270/521]  eta: 0:16:32  loss: 1.2829 (0.8430)  acc1: 72.9167 (82.1418)  acc5: 90.6250 (95.7987)  time: 3.9237  data: 0.0001  max mem: 19768
+Test:  [275/521]  eta: 0:16:12  loss: 1.2829 (0.8488)  acc1: 72.9167 (81.9520)  acc5: 91.6667 (95.7541)  time: 3.9239  data: 0.0001  max mem: 19768
+Test:  [280/521]  eta: 0:15:52  loss: 1.1437 (0.8527)  acc1: 75.0000 (81.8617)  acc5: 92.7083 (95.7407)  time: 3.9240  data: 0.0001  max mem: 19768
+Test:  [285/521]  eta: 0:15:32  loss: 0.9856 (0.8563)  acc1: 77.0833 (81.7708)  acc5: 93.7500 (95.6913)  time: 3.9241  data: 0.0001  max mem: 19768
+Test:  [290/521]  eta: 0:15:12  loss: 1.1231 (0.8591)  acc1: 77.0833 (81.7189)  acc5: 92.7083 (95.6544)  time: 3.9247  data: 0.0001  max mem: 19768
+Test:  [295/521]  eta: 0:14:53  loss: 0.9702 (0.8582)  acc1: 79.1667 (81.7638)  acc5: 94.7917 (95.6574)  time: 3.9255  data: 0.0001  max mem: 19768
+Test:  [300/521]  eta: 0:14:33  loss: 0.7251 (0.8544)  acc1: 85.4167 (81.8764)  acc5: 94.7917 (95.6638)  time: 3.9258  data: 0.0002  max mem: 19768
+Test:  [305/521]  eta: 0:14:13  loss: 0.7304 (0.8611)  acc1: 85.4167 (81.7198)  acc5: 94.7917 (95.5950)  time: 3.9264  data: 0.0002  max mem: 19768
+Test:  [310/521]  eta: 0:13:53  loss: 0.7370 (0.8653)  acc1: 82.2917 (81.6117)  acc5: 95.8333 (95.5386)  time: 3.9264  data: 0.0002  max mem: 19768
+Test:  [315/521]  eta: 0:13:33  loss: 0.8539 (0.8683)  acc1: 75.0000 (81.5401)  acc5: 93.7500 (95.4971)  time: 3.9262  data: 0.0002  max mem: 19768
+Test:  [320/521]  eta: 0:13:13  loss: 1.0601 (0.8665)  acc1: 75.0000 (81.6134)  acc5: 92.7083 (95.4861)  time: 3.9260  data: 0.0001  max mem: 19768
+Test:  [325/521]  eta: 0:12:54  loss: 1.0601 (0.8754)  acc1: 75.0000 (81.3682)  acc5: 92.7083 (95.3924)  time: 3.9257  data: 0.0001  max mem: 19768
+Test:  [330/521]  eta: 0:12:34  loss: 1.0601 (0.8823)  acc1: 76.0417 (81.2217)  acc5: 92.7083 (95.2952)  time: 3.9251  data: 0.0001  max mem: 19768
+Test:  [335/521]  eta: 0:12:14  loss: 1.0597 (0.8835)  acc1: 76.0417 (81.1167)  acc5: 94.7917 (95.3032)  time: 3.9255  data: 0.0001  max mem: 19768
+Test:  [340/521]  eta: 0:11:54  loss: 1.1454 (0.8887)  acc1: 73.9583 (81.0331)  acc5: 90.6250 (95.2316)  time: 3.9271  data: 0.0002  max mem: 19768
+Test:  [345/521]  eta: 0:11:34  loss: 1.1454 (0.8948)  acc1: 75.0000 (80.8737)  acc5: 90.6250 (95.1891)  time: 3.9268  data: 0.0002  max mem: 19768
+Test:  [350/521]  eta: 0:11:15  loss: 1.1454 (0.8943)  acc1: 75.0000 (80.8464)  acc5: 94.7917 (95.2071)  time: 3.9275  data: 0.0002  max mem: 19768
+Test:  [355/521]  eta: 0:10:55  loss: 1.2816 (0.9002)  acc1: 68.7500 (80.6999)  acc5: 90.6250 (95.1311)  time: 3.9275  data: 0.0002  max mem: 19768
+Test:  [360/521]  eta: 0:10:35  loss: 1.2085 (0.9042)  acc1: 68.7500 (80.6123)  acc5: 91.6667 (95.0716)  time: 3.9256  data: 0.0001  max mem: 19768
+Test:  [365/521]  eta: 0:10:15  loss: 1.0382 (0.9036)  acc1: 76.0417 (80.6381)  acc5: 93.7500 (95.0820)  time: 3.9255  data: 0.0002  max mem: 19768
+Test:  [370/521]  eta: 0:09:55  loss: 1.1675 (0.9075)  acc1: 77.0833 (80.5846)  acc5: 91.6667 (95.0528)  time: 3.9258  data: 0.0002  max mem: 19768
+Test:  [375/521]  eta: 0:09:36  loss: 0.8349 (0.9067)  acc1: 82.2917 (80.6239)  acc5: 93.7500 (95.0465)  time: 3.9248  data: 0.0002  max mem: 19768
+Test:  [380/521]  eta: 0:09:16  loss: 0.9125 (0.9106)  acc1: 79.1667 (80.5501)  acc5: 93.7500 (94.9831)  time: 3.9260  data: 0.0002  max mem: 19768
+Test:  [385/521]  eta: 0:08:56  loss: 1.0287 (0.9135)  acc1: 77.0833 (80.4863)  acc5: 92.7083 (94.9428)  time: 3.9261  data: 0.0002  max mem: 19768
+Test:  [390/521]  eta: 0:08:36  loss: 1.0308 (0.9207)  acc1: 76.0417 (80.2856)  acc5: 91.6667 (94.8663)  time: 3.9270  data: 0.0002  max mem: 19768
+Test:  [395/521]  eta: 0:08:17  loss: 1.1016 (0.9206)  acc1: 76.0417 (80.3083)  acc5: 91.6667 (94.8680)  time: 3.9279  data: 0.0002  max mem: 19768
+Test:  [400/521]  eta: 0:07:57  loss: 1.1280 (0.9238)  acc1: 76.0417 (80.2707)  acc5: 90.6250 (94.8176)  time: 3.9272  data: 0.0002  max mem: 19768
+Test:  [405/521]  eta: 0:07:37  loss: 1.1109 (0.9263)  acc1: 76.0417 (80.2468)  acc5: 90.6250 (94.7788)  time: 3.9281  data: 0.0001  max mem: 19768
+Test:  [410/521]  eta: 0:07:17  loss: 1.0106 (0.9293)  acc1: 76.0417 (80.1652)  acc5: 91.6667 (94.7283)  time: 3.9269  data: 0.0001  max mem: 19768
+Test:  [415/521]  eta: 0:06:58  loss: 1.1204 (0.9318)  acc1: 76.0417 (80.1107)  acc5: 90.6250 (94.6990)  time: 3.9269  data: 0.0001  max mem: 19768
+Test:  [420/521]  eta: 0:06:38  loss: 1.0739 (0.9312)  acc1: 78.1250 (80.1589)  acc5: 90.6250 (94.6853)  time: 3.9269  data: 0.0002  max mem: 19768
+Test:  [425/521]  eta: 0:06:18  loss: 1.0739 (0.9342)  acc1: 78.1250 (80.0885)  acc5: 91.6667 (94.6743)  time: 3.9267  data: 0.0002  max mem: 19768
+Test:  [430/521]  eta: 0:05:58  loss: 1.0609 (0.9356)  acc1: 78.1250 (80.0537)  acc5: 91.6667 (94.6418)  time: 3.9262  data: 0.0002  max mem: 19768
+Test:  [435/521]  eta: 0:05:39  loss: 1.0739 (0.9391)  acc1: 76.0417 (79.9551)  acc5: 91.6667 (94.6101)  time: 3.9252  data: 0.0001  max mem: 19768
+Test:  [440/521]  eta: 0:05:19  loss: 1.2586 (0.9448)  acc1: 70.8333 (79.8068)  acc5: 90.6250 (94.5649)  time: 3.9246  data: 0.0002  max mem: 19768
+Test:  [445/521]  eta: 0:04:59  loss: 1.0609 (0.9452)  acc1: 73.9583 (79.7669)  acc5: 92.7083 (94.5721)  time: 3.9238  data: 0.0001  max mem: 19768
+Test:  [450/521]  eta: 0:04:39  loss: 1.2071 (0.9483)  acc1: 72.9167 (79.6771)  acc5: 92.7083 (94.5353)  time: 3.9245  data: 0.0001  max mem: 19768
+Test:  [455/521]  eta: 0:04:20  loss: 1.0077 (0.9466)  acc1: 78.1250 (79.7286)  acc5: 93.7500 (94.5427)  time: 3.9246  data: 0.0002  max mem: 19768
+Test:  [460/521]  eta: 0:04:00  loss: 1.0077 (0.9479)  acc1: 78.1250 (79.6389)  acc5: 94.7917 (94.5454)  time: 3.9247  data: 0.0002  max mem: 19768
+Test:  [465/521]  eta: 0:03:40  loss: 1.0691 (0.9502)  acc1: 78.1250 (79.6026)  acc5: 94.7917 (94.5234)  time: 3.9247  data: 0.0002  max mem: 19768
+Test:  [470/521]  eta: 0:03:21  loss: 1.0236 (0.9520)  acc1: 79.1667 (79.5670)  acc5: 94.7917 (94.4953)  time: 3.9240  data: 0.0002  max mem: 19768
+Test:  [475/521]  eta: 0:03:01  loss: 1.0691 (0.9585)  acc1: 76.0417 (79.3899)  acc5: 93.7500 (94.4700)  time: 3.9242  data: 0.0002  max mem: 19768
+Test:  [480/521]  eta: 0:02:41  loss: 1.0377 (0.9566)  acc1: 79.1667 (79.4439)  acc5: 93.7500 (94.4950)  time: 3.9241  data: 0.0001  max mem: 19768
+Test:  [485/521]  eta: 0:02:21  loss: 1.0377 (0.9575)  acc1: 78.1250 (79.3939)  acc5: 93.7500 (94.5002)  time: 3.9241  data: 0.0002  max mem: 19768
+Test:  [490/521]  eta: 0:02:02  loss: 0.9526 (0.9554)  acc1: 77.0833 (79.4361)  acc5: 95.8333 (94.5244)  time: 3.9240  data: 0.0002  max mem: 19768
+Test:  [495/521]  eta: 0:01:42  loss: 0.9526 (0.9547)  acc1: 79.1667 (79.4208)  acc5: 96.8750 (94.5439)  time: 3.9238  data: 0.0002  max mem: 19768
+Test:  [500/521]  eta: 0:01:22  loss: 0.8261 (0.9526)  acc1: 77.0833 (79.4910)  acc5: 96.8750 (94.5588)  time: 3.9240  data: 0.0002  max mem: 19768
+Test:  [505/521]  eta: 0:01:03  loss: 0.9386 (0.9569)  acc1: 77.0833 (79.3787)  acc5: 95.8333 (94.5138)  time: 3.9241  data: 0.0002  max mem: 19768
+Test:  [510/521]  eta: 0:00:43  loss: 0.9764 (0.9597)  acc1: 73.9583 (79.2910)  acc5: 95.8333 (94.5104)  time: 3.9240  data: 0.0002  max mem: 19768
+Test:  [515/521]  eta: 0:00:23  loss: 0.8681 (0.9557)  acc1: 78.1250 (79.3726)  acc5: 95.8333 (94.5413)  time: 3.9239  data: 0.0002  max mem: 19768
+Test:  [520/521]  eta: 0:00:03  loss: 0.9386 (0.9545)  acc1: 76.0417 (79.4040)  acc5: 95.8333 (94.5600)  time: 3.9337  data: 0.0001  max mem: 19768
+Test: Total time: 0:34:13 (3.9411 s / it)
+* Acc@1 79.404 Acc@5 94.560 loss 0.955
+Accuracy of the network on the 50000 test images: 79.4%
+vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2 w4a8 method_1.5 -------------------------------------------------
+Not using distributed mode
+batch_size: 128
+epochs: 300
+bce_loss: False
+unscale_lr: False
+model: vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2
+input_size: 224
+drop: 0.0
+drop_path: 0.1
+model_ema: True
+model_ema_decay: 0.99996
+model_ema_force_cpu: False
+opt: adamw
+opt_eps: 1e-08
+opt_betas: None
+clip_grad: None
+momentum: 0.9
+weight_decay: 0.05
+sched: cosine
+lr: 0.0005
+lr_noise: None
+lr_noise_pct: 0.67
+lr_noise_std: 1.0
+warmup_lr: 1e-06
+min_lr: 1e-05
+decay_epochs: 30
+warmup_epochs: 5
+cooldown_epochs: 10
+patience_epochs: 10
+decay_rate: 0.1
+color_jitter: 0.3
+aa: rand-m9-mstd0.5-inc1
+smoothing: 0.1
+train_interpolation: bicubic
+repeated_aug: True
+train_mode: True
+ThreeAugment: False
+src: False
+reprob: 0.25
+remode: pixel
+recount: 1
+resplit: False
+mixup: 0.8
+cutmix: 1.0
+cutmix_minmax: None
+mixup_prob: 1.0
+mixup_switch_prob: 0.5
+mixup_mode: batch
+teacher_model: regnety_160
+teacher_path: 
+distillation_type: none
+distillation_alpha: 0.5
+distillation_tau: 1.0
+cosub: False
+finetune: 
+attn_only: False
+data_path: /data01/datasets/imagenet
+data_set: IMNET
+inat_category: name
+output_dir: 
+device: cuda
+seed: 0
+resume: ./saved_checkpoint/vim_b_midclstok_81p9acc.pth
+start_epoch: 0
+eval: True
+eval_crop_ratio: 0.875
+dist_eval: False
+num_workers: 10
+pin_mem: True
+distributed: False
+world_size: 1
+dist_url: env://
+if_amp: True
+if_continue_inf: False
+if_nan2num: False
+if_random_cls_token_position: False
+if_random_token_rank: False
+local_rank: 0
+use_vim_torch: True
+static_quant: True
+observe: percentile
+quant_weight: True
+quant_act: True
+a_bit: 8
+w_bit: 4
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_S1: False
+use_S2: False
+use_S3: False
+use_S4: False
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: False
+use_hadmard_R3: False
+use_hadmard_R4: False
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_reduce_mean: True
+use_pertoken: False
+use_split: True
+use_klt: True
+generate_klt: False
+use_perkernel: False
+w_perchannel: True
+fake_online_hadamard: False
+analyse_and_plot: False
+use_adaround: False
+adaround_iter: 200
+b_start: 20
+b_end: 2
+warmup: 0.2
+Creating model: vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2
+number of params: 97598440
+Test:  [0/3]  eta: 0:02:41  loss: 0.7432 (0.7432)  acc1: 83.3333 (83.3333)  acc5: 94.7917 (94.7917)  time: 53.9813  data: 2.1166  max mem: 16314
+Test:  [2/3]  eta: 0:00:45  loss: 0.6305 (0.6223)  acc1: 88.5417 (87.2000)  acc5: 97.9167 (97.2000)  time: 45.2315  data: 0.7057  max mem: 16315
+Test: Total time: 0:02:15 (45.2810 s / it)
+* Acc@1 87.200 Acc@5 97.200 loss 0.622
+Fp Accuracy of the network on the 50000 test images: 87.2%
+Test:  [  0/521]  eta: 1:48:55  loss: 0.5083 (0.5083)  acc1: 92.7083 (92.7083)  acc5: 96.8750 (96.8750)  time: 12.5433  data: 2.1577  max mem: 20271
+Test:  [  5/521]  eta: 0:44:57  loss: 0.8483 (0.8462)  acc1: 79.1667 (81.9444)  acc5: 95.8333 (95.4861)  time: 5.2285  data: 0.3597  max mem: 20306
+Test:  [ 10/521]  eta: 0:38:51  loss: 0.6131 (0.6948)  acc1: 87.5000 (86.1742)  acc5: 96.8750 (96.2121)  time: 4.5633  data: 0.1963  max mem: 20306
+Test:  [ 15/521]  eta: 0:36:22  loss: 0.6313 (0.7671)  acc1: 85.4167 (84.9609)  acc5: 95.8333 (95.2474)  time: 4.3131  data: 0.1350  max mem: 20306
+Test:  [ 20/521]  eta: 0:34:55  loss: 0.9015 (0.9557)  acc1: 79.1667 (80.1091)  acc5: 95.8333 (93.6508)  time: 3.7646  data: 0.0001  max mem: 20306
+Test:  [ 25/521]  eta: 0:33:55  loss: 1.0731 (1.0203)  acc1: 77.0833 (78.1651)  acc5: 94.7917 (93.0689)  time: 3.7654  data: 0.0001  max mem: 20306
+Test:  [ 30/521]  eta: 0:33:07  loss: 1.1903 (1.0462)  acc1: 73.9583 (77.2177)  acc5: 89.5833 (92.8091)  time: 3.7650  data: 0.0001  max mem: 20306
+Test:  [ 35/521]  eta: 0:32:28  loss: 1.2637 (1.1172)  acc1: 64.5833 (74.9132)  acc5: 88.5417 (92.1007)  time: 3.7657  data: 0.0001  max mem: 20306
+Test:  [ 40/521]  eta: 0:31:53  loss: 1.2568 (1.0980)  acc1: 72.9167 (75.4065)  acc5: 90.6250 (92.4035)  time: 3.7654  data: 0.0001  max mem: 20306
+Test:  [ 45/521]  eta: 0:31:22  loss: 1.0471 (1.0628)  acc1: 77.0833 (76.4040)  acc5: 90.6250 (92.6178)  time: 3.7639  data: 0.0001  max mem: 20306
+Test:  [ 50/521]  eta: 0:30:54  loss: 0.7062 (1.0055)  acc1: 86.4583 (77.8799)  acc5: 94.7917 (93.0556)  time: 3.7646  data: 0.0001  max mem: 20306
+Test:  [ 55/521]  eta: 0:30:27  loss: 0.7062 (1.0023)  acc1: 86.4583 (78.2924)  acc5: 94.7917 (93.0246)  time: 3.7644  data: 0.0001  max mem: 20306
+Test:  [ 60/521]  eta: 0:30:01  loss: 0.8033 (1.0059)  acc1: 83.3333 (78.2787)  acc5: 94.7917 (92.9986)  time: 3.7640  data: 0.0001  max mem: 20306
+Test:  [ 65/521]  eta: 0:29:37  loss: 0.8807 (1.0409)  acc1: 82.2917 (77.4779)  acc5: 92.7083 (92.6136)  time: 3.7640  data: 0.0001  max mem: 20306
+Test:  [ 70/521]  eta: 0:29:13  loss: 0.9236 (1.0076)  acc1: 82.2917 (78.2570)  acc5: 92.7083 (92.9284)  time: 3.7631  data: 0.0001  max mem: 20306
+Test:  [ 75/521]  eta: 0:28:50  loss: 0.8343 (0.9726)  acc1: 83.3333 (79.1530)  acc5: 94.7917 (93.2155)  time: 3.7630  data: 0.0001  max mem: 20306
+Test:  [ 80/521]  eta: 0:28:27  loss: 0.6545 (0.9648)  acc1: 86.4583 (79.2567)  acc5: 95.8333 (93.3385)  time: 3.7631  data: 0.0001  max mem: 20306
+Test:  [ 85/521]  eta: 0:28:05  loss: 0.6386 (0.9750)  acc1: 86.4583 (78.8517)  acc5: 95.8333 (93.3018)  time: 3.7635  data: 0.0001  max mem: 20306
+Test:  [ 90/521]  eta: 0:27:43  loss: 0.8702 (1.0166)  acc1: 78.1250 (77.7244)  acc5: 93.7500 (93.0060)  time: 3.7635  data: 0.0001  max mem: 20306
+Test:  [ 95/521]  eta: 0:27:22  loss: 1.1091 (1.0222)  acc1: 72.9167 (77.3872)  acc5: 93.7500 (93.0013)  time: 3.7630  data: 0.0001  max mem: 20306
+Test:  [100/521]  eta: 0:27:01  loss: 1.4149 (1.0461)  acc1: 64.5833 (76.6399)  acc5: 90.6250 (92.8115)  time: 3.7632  data: 0.0001  max mem: 20306
+Test:  [105/521]  eta: 0:26:40  loss: 1.2023 (1.0449)  acc1: 67.7083 (76.5330)  acc5: 91.6667 (92.9638)  time: 3.7634  data: 0.0001  max mem: 20306
+Test:  [110/521]  eta: 0:26:19  loss: 1.1112 (1.0488)  acc1: 71.8750 (76.3983)  acc5: 91.6667 (92.9711)  time: 3.7634  data: 0.0001  max mem: 20306
+Test:  [115/521]  eta: 0:25:58  loss: 1.0949 (1.0449)  acc1: 71.8750 (76.4278)  acc5: 92.7083 (93.0765)  time: 3.7635  data: 0.0001  max mem: 20306
+Test:  [120/521]  eta: 0:25:38  loss: 1.0329 (1.0488)  acc1: 73.9583 (76.2655)  acc5: 94.7917 (93.0527)  time: 3.7646  data: 0.0001  max mem: 20306
+Test:  [125/521]  eta: 0:25:18  loss: 1.0868 (1.0529)  acc1: 71.8750 (75.9921)  acc5: 93.7500 (93.0969)  time: 3.7642  data: 0.0001  max mem: 20306
+Test:  [130/521]  eta: 0:24:57  loss: 0.9513 (1.0461)  acc1: 76.0417 (76.0655)  acc5: 95.8333 (93.2490)  time: 3.7642  data: 0.0001  max mem: 20306
+Test:  [135/521]  eta: 0:24:37  loss: 0.9510 (1.0332)  acc1: 80.2083 (76.4400)  acc5: 96.8750 (93.3670)  time: 3.7651  data: 0.0001  max mem: 20306
+Test:  [140/521]  eta: 0:24:17  loss: 0.9513 (1.0374)  acc1: 79.1667 (76.2855)  acc5: 96.8750 (93.3585)  time: 3.7636  data: 0.0001  max mem: 20306
+Test:  [145/521]  eta: 0:23:57  loss: 0.9305 (1.0380)  acc1: 78.1250 (76.2842)  acc5: 96.8750 (93.3933)  time: 3.7634  data: 0.0001  max mem: 20306
+Test:  [150/521]  eta: 0:23:38  loss: 1.0833 (1.0442)  acc1: 76.0417 (76.0969)  acc5: 93.7500 (93.4120)  time: 3.7633  data: 0.0001  max mem: 20306
+Test:  [155/521]  eta: 0:23:18  loss: 1.1319 (1.0383)  acc1: 75.0000 (76.3622)  acc5: 93.7500 (93.4562)  time: 3.7630  data: 0.0001  max mem: 20306
+Test:  [160/521]  eta: 0:22:58  loss: 1.1283 (1.0364)  acc1: 75.0000 (76.3716)  acc5: 93.7500 (93.4718)  time: 3.7629  data: 0.0001  max mem: 20306
+Test:  [165/521]  eta: 0:22:38  loss: 1.1284 (1.0434)  acc1: 76.0417 (76.3052)  acc5: 93.7500 (93.4111)  time: 3.7629  data: 0.0001  max mem: 20306
+Test:  [170/521]  eta: 0:22:19  loss: 0.8032 (1.0275)  acc1: 80.2083 (76.7300)  acc5: 93.7500 (93.5307)  time: 3.7629  data: 0.0001  max mem: 20306
+Test:  [175/521]  eta: 0:21:59  loss: 0.8620 (1.0240)  acc1: 79.1667 (76.8348)  acc5: 93.7500 (93.5665)  time: 3.7624  data: 0.0001  max mem: 20306
+Test:  [180/521]  eta: 0:21:40  loss: 0.9486 (1.0236)  acc1: 80.2083 (76.8762)  acc5: 93.7500 (93.5486)  time: 3.7639  data: 0.0001  max mem: 20306
+Test:  [185/521]  eta: 0:21:20  loss: 0.7116 (1.0212)  acc1: 83.3333 (76.8649)  acc5: 95.8333 (93.6156)  time: 3.7639  data: 0.0001  max mem: 20306
+Test:  [190/521]  eta: 0:21:01  loss: 0.9486 (1.0206)  acc1: 80.2083 (76.8543)  acc5: 93.7500 (93.6409)  time: 3.7642  data: 0.0001  max mem: 20306
+Test:  [195/521]  eta: 0:20:41  loss: 0.9810 (1.0248)  acc1: 75.0000 (76.8176)  acc5: 92.7083 (93.5906)  time: 3.7643  data: 0.0001  max mem: 20306
+Test:  [200/521]  eta: 0:20:22  loss: 0.8569 (1.0283)  acc1: 75.0000 (76.6584)  acc5: 93.7500 (93.5842)  time: 3.7634  data: 0.0001  max mem: 20306
+Test:  [205/521]  eta: 0:20:02  loss: 0.8569 (1.0241)  acc1: 81.2500 (76.8103)  acc5: 93.7500 (93.6185)  time: 3.7639  data: 0.0001  max mem: 20306
+Test:  [210/521]  eta: 0:19:43  loss: 0.8762 (1.0227)  acc1: 81.2500 (76.8365)  acc5: 93.7500 (93.6118)  time: 3.7647  data: 0.0002  max mem: 20306
+Test:  [215/521]  eta: 0:19:24  loss: 0.9632 (1.0349)  acc1: 73.9583 (76.4564)  acc5: 93.7500 (93.5137)  time: 3.7651  data: 0.0001  max mem: 20306
+Test:  [220/521]  eta: 0:19:04  loss: 1.0722 (1.0426)  acc1: 73.9583 (76.3433)  acc5: 93.7500 (93.4248)  time: 3.7647  data: 0.0002  max mem: 20306
+Test:  [225/521]  eta: 0:18:45  loss: 1.1525 (1.0443)  acc1: 69.7917 (76.3044)  acc5: 92.7083 (93.4043)  time: 3.7642  data: 0.0001  max mem: 20306
+Test:  [230/521]  eta: 0:18:26  loss: 1.2238 (1.0578)  acc1: 66.6667 (76.0462)  acc5: 90.6250 (93.1908)  time: 3.7637  data: 0.0001  max mem: 20306
+Test:  [235/521]  eta: 0:18:07  loss: 1.1990 (1.0632)  acc1: 70.8333 (75.9666)  acc5: 91.6667 (93.1012)  time: 3.7631  data: 0.0001  max mem: 20306
+Test:  [240/521]  eta: 0:17:47  loss: 1.2644 (1.0726)  acc1: 68.7500 (75.7996)  acc5: 90.6250 (92.9763)  time: 3.7628  data: 0.0001  max mem: 20306
+Test:  [245/521]  eta: 0:17:28  loss: 1.5154 (1.0826)  acc1: 64.5833 (75.6987)  acc5: 84.3750 (92.7888)  time: 3.7634  data: 0.0001  max mem: 20306
+Test:  [250/521]  eta: 0:17:09  loss: 1.2644 (1.0903)  acc1: 70.8333 (75.5561)  acc5: 87.5000 (92.6710)  time: 3.7629  data: 0.0001  max mem: 20306
+Test:  [255/521]  eta: 0:16:50  loss: 1.5124 (1.1002)  acc1: 64.5833 (75.2767)  acc5: 87.5000 (92.5659)  time: 3.7639  data: 0.0001  max mem: 20306
+Test:  [260/521]  eta: 0:16:31  loss: 1.6378 (1.1123)  acc1: 64.5833 (75.0599)  acc5: 85.4167 (92.3811)  time: 3.7642  data: 0.0001  max mem: 20306
+Test:  [265/521]  eta: 0:16:11  loss: 1.6622 (1.1296)  acc1: 62.5000 (74.7102)  acc5: 85.4167 (92.1444)  time: 3.7637  data: 0.0001  max mem: 20306
+Test:  [270/521]  eta: 0:15:52  loss: 1.6622 (1.1340)  acc1: 62.5000 (74.6348)  acc5: 85.4167 (92.0933)  time: 3.7649  data: 0.0001  max mem: 20306
+Test:  [275/521]  eta: 0:15:33  loss: 1.5570 (1.1422)  acc1: 64.5833 (74.4527)  acc5: 85.4167 (92.0101)  time: 3.7640  data: 0.0001  max mem: 20306
+Test:  [280/521]  eta: 0:15:14  loss: 1.5167 (1.1484)  acc1: 66.6667 (74.3253)  acc5: 87.5000 (91.9447)  time: 3.7640  data: 0.0001  max mem: 20306
+Test:  [285/521]  eta: 0:14:55  loss: 1.4633 (1.1549)  acc1: 66.6667 (74.2096)  acc5: 87.5000 (91.8451)  time: 3.7645  data: 0.0001  max mem: 20306
+Test:  [290/521]  eta: 0:14:36  loss: 1.5076 (1.1603)  acc1: 64.5833 (74.1481)  acc5: 87.5000 (91.7526)  time: 3.7641  data: 0.0001  max mem: 20306
+Test:  [295/521]  eta: 0:14:17  loss: 1.3607 (1.1607)  acc1: 71.8750 (74.1800)  acc5: 87.5000 (91.7476)  time: 3.7640  data: 0.0002  max mem: 20306
+Test:  [300/521]  eta: 0:13:58  loss: 0.9920 (1.1560)  acc1: 79.1667 (74.3529)  acc5: 91.6667 (91.7705)  time: 3.7638  data: 0.0001  max mem: 20306
+Test:  [305/521]  eta: 0:13:39  loss: 1.0571 (1.1639)  acc1: 76.0417 (74.1830)  acc5: 91.6667 (91.6667)  time: 3.7636  data: 0.0001  max mem: 20306
+Test:  [310/521]  eta: 0:13:20  loss: 1.0929 (1.1721)  acc1: 68.7500 (73.9885)  acc5: 90.6250 (91.5528)  time: 3.7629  data: 0.0001  max mem: 20306
+Test:  [315/521]  eta: 0:13:01  loss: 1.2291 (1.1767)  acc1: 68.7500 (73.9649)  acc5: 89.5833 (91.4656)  time: 3.7639  data: 0.0001  max mem: 20306
+Test:  [320/521]  eta: 0:12:42  loss: 1.3663 (1.1750)  acc1: 68.7500 (74.0524)  acc5: 87.5000 (91.4720)  time: 3.7642  data: 0.0002  max mem: 20306
+Test:  [325/521]  eta: 0:12:23  loss: 1.3663 (1.1845)  acc1: 70.8333 (73.8114)  acc5: 87.5000 (91.3535)  time: 3.7644  data: 0.0002  max mem: 20306
+Test:  [330/521]  eta: 0:12:03  loss: 1.3083 (1.1944)  acc1: 70.8333 (73.5901)  acc5: 87.5000 (91.2229)  time: 3.7650  data: 0.0002  max mem: 20306
+Test:  [335/521]  eta: 0:11:44  loss: 1.3289 (1.1965)  acc1: 69.7917 (73.4468)  acc5: 89.5833 (91.2171)  time: 3.7647  data: 0.0002  max mem: 20306
+Test:  [340/521]  eta: 0:11:25  loss: 1.5523 (1.2037)  acc1: 60.4167 (73.3352)  acc5: 85.4167 (91.1260)  time: 3.7648  data: 0.0002  max mem: 20306
+Test:  [345/521]  eta: 0:11:06  loss: 1.7076 (1.2118)  acc1: 60.4167 (73.0973)  acc5: 85.4167 (91.0706)  time: 3.7654  data: 0.0002  max mem: 20306
+Test:  [350/521]  eta: 0:10:47  loss: 1.5049 (1.2140)  acc1: 60.4167 (73.0027)  acc5: 88.5417 (91.0702)  time: 3.7648  data: 0.0002  max mem: 20306
+Test:  [355/521]  eta: 0:10:28  loss: 1.8833 (1.2238)  acc1: 59.3750 (72.7733)  acc5: 84.3750 (90.9381)  time: 3.7654  data: 0.0002  max mem: 20306
+Test:  [360/521]  eta: 0:10:09  loss: 1.7576 (1.2283)  acc1: 59.3750 (72.7233)  acc5: 86.4583 (90.8558)  time: 3.7650  data: 0.0002  max mem: 20306
+Test:  [365/521]  eta: 0:09:50  loss: 1.4759 (1.2301)  acc1: 65.6250 (72.6804)  acc5: 86.4583 (90.8328)  time: 3.7642  data: 0.0002  max mem: 20306
+Test:  [370/521]  eta: 0:09:31  loss: 1.6798 (1.2381)  acc1: 64.5833 (72.5039)  acc5: 84.3750 (90.7457)  time: 3.7648  data: 0.0002  max mem: 20306
+Test:  [375/521]  eta: 0:09:12  loss: 1.3778 (1.2388)  acc1: 69.7917 (72.5205)  acc5: 88.5417 (90.7247)  time: 3.7636  data: 0.0002  max mem: 20306
+Test:  [380/521]  eta: 0:08:53  loss: 1.4354 (1.2439)  acc1: 69.7917 (72.4491)  acc5: 88.5417 (90.6441)  time: 3.7640  data: 0.0002  max mem: 20306
+Test:  [385/521]  eta: 0:08:35  loss: 1.3778 (1.2476)  acc1: 69.7917 (72.3904)  acc5: 88.5417 (90.5791)  time: 3.7647  data: 0.0002  max mem: 20306
+Test:  [390/521]  eta: 0:08:16  loss: 1.3778 (1.2567)  acc1: 69.7917 (72.1707)  acc5: 85.4167 (90.4731)  time: 3.7655  data: 0.0002  max mem: 20306
+Test:  [395/521]  eta: 0:07:57  loss: 1.4006 (1.2567)  acc1: 65.6250 (72.1775)  acc5: 88.5417 (90.4803)  time: 3.7654  data: 0.0002  max mem: 20306
+Test:  [400/521]  eta: 0:07:38  loss: 1.4214 (1.2623)  acc1: 66.6667 (72.0802)  acc5: 85.4167 (90.3704)  time: 3.7654  data: 0.0002  max mem: 20306
+Test:  [405/521]  eta: 0:07:19  loss: 1.6077 (1.2665)  acc1: 64.5833 (72.0187)  acc5: 84.3750 (90.2966)  time: 3.7647  data: 0.0001  max mem: 20306
+Test:  [410/521]  eta: 0:07:00  loss: 1.6051 (1.2697)  acc1: 66.6667 (71.9434)  acc5: 84.3750 (90.2322)  time: 3.7634  data: 0.0001  max mem: 20306
+Test:  [415/521]  eta: 0:06:41  loss: 1.6410 (1.2743)  acc1: 65.6250 (71.8875)  acc5: 84.3750 (90.1542)  time: 3.7634  data: 0.0001  max mem: 20306
+Test:  [420/521]  eta: 0:06:22  loss: 1.6051 (1.2744)  acc1: 67.7083 (71.9047)  acc5: 84.3750 (90.1376)  time: 3.7638  data: 0.0001  max mem: 20306
+Test:  [425/521]  eta: 0:06:03  loss: 1.5698 (1.2763)  acc1: 65.6250 (71.8383)  acc5: 85.4167 (90.1384)  time: 3.7642  data: 0.0001  max mem: 20306
+Test:  [430/521]  eta: 0:05:44  loss: 1.4433 (1.2787)  acc1: 67.7083 (71.8122)  acc5: 88.5417 (90.1175)  time: 3.7646  data: 0.0001  max mem: 20306
+Test:  [435/521]  eta: 0:05:25  loss: 1.4252 (1.2824)  acc1: 66.6667 (71.7221)  acc5: 89.5833 (90.0659)  time: 3.7646  data: 0.0001  max mem: 20306
+Test:  [440/521]  eta: 0:05:06  loss: 1.6790 (1.2893)  acc1: 60.4167 (71.5679)  acc5: 85.4167 (89.9684)  time: 3.7644  data: 0.0001  max mem: 20306
+Test:  [445/521]  eta: 0:04:47  loss: 1.4252 (1.2893)  acc1: 65.6250 (71.5387)  acc5: 89.5833 (89.9827)  time: 3.7639  data: 0.0001  max mem: 20306
+Test:  [450/521]  eta: 0:04:28  loss: 1.4656 (1.2936)  acc1: 60.4167 (71.4246)  acc5: 86.4583 (89.9252)  time: 3.7635  data: 0.0001  max mem: 20306
+Test:  [455/521]  eta: 0:04:09  loss: 1.3658 (1.2922)  acc1: 65.6250 (71.4638)  acc5: 88.5417 (89.9420)  time: 3.7640  data: 0.0001  max mem: 20306
+Test:  [460/521]  eta: 0:03:50  loss: 1.2795 (1.2933)  acc1: 69.7917 (71.4208)  acc5: 89.5833 (89.9245)  time: 3.7635  data: 0.0001  max mem: 20306
+Test:  [465/521]  eta: 0:03:31  loss: 1.3142 (1.2970)  acc1: 68.7500 (71.3609)  acc5: 86.4583 (89.8762)  time: 3.7633  data: 0.0001  max mem: 20306
+Test:  [470/521]  eta: 0:03:12  loss: 1.2230 (1.2984)  acc1: 69.7917 (71.3287)  acc5: 89.5833 (89.8465)  time: 3.7633  data: 0.0001  max mem: 20306
+Test:  [475/521]  eta: 0:02:53  loss: 1.5673 (1.3048)  acc1: 67.7083 (71.1550)  acc5: 86.4583 (89.8000)  time: 3.7633  data: 0.0001  max mem: 20306
+Test:  [480/521]  eta: 0:02:35  loss: 1.3588 (1.3025)  acc1: 68.7500 (71.2015)  acc5: 89.5833 (89.8345)  time: 3.7631  data: 0.0001  max mem: 20306
+Test:  [485/521]  eta: 0:02:16  loss: 1.3588 (1.3050)  acc1: 67.7083 (71.1355)  acc5: 89.5833 (89.8148)  time: 3.7632  data: 0.0001  max mem: 20306
+Test:  [490/521]  eta: 0:01:57  loss: 1.3588 (1.3030)  acc1: 67.7083 (71.1791)  acc5: 90.6250 (89.8528)  time: 3.7632  data: 0.0001  max mem: 20306
+Test:  [495/521]  eta: 0:01:38  loss: 1.2605 (1.3009)  acc1: 69.7917 (71.2177)  acc5: 92.7083 (89.9005)  time: 3.7629  data: 0.0001  max mem: 20306
+Test:  [500/521]  eta: 0:01:19  loss: 1.2226 (1.2990)  acc1: 70.8333 (71.2804)  acc5: 93.7500 (89.9077)  time: 3.7630  data: 0.0001  max mem: 20306
+Test:  [505/521]  eta: 0:01:00  loss: 1.2226 (1.3047)  acc1: 70.8333 (71.1545)  acc5: 91.6667 (89.8304)  time: 3.7629  data: 0.0001  max mem: 20306
+Test:  [510/521]  eta: 0:00:41  loss: 1.2605 (1.3089)  acc1: 64.5833 (71.0351)  acc5: 90.6250 (89.8116)  time: 3.7629  data: 0.0001  max mem: 20306
+Test:  [515/521]  eta: 0:00:22  loss: 1.2446 (1.3040)  acc1: 64.5833 (71.1483)  acc5: 89.5833 (89.8559)  time: 3.7627  data: 0.0001  max mem: 20306
+Test:  [520/521]  eta: 0:00:03  loss: 1.2961 (1.3021)  acc1: 64.5833 (71.2240)  acc5: 90.6250 (89.8760)  time: 3.7556  data: 0.0001  max mem: 20306
+Test: Total time: 0:32:49 (3.7810 s / it)
+* Acc@1 71.224 Acc@5 89.876 loss 1.302
+Accuracy of the network on the 50000 test images: 71.2%
+vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2 w4a8 method_0.5 -------------------------------------------------
+Not using distributed mode
+batch_size: 128
+epochs: 300
+bce_loss: False
+unscale_lr: False
+model: vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2
+input_size: 224
+drop: 0.0
+drop_path: 0.1
+model_ema: True
+model_ema_decay: 0.99996
+model_ema_force_cpu: False
+opt: adamw
+opt_eps: 1e-08
+opt_betas: None
+clip_grad: None
+momentum: 0.9
+weight_decay: 0.05
+sched: cosine
+lr: 0.0005
+lr_noise: None
+lr_noise_pct: 0.67
+lr_noise_std: 1.0
+warmup_lr: 1e-06
+min_lr: 1e-05
+decay_epochs: 30
+warmup_epochs: 5
+cooldown_epochs: 10
+patience_epochs: 10
+decay_rate: 0.1
+color_jitter: 0.3
+aa: rand-m9-mstd0.5-inc1
+smoothing: 0.1
+train_interpolation: bicubic
+repeated_aug: True
+train_mode: True
+ThreeAugment: False
+src: False
+reprob: 0.25
+remode: pixel
+recount: 1
+resplit: False
+mixup: 0.8
+cutmix: 1.0
+cutmix_minmax: None
+mixup_prob: 1.0
+mixup_switch_prob: 0.5
+mixup_mode: batch
+teacher_model: regnety_160
+teacher_path: 
+distillation_type: none
+distillation_alpha: 0.5
+distillation_tau: 1.0
+cosub: False
+finetune: 
+attn_only: False
+data_path: /data01/datasets/imagenet
+data_set: IMNET
+inat_category: name
+output_dir: 
+device: cuda
+seed: 0
+resume: ./saved_checkpoint/vim_b_midclstok_81p9acc.pth
+start_epoch: 0
+eval: True
+eval_crop_ratio: 0.875
+dist_eval: False
+num_workers: 10
+pin_mem: True
+distributed: False
+world_size: 1
+dist_url: env://
+if_amp: True
+if_continue_inf: False
+if_nan2num: False
+if_random_cls_token_position: False
+if_random_token_rank: False
+local_rank: 0
+use_vim_torch: True
+static_quant: True
+observe: minmax
+quant_weight: True
+quant_act: True
+a_bit: 8
+w_bit: 4
+use_smoothquant: False
+use_gptq: False
+use_hadmard: True
+use_S1: False
+use_S2: False
+use_S3: False
+use_S4: False
+use_S5: False
+use_S7: False
+use_hadmard_R1: True
+use_hadmard_R2: False
+use_hadmard_R3: False
+use_hadmard_R4: False
+use_hadmard_R5: True
+use_hadmard_R6: False
+use_reduce_mean: False
+use_pertoken: False
+use_split: False
+use_klt: False
+generate_klt: False
+use_perkernel: False
+w_perchannel: True
+fake_online_hadamard: False
+analyse_and_plot: False
+use_adaround: False
+adaround_iter: 200
+b_start: 20
+b_end: 2
+warmup: 0.2
+Creating model: vim_base_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_middle_cls_token_div2
+number of params: 97598440
+Test:  [0/3]  eta: 0:00:24  loss: 0.7432 (0.7432)  acc1: 83.3333 (83.3333)  acc5: 94.7917 (94.7917)  time: 8.3007  data: 2.4263  max mem: 13307
+Test:  [2/3]  eta: 0:00:04  loss: 0.6304 (0.6222)  acc1: 88.5417 (87.2000)  acc5: 97.9167 (97.2000)  time: 4.3523  data: 0.8088  max mem: 13307
+Test: Total time: 0:00:13 (4.3928 s / it)
+* Acc@1 87.200 Acc@5 97.200 loss 0.622
+Fp Accuracy of the network on the 50000 test images: 87.2%
+Test:  [  0/521]  eta: 1:18:08  loss: 1.0606 (1.0606)  acc1: 81.2500 (81.2500)  acc5: 91.6667 (91.6667)  time: 8.9994  data: 1.9809  max mem: 15301
+Test:  [  5/521]  eta: 0:39:48  loss: 2.0212 (1.9593)  acc1: 52.0833 (59.0278)  acc5: 84.3750 (82.4653)  time: 4.6292  data: 0.3303  max mem: 15309
+Test:  [ 10/521]  eta: 0:36:01  loss: 1.4243 (1.6201)  acc1: 72.9167 (67.8030)  acc5: 86.4583 (85.9849)  time: 4.2305  data: 0.1802  max mem: 15309
+Test:  [ 15/521]  eta: 0:34:25  loss: 1.6351 (1.8299)  acc1: 61.4583 (64.8438)  acc5: 85.4167 (82.3568)  time: 4.0818  data: 0.1239  max mem: 15309
+Test:  [ 20/521]  eta: 0:33:26  loss: 2.0225 (2.2538)  acc1: 57.2917 (56.8452)  acc5: 77.0833 (75.6944)  time: 3.7543  data: 0.0001  max mem: 15309
+Test:  [ 25/521]  eta: 0:32:42  loss: 2.5597 (2.4483)  acc1: 50.0000 (53.3253)  acc5: 69.7917 (73.3974)  time: 3.7539  data: 0.0001  max mem: 15309
+Test:  [ 30/521]  eta: 0:32:06  loss: 2.8848 (2.4855)  acc1: 40.6250 (52.4866)  acc5: 67.7083 (73.1183)  time: 3.7539  data: 0.0001  max mem: 15309
+Test:  [ 35/521]  eta: 0:31:35  loss: 3.1317 (2.5705)  acc1: 34.3750 (50.8681)  acc5: 61.4583 (72.0197)  time: 3.7538  data: 0.0001  max mem: 15309
+Test:  [ 40/521]  eta: 0:31:07  loss: 2.6439 (2.5010)  acc1: 37.5000 (51.7531)  acc5: 78.1250 (73.5010)  time: 3.7531  data: 0.0001  max mem: 15309
+Test:  [ 45/521]  eta: 0:30:40  loss: 2.0416 (2.4072)  acc1: 58.3333 (53.8043)  acc5: 80.2083 (74.8188)  time: 3.7527  data: 0.0001  max mem: 15309
+Test:  [ 50/521]  eta: 0:30:16  loss: 1.8522 (2.2770)  acc1: 67.7083 (56.5155)  acc5: 82.2917 (76.3685)  time: 3.7541  data: 0.0001  max mem: 15309
+Test:  [ 55/521]  eta: 0:29:53  loss: 1.7170 (2.3093)  acc1: 67.7083 (56.1012)  acc5: 87.5000 (75.9301)  time: 3.7545  data: 0.0001  max mem: 15309
+Test:  [ 60/521]  eta: 0:29:30  loss: 1.7909 (2.3384)  acc1: 64.5833 (55.9085)  acc5: 81.2500 (75.5806)  time: 3.7542  data: 0.0001  max mem: 15309
+Test:  [ 65/521]  eta: 0:29:07  loss: 2.1272 (2.4323)  acc1: 55.2083 (54.3561)  acc5: 72.9167 (74.2582)  time: 3.7543  data: 0.0001  max mem: 15309
+Test:  [ 70/521]  eta: 0:28:46  loss: 2.2678 (2.3627)  acc1: 55.2083 (55.6485)  acc5: 72.9167 (75.3228)  time: 3.7532  data: 0.0001  max mem: 15309
+Test:  [ 75/521]  eta: 0:28:24  loss: 1.9878 (2.2946)  acc1: 62.5000 (56.9216)  acc5: 77.0833 (76.2473)  time: 3.7529  data: 0.0001  max mem: 15309
+Test:  [ 80/521]  eta: 0:28:04  loss: 1.5854 (2.2665)  acc1: 63.5417 (57.2531)  acc5: 86.4583 (76.7361)  time: 3.7540  data: 0.0001  max mem: 15309
+Test:  [ 85/521]  eta: 0:27:43  loss: 1.3971 (2.2572)  acc1: 69.7917 (57.1584)  acc5: 87.5000 (76.8532)  time: 3.7546  data: 0.0002  max mem: 15309
+Test:  [ 90/521]  eta: 0:27:22  loss: 1.8821 (2.3020)  acc1: 56.2500 (55.8036)  acc5: 82.2917 (76.2134)  time: 3.7543  data: 0.0001  max mem: 15309
+Test:  [ 95/521]  eta: 0:27:02  loss: 2.1796 (2.3258)  acc1: 43.7500 (55.2626)  acc5: 75.0000 (75.7813)  time: 3.7537  data: 0.0001  max mem: 15309
+Test:  [100/521]  eta: 0:26:42  loss: 3.0123 (2.3614)  acc1: 40.6250 (54.2285)  acc5: 65.6250 (75.2372)  time: 3.7526  data: 0.0001  max mem: 15309
+Test:  [105/521]  eta: 0:26:22  loss: 2.8626 (2.3571)  acc1: 40.6250 (53.9406)  acc5: 65.6250 (75.4520)  time: 3.7518  data: 0.0001  max mem: 15309
+Test:  [110/521]  eta: 0:26:02  loss: 2.4998 (2.3786)  acc1: 41.6667 (53.2845)  acc5: 68.7500 (75.1502)  time: 3.7519  data: 0.0001  max mem: 15309
+Test:  [115/521]  eta: 0:25:42  loss: 2.4652 (2.3599)  acc1: 44.7917 (53.4303)  acc5: 75.0000 (75.6017)  time: 3.7521  data: 0.0001  max mem: 15309
+Test:  [120/521]  eta: 0:25:22  loss: 2.3004 (2.3535)  acc1: 46.8750 (53.3230)  acc5: 81.2500 (75.7920)  time: 3.7525  data: 0.0001  max mem: 15309
+Test:  [125/521]  eta: 0:25:02  loss: 2.2583 (2.3362)  acc1: 47.9167 (53.2821)  acc5: 81.2500 (76.1409)  time: 3.7537  data: 0.0001  max mem: 15309
+Test:  [130/521]  eta: 0:24:43  loss: 1.9321 (2.3208)  acc1: 50.0000 (53.3556)  acc5: 82.2917 (76.4233)  time: 3.7550  data: 0.0001  max mem: 15309
+Test:  [135/521]  eta: 0:24:23  loss: 1.9348 (2.3035)  acc1: 55.2083 (53.6841)  acc5: 82.2917 (76.6851)  time: 3.7551  data: 0.0001  max mem: 15309
+Test:  [140/521]  eta: 0:24:04  loss: 2.0547 (2.3217)  acc1: 54.1667 (53.1546)  acc5: 80.2083 (76.4037)  time: 3.7547  data: 0.0001  max mem: 15309
+Test:  [145/521]  eta: 0:23:44  loss: 2.0761 (2.3259)  acc1: 54.1667 (52.9894)  acc5: 80.2083 (76.3913)  time: 3.7536  data: 0.0001  max mem: 15309
+Test:  [150/521]  eta: 0:23:25  loss: 2.1958 (2.3248)  acc1: 54.1667 (52.9180)  acc5: 80.2083 (76.5453)  time: 3.7523  data: 0.0001  max mem: 15309
+Test:  [155/521]  eta: 0:23:06  loss: 2.3044 (2.3199)  acc1: 52.0833 (53.1918)  acc5: 79.1667 (76.6493)  time: 3.7521  data: 0.0001  max mem: 15309
+Test:  [160/521]  eta: 0:22:46  loss: 2.2714 (2.3184)  acc1: 52.0833 (53.1509)  acc5: 80.2083 (76.6887)  time: 3.7520  data: 0.0001  max mem: 15309
+Test:  [165/521]  eta: 0:22:27  loss: 2.3044 (2.3322)  acc1: 52.0833 (52.8928)  acc5: 78.1250 (76.5123)  time: 3.7518  data: 0.0001  max mem: 15309
+Test:  [170/521]  eta: 0:22:08  loss: 1.9096 (2.2954)  acc1: 56.2500 (53.6672)  acc5: 79.1667 (76.9371)  time: 3.7518  data: 0.0001  max mem: 15309
+Test:  [175/521]  eta: 0:21:48  loss: 1.8466 (2.2997)  acc1: 57.2917 (53.7228)  acc5: 78.1250 (76.8407)  time: 3.7518  data: 0.0002  max mem: 15309
+Test:  [180/521]  eta: 0:21:29  loss: 2.4862 (2.3237)  acc1: 57.2917 (53.4818)  acc5: 69.7917 (76.4215)  time: 3.7528  data: 0.0002  max mem: 15309
+Test:  [185/521]  eta: 0:21:10  loss: 2.4973 (2.3376)  acc1: 57.2917 (53.2370)  acc5: 73.9583 (76.2713)  time: 3.7541  data: 0.0002  max mem: 15309
+Test:  [190/521]  eta: 0:20:51  loss: 2.5555 (2.3369)  acc1: 44.7917 (53.2177)  acc5: 71.8750 (76.3471)  time: 3.7568  data: 0.0002  max mem: 15309
+Test:  [195/521]  eta: 0:20:32  loss: 2.6701 (2.3483)  acc1: 44.7917 (53.0506)  acc5: 72.9167 (76.1852)  time: 3.7570  data: 0.0002  max mem: 15309
+Test:  [200/521]  eta: 0:20:13  loss: 2.3783 (2.3466)  acc1: 47.9167 (52.9954)  acc5: 76.0417 (76.2749)  time: 3.7575  data: 0.0002  max mem: 15309
+Test:  [205/521]  eta: 0:19:54  loss: 2.3339 (2.3395)  acc1: 54.1667 (53.2160)  acc5: 78.1250 (76.3501)  time: 3.7572  data: 0.0002  max mem: 15309
+Test:  [210/521]  eta: 0:19:35  loss: 2.2587 (2.3297)  acc1: 55.2083 (53.4261)  acc5: 79.1667 (76.4712)  time: 3.7546  data: 0.0002  max mem: 15309
+Test:  [215/521]  eta: 0:19:16  loss: 2.2587 (2.3401)  acc1: 55.2083 (53.1539)  acc5: 79.1667 (76.3455)  time: 3.7551  data: 0.0002  max mem: 15309
+Test:  [220/521]  eta: 0:18:57  loss: 2.2993 (2.3478)  acc1: 52.0833 (53.0590)  acc5: 78.1250 (76.2915)  time: 3.7538  data: 0.0002  max mem: 15309
+Test:  [225/521]  eta: 0:18:37  loss: 2.4294 (2.3513)  acc1: 47.9167 (53.0282)  acc5: 77.0833 (76.2491)  time: 3.7528  data: 0.0002  max mem: 15309
+Test:  [230/521]  eta: 0:18:18  loss: 2.6376 (2.3616)  acc1: 45.8333 (52.8725)  acc5: 73.9583 (76.0823)  time: 3.7528  data: 0.0002  max mem: 15309
+Test:  [235/521]  eta: 0:17:59  loss: 2.6376 (2.3724)  acc1: 47.9167 (52.7145)  acc5: 73.9583 (75.8519)  time: 3.7524  data: 0.0002  max mem: 15309
+Test:  [240/521]  eta: 0:17:40  loss: 2.6775 (2.3803)  acc1: 45.8333 (52.5588)  acc5: 69.7917 (75.7434)  time: 3.7526  data: 0.0002  max mem: 15309
+Test:  [245/521]  eta: 0:17:21  loss: 2.6255 (2.3887)  acc1: 47.9167 (52.4983)  acc5: 69.7917 (75.5928)  time: 3.7528  data: 0.0002  max mem: 15309
+Test:  [250/521]  eta: 0:17:02  loss: 2.6255 (2.3897)  acc1: 50.0000 (52.5025)  acc5: 69.7917 (75.5395)  time: 3.7527  data: 0.0002  max mem: 15309
+Test:  [255/521]  eta: 0:16:43  loss: 2.6032 (2.3927)  acc1: 47.9167 (52.4373)  acc5: 70.8333 (75.4761)  time: 3.7530  data: 0.0002  max mem: 15309
+Test:  [260/521]  eta: 0:16:24  loss: 2.4406 (2.4066)  acc1: 47.9167 (52.2390)  acc5: 70.8333 (75.2554)  time: 3.7532  data: 0.0002  max mem: 15309
+Test:  [265/521]  eta: 0:16:05  loss: 2.6548 (2.4202)  acc1: 44.7917 (51.9698)  acc5: 69.7917 (75.0274)  time: 3.7537  data: 0.0001  max mem: 15309
+Test:  [270/521]  eta: 0:15:47  loss: 2.7887 (2.4270)  acc1: 39.5833 (51.8681)  acc5: 64.5833 (74.9193)  time: 3.7550  data: 0.0001  max mem: 15309
+Test:  [275/521]  eta: 0:15:28  loss: 2.8760 (2.4375)  acc1: 38.5417 (51.6795)  acc5: 64.5833 (74.7509)  time: 3.7543  data: 0.0001  max mem: 15309
+Test:  [280/521]  eta: 0:15:09  loss: 2.8539 (2.4437)  acc1: 43.7500 (51.6014)  acc5: 66.6667 (74.6404)  time: 3.7553  data: 0.0001  max mem: 15309
+Test:  [285/521]  eta: 0:14:50  loss: 2.8539 (2.4520)  acc1: 43.7500 (51.5006)  acc5: 64.5833 (74.4901)  time: 3.7548  data: 0.0001  max mem: 15309
+Test:  [290/521]  eta: 0:14:31  loss: 2.7111 (2.4547)  acc1: 46.8750 (51.4712)  acc5: 66.6667 (74.4308)  time: 3.7544  data: 0.0002  max mem: 15309
+Test:  [295/521]  eta: 0:14:12  loss: 2.4277 (2.4520)  acc1: 48.9583 (51.5590)  acc5: 73.9583 (74.4299)  time: 3.7544  data: 0.0002  max mem: 15309
+Test:  [300/521]  eta: 0:13:53  loss: 2.2615 (2.4444)  acc1: 55.2083 (51.7857)  acc5: 76.0417 (74.5259)  time: 3.7530  data: 0.0002  max mem: 15309
+Test:  [305/521]  eta: 0:13:34  loss: 2.2799 (2.4532)  acc1: 54.1667 (51.6340)  acc5: 76.0417 (74.3873)  time: 3.7534  data: 0.0002  max mem: 15309
+Test:  [310/521]  eta: 0:13:15  loss: 2.2799 (2.4629)  acc1: 48.9583 (51.4737)  acc5: 73.9583 (74.2296)  time: 3.7530  data: 0.0002  max mem: 15309
+Test:  [315/521]  eta: 0:12:56  loss: 2.6321 (2.4677)  acc1: 42.7083 (51.4109)  acc5: 68.7500 (74.1363)  time: 3.7539  data: 0.0002  max mem: 15309
+Test:  [320/521]  eta: 0:12:37  loss: 2.5578 (2.4639)  acc1: 42.7083 (51.5349)  acc5: 67.7083 (74.1920)  time: 3.7547  data: 0.0002  max mem: 15309
+Test:  [325/521]  eta: 0:12:18  loss: 2.5061 (2.4697)  acc1: 44.7917 (51.4315)  acc5: 70.8333 (74.1117)  time: 3.7544  data: 0.0002  max mem: 15309
+Test:  [330/521]  eta: 0:11:59  loss: 2.4904 (2.4776)  acc1: 47.9167 (51.2934)  acc5: 70.8333 (73.9709)  time: 3.7547  data: 0.0002  max mem: 15309
+Test:  [335/521]  eta: 0:11:41  loss: 2.4387 (2.4775)  acc1: 47.9167 (51.1626)  acc5: 76.0417 (74.0017)  time: 3.7537  data: 0.0002  max mem: 15309
+Test:  [340/521]  eta: 0:11:22  loss: 2.7536 (2.4876)  acc1: 36.4583 (50.9928)  acc5: 67.7083 (73.8300)  time: 3.7534  data: 0.0002  max mem: 15309
+Test:  [345/521]  eta: 0:11:03  loss: 2.7536 (2.4930)  acc1: 36.4583 (50.8339)  acc5: 67.7083 (73.7867)  time: 3.7539  data: 0.0002  max mem: 15309
+Test:  [350/521]  eta: 0:10:44  loss: 2.9423 (2.4982)  acc1: 36.4583 (50.6974)  acc5: 67.7083 (73.7031)  time: 3.7533  data: 0.0002  max mem: 15309
+Test:  [355/521]  eta: 0:10:25  loss: 3.1139 (2.5101)  acc1: 34.3750 (50.4331)  acc5: 63.5417 (73.5165)  time: 3.7536  data: 0.0002  max mem: 15309
+Test:  [360/521]  eta: 0:10:06  loss: 2.9930 (2.5106)  acc1: 34.3750 (50.4501)  acc5: 64.5833 (73.4620)  time: 3.7532  data: 0.0002  max mem: 15309
+Test:  [365/521]  eta: 0:09:47  loss: 2.8615 (2.5095)  acc1: 42.7083 (50.4696)  acc5: 64.5833 (73.4745)  time: 3.7534  data: 0.0002  max mem: 15309
+Test:  [370/521]  eta: 0:09:28  loss: 2.9930 (2.5209)  acc1: 41.6667 (50.2780)  acc5: 67.7083 (73.3154)  time: 3.7537  data: 0.0002  max mem: 15309
+Test:  [375/521]  eta: 0:09:10  loss: 2.6319 (2.5192)  acc1: 48.9583 (50.3131)  acc5: 71.8750 (73.3516)  time: 3.7540  data: 0.0002  max mem: 15309
+Test:  [380/521]  eta: 0:08:51  loss: 2.6786 (2.5228)  acc1: 45.8333 (50.2652)  acc5: 71.8750 (73.2994)  time: 3.7541  data: 0.0002  max mem: 15309
+Test:  [385/521]  eta: 0:08:32  loss: 2.7620 (2.5264)  acc1: 43.7500 (50.1943)  acc5: 70.8333 (73.2216)  time: 3.7535  data: 0.0003  max mem: 15309
+Test:  [390/521]  eta: 0:08:13  loss: 2.6999 (2.5346)  acc1: 44.7917 (50.0426)  acc5: 70.8333 (73.0845)  time: 3.7530  data: 0.0003  max mem: 15309
+Test:  [395/521]  eta: 0:07:54  loss: 2.6958 (2.5308)  acc1: 47.9167 (50.1473)  acc5: 70.8333 (73.1403)  time: 3.7524  data: 0.0003  max mem: 15309
+Test:  [400/521]  eta: 0:07:35  loss: 2.4962 (2.5359)  acc1: 47.9167 (50.0779)  acc5: 72.9167 (73.0517)  time: 3.7532  data: 0.0002  max mem: 15309
+Test:  [405/521]  eta: 0:07:16  loss: 2.6958 (2.5407)  acc1: 46.8750 (50.0051)  acc5: 68.7500 (72.9680)  time: 3.7529  data: 0.0002  max mem: 15309
+Test:  [410/521]  eta: 0:06:58  loss: 2.4962 (2.5416)  acc1: 46.8750 (49.9975)  acc5: 68.7500 (72.9420)  time: 3.7529  data: 0.0002  max mem: 15309
+Test:  [415/521]  eta: 0:06:39  loss: 3.0209 (2.5485)  acc1: 44.7917 (49.9249)  acc5: 63.5417 (72.8365)  time: 3.7530  data: 0.0002  max mem: 15309
+Test:  [420/521]  eta: 0:06:20  loss: 2.9148 (2.5471)  acc1: 45.8333 (49.9951)  acc5: 65.6250 (72.8400)  time: 3.7519  data: 0.0002  max mem: 15309
+Test:  [425/521]  eta: 0:06:01  loss: 2.6201 (2.5446)  acc1: 45.8333 (49.9927)  acc5: 69.7917 (72.9093)  time: 3.7526  data: 0.0002  max mem: 15309
+Test:  [430/521]  eta: 0:05:42  loss: 2.6201 (2.5503)  acc1: 45.8333 (49.8792)  acc5: 69.7917 (72.8224)  time: 3.7531  data: 0.0002  max mem: 15309
+Test:  [435/521]  eta: 0:05:23  loss: 2.5407 (2.5530)  acc1: 51.0417 (49.8471)  acc5: 72.9167 (72.7662)  time: 3.7531  data: 0.0002  max mem: 15309
+Test:  [440/521]  eta: 0:05:05  loss: 2.7216 (2.5606)  acc1: 36.4583 (49.6811)  acc5: 67.7083 (72.6379)  time: 3.7531  data: 0.0002  max mem: 15309
+Test:  [445/521]  eta: 0:04:46  loss: 2.7216 (2.5598)  acc1: 35.4167 (49.6847)  acc5: 64.5833 (72.6551)  time: 3.7528  data: 0.0002  max mem: 15309
+Test:  [450/521]  eta: 0:04:27  loss: 2.7216 (2.5644)  acc1: 35.4167 (49.5843)  acc5: 64.5833 (72.5517)  time: 3.7522  data: 0.0001  max mem: 15309
+Test:  [455/521]  eta: 0:04:08  loss: 2.7216 (2.5636)  acc1: 40.6250 (49.5683)  acc5: 68.7500 (72.5740)  time: 3.7526  data: 0.0002  max mem: 15309
+Test:  [460/521]  eta: 0:03:49  loss: 2.6151 (2.5645)  acc1: 48.9583 (49.5594)  acc5: 69.7917 (72.5393)  time: 3.7526  data: 0.0001  max mem: 15309
+Test:  [465/521]  eta: 0:03:30  loss: 2.7631 (2.5720)  acc1: 45.8333 (49.4725)  acc5: 68.7500 (72.4003)  time: 3.7521  data: 0.0001  max mem: 15309
+Test:  [470/521]  eta: 0:03:11  loss: 2.6036 (2.5697)  acc1: 51.0417 (49.5400)  acc5: 70.8333 (72.4301)  time: 3.7530  data: 0.0001  max mem: 15309
+Test:  [475/521]  eta: 0:02:53  loss: 2.7380 (2.5748)  acc1: 45.8333 (49.4332)  acc5: 70.8333 (72.3827)  time: 3.7525  data: 0.0001  max mem: 15309
+Test:  [480/521]  eta: 0:02:34  loss: 2.6743 (2.5713)  acc1: 46.8750 (49.5171)  acc5: 73.9583 (72.4467)  time: 3.7529  data: 0.0001  max mem: 15309
+Test:  [485/521]  eta: 0:02:15  loss: 2.7380 (2.5792)  acc1: 41.6667 (49.3934)  acc5: 72.9167 (72.3187)  time: 3.7544  data: 0.0001  max mem: 15309
+Test:  [490/521]  eta: 0:01:56  loss: 2.8192 (2.5842)  acc1: 39.5833 (49.3148)  acc5: 69.7917 (72.2399)  time: 3.7548  data: 0.0001  max mem: 15309
+Test:  [495/521]  eta: 0:01:37  loss: 2.7683 (2.5807)  acc1: 45.8333 (49.3343)  acc5: 70.8333 (72.3034)  time: 3.7561  data: 0.0001  max mem: 15309
+Test:  [500/521]  eta: 0:01:19  loss: 2.8672 (2.5829)  acc1: 44.7917 (49.3222)  acc5: 68.7500 (72.2617)  time: 3.7557  data: 0.0001  max mem: 15309
+Test:  [505/521]  eta: 0:01:00  loss: 2.8672 (2.5966)  acc1: 44.7917 (49.0942)  acc5: 68.7500 (72.0109)  time: 3.7542  data: 0.0001  max mem: 15309
+Test:  [510/521]  eta: 0:00:41  loss: 2.8681 (2.6064)  acc1: 35.4167 (48.9359)  acc5: 66.6667 (71.8852)  time: 3.7529  data: 0.0001  max mem: 15309
+Test:  [515/521]  eta: 0:00:22  loss: 2.8672 (2.5982)  acc1: 40.6250 (49.0896)  acc5: 66.6667 (72.0022)  time: 3.7516  data: 0.0001  max mem: 15309
+Test:  [520/521]  eta: 0:00:03  loss: 2.8436 (2.5971)  acc1: 38.5417 (49.1480)  acc5: 67.7083 (72.0120)  time: 3.7296  data: 0.0001  max mem: 15309
+Test: Total time: 0:32:40 (3.7633 s / it)
+* Acc@1 49.148 Acc@5 72.012 loss 2.597
+Accuracy of the network on the 50000 test images: 49.1%
