@@ -12,6 +12,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
 """PyTorch MAMBA model."""
 
 import math
@@ -25,6 +26,7 @@ from torch import alpha_dropout, nn
 from torch.nn import CrossEntropyLoss
 
 from transformers.activations import ACT2FN
+from transformers.generation import GenerationMixin
 from transformers.modeling_utils import PreTrainedModel
 from transformers.utils import (
     ModelOutput,
@@ -59,7 +61,7 @@ _CHECKPOINT_FOR_DOC = "state-spaces/mamba-130m-hf"
 _CONFIG_FOR_DOC = "MambaConfig"
 
 
-from transformers.models.deprecated._archive_maps import MAMBA_PRETRAINED_MODEL_ARCHIVE_LIST  # noqa: F401, E402
+#from transformers.models.deprecated._archive_maps import MAMBA_PRETRAINED_MODEL_ARCHIVE_LIST  # noqa: F401, E402
 
 
 class MambaCache:
@@ -289,6 +291,8 @@ class MambaMixer(nn.Module):
         h_list = []
         for i in range(seq_len):
             ssm_state = discrete_A[:, :, i, :] * ssm_state + deltaB_u[:, :, i, :]      # [batch, intermediade_size, ssm_state]
+            print("********************")
+            print("SSM state shape: ", ssm_state.shape)
             h_list.append(ssm_state)
         h = torch.stack(h_list,dim=1).to(C)
         
@@ -319,6 +323,7 @@ class MambaMixer(nn.Module):
 
         if cache_params is not None:
             cache_params.ssm_states[self.layer_idx].copy_(ssm_state)
+
 
         # 4. Final linear projection
         contextualized_states = self.out_proj(scan_output.transpose(1, 2).to(self.out_proj.weight)) # [batch, seq_len, hidden_size]
@@ -848,7 +853,7 @@ class MambaModel(MambaPreTrainedModel):
     """,
     MAMBA_START_DOCSTRING,
 )
-class MambaForCausalLM(MambaPreTrainedModel):
+class MambaForCausalLM(MambaPreTrainedModel,GenerationMixin):
     _tied_weights_keys = ["lm_head.weight"]
 
     def __init__(self, config):
